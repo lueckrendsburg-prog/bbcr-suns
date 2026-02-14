@@ -1,0 +1,50 @@
+name: Deploy BBCR Suns Dashboard
+
+on:
+  # Läuft automatisch wenn bbc-data.json oder pwa.html geändert wird
+  push:
+    branches: [ main ]
+    paths:
+      - 'bbc-data.json'
+      - 'pwa.html'
+  # Kann auch manuell gestartet werden
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v4
+
+      - name: Seite vorbereiten
+        run: |
+          mkdir -p _site
+          # pwa.html → index.html (damit die URL kürzer wird)
+          cp pwa.html _site/index.html
+          cp pwa.html _site/pwa.html
+          # bbc-data.json öffentlich bereitstellen
+          cp bbc-data.json _site/bbc-data.json
+          echo "✅ Dateien bereit:"
+          ls -lh _site/
+
+      - name: GitHub Pages konfigurieren
+        uses: actions/configure-pages@v4
+
+      - name: Dateien hochladen
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '_site'
+
+      - name: Auf GitHub Pages deployen
+        id: deployment
+        uses: actions/deploy-pages@v4
