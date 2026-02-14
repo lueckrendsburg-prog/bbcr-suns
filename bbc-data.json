@@ -18,10 +18,10 @@
       "name": "U18 weiblich",
       "league": "Oberliga",
       "position": 1,
-      "wins": 9,
+      "wins": 10,
       "losses": 0,
-      "points": 18,
-      "games": 9,
+      "points": 20,
+      "games": 10,
       "liga_id": "48937"
     },
     {
@@ -146,27 +146,27 @@
     {
       "rank": 1,
       "team": "BBC Rendsburg",
-      "games": 9,
-      "wins": 9,
+      "games": 10,
+      "wins": 10,
       "losses": 0,
-      "points": 18,
+      "points": 20,
       "teamKey": "u18w"
     },
     {
       "rank": 2,
       "team": "Itzehoe Eagles",
-      "games": 7,
-      "wins": 5,
+      "games": 8,
+      "wins": 6,
       "losses": 2,
-      "points": 10,
+      "points": 12,
       "teamKey": "u18w"
     },
     {
       "rank": 3,
       "team": "TSV Klausdorf",
-      "games": 8,
+      "games": 9,
       "wins": 4,
-      "losses": 4,
+      "losses": 5,
       "points": 8,
       "teamKey": "u18w"
     },
@@ -200,9 +200,9 @@
     {
       "rank": 7,
       "team": "Lübecker TS",
-      "games": 8,
+      "games": 9,
       "wins": 1,
-      "losses": 7,
+      "losses": 8,
       "points": 2,
       "teamKey": "u18w"
     },
@@ -1769,11 +1769,11 @@
       "time": "15:30",
       "homeTeam": "Itzehoe Eagles",
       "awayTeam": "Lübecker TS",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 87,
+      "awayScore": 34,
       "venue": "N/A",
       "status": "finished",
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2721159"
+      "spielUrl": ""
     },
     {
       "id": "u18w-46",
@@ -1783,11 +1783,11 @@
       "time": "16:00",
       "homeTeam": "TSV Klausdorf",
       "awayTeam": "BBC Rendsburg",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 43,
+      "awayScore": 74,
       "venue": "N/A",
       "status": "finished",
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2721160"
+      "spielUrl": ""
     },
     {
       "id": "u18w-20",
@@ -2854,5 +2854,5 @@
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2761948"
     }
   ],
-  "lastUpdated": "2026-02-14T15:22:59.974Z"
+  "lastUpdated": "2026-02-14T20:42:33.657Z"
 }
