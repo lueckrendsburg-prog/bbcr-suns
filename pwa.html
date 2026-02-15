@@ -676,8 +676,8 @@
             }, []);
 
             // GitHub Raw-URL — wird automatisch befüllt wenn Token konfiguriert
-            // Format: https://raw.githubusercontent.com/USERNAME/bbcr-suns/main/bbc-data.json
-            const GITHUB_DATA_URL = 'https://raw.githubusercontent.com/lueckrendsburg-prog/bbcr-suns/main/bbc-data.json';
+            // Format: https://lueckrendsburg-prog.github.io/bbcr-suns/bbc-data.json
+            const GITHUB_DATA_URL = 'https://lueckrendsburg-prog.github.io/bbcr-suns/bbc-data.json';
 
             const loadData = async () => {
                 if (window.electronAPI) {
@@ -701,11 +701,12 @@
                     // Fallback: Demo-Daten wenn GitHub nicht erreichbar
                     setData({
                         teams:[
-                            {id:'damen',key:'damen',name:'BBC Rendsburg Damen', league:'Damen Landesliga',      position:3,wins:4, losses:6,points:8 },
-                            {id:'u18',  key:'u18',  name:'BBC Rendsburg U18',   league:'Jugend U18 Landesliga', position:1,wins:9, losses:0,points:18},
-                            {id:'u16',  key:'u16',  name:'BBC Rendsburg U16',   league:'Jugend U16 Landesliga', position:2,wins:5, losses:1,points:10},
-                            {id:'u14',  key:'u14',  name:'BBC Rendsburg U14',   league:'Jugend U14 Landesliga', position:1,wins:5, losses:0,points:10},
-                            {id:'u12',  key:'u12',  name:'BBC Rendsburg U12',   league:'Jugend U12 Landesliga', position:2,wins:7, losses:1,points:14},
+                            {id:'damen', key:'damen', name:'BBC Rendsburg Damen', league:'Oberliga Nord',    position:0,wins:0,losses:0,points:0},
+                            {id:'u18w',  key:'u18w',  name:'U18 weiblich',         league:'Oberliga',         position:0,wins:0,losses:0,points:0},
+                            {id:'u16w',  key:'u16w',  name:'U16 weiblich',         league:'Oberliga',         position:0,wins:0,losses:0,points:0},
+                            {id:'u14w',  key:'u14w',  name:'U14 weiblich',         league:'Oberliga',         position:0,wins:0,losses:0,points:0},
+                            {id:'u12w',  key:'u12w',  name:'U12 weiblich',         league:'Oberliga',         position:0,wins:0,losses:0,points:0},
+                            {id:'u12ml', key:'u12ml', name:'U12 ML',               league:'Miniliga',         position:0,wins:0,losses:0,points:0},
                         ],
                         standings:[],schedule:[],players:[],lastUpdated:null
                     });
