@@ -504,6 +504,26 @@
         }
         .location-link:active { color:var(--sky); }
 
+        /* ── ABGESAGTE SPIELE ────────────────────────────────── */
+        .match-card.cancelled {
+            opacity: 0.5;
+            background: rgba(240,240,240,0.85);
+        }
+        .match-card.cancelled .match-team-name,
+        .match-card.cancelled .match-date,
+        .match-card.cancelled .match-time {
+            text-decoration: line-through;
+            color: #999;
+        }
+        .cancelled-badge {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.62rem; font-weight: 700;
+            letter-spacing: 1.5px; text-transform: uppercase;
+            color: #cc0000;
+            text-align: center;
+            margin-top: 0.2rem;
+        }
+
         /* ── BBC FOOTER ──────────────────────────────────────────── */
         .page-footer { text-align:center; padding:2rem 0 1rem; }
         .page-footer-logo {
@@ -862,7 +882,8 @@
                 const standings = getStandings(selectedTeam.key);
                 const schedule  = getSchedule(selectedTeam.key);
                 const upcoming  = schedule.filter(m=>m.status==='upcoming');
-                const finished  = schedule.filter(m=>m.status==='finished');
+                const finished  = schedule.filter(m=>m.status==='finished'&&!m.abgesagt);
+                const cancelled = schedule.filter(m=>m.abgesagt);
                 return (
                     <div className="page-transition">
                         <button className="back-button" onClick={goHome}>← Zurück</button>
@@ -910,13 +931,14 @@
                                         Anstehend <span className="pill">{upcoming.length}</span>
                                     </div>
                                     {upcoming.map(m=>(
-                                        <div key={m.id} className="match-card" onClick={()=>setSelectedMatch(m)}>
+                                        <div key={m.id} className={`match-card${m.abgesagt?' cancelled':''}`} onClick={()=>setSelectedMatch(m)}>
                                             <div className="match-team">
                                                 <div className={`match-team-name${isBBC(m.homeTeam)?' bbc':''}`}>{m.homeTeam}</div>
                                             </div>
                                             <div className="match-info">
                                                 <div className="match-date">{m.date}</div>
                                                 <div className="match-time">{m.time}</div>
+                                                {m.abgesagt && <div className="cancelled-badge">Abgesagt</div>}
                                             </div>
                                             <div className="match-team">
                                                 <div className={`match-team-name${isBBC(m.awayTeam)?' bbc':''}`}>{m.awayTeam}</div>
@@ -929,7 +951,7 @@
                                         Beendet <span className="pill">{finished.length}</span>
                                     </div>
                                     {finished.map(m=>(
-                                        <div key={m.id} className="match-card" onClick={()=>setSelectedMatch(m)}>
+                                        <div key={m.id} className={`match-card${m.abgesagt?' cancelled':''}`} onClick={()=>setSelectedMatch(m)}>
                                             <div className="match-team">
                                                 <div className={`match-team-name${isBBC(m.homeTeam)?' bbc':''}`}>{m.homeTeam}</div>
                                                 {m.homeScore!==null&&<div className="match-team-score">{m.homeScore}</div>}
@@ -937,10 +959,31 @@
                                             <div className="match-info">
                                                 <div className="match-date">{m.date}</div>
                                                 <div className="match-time">{m.time}</div>
+                                                {m.abgesagt && <div className="cancelled-badge">Abgesagt</div>}
                                             </div>
                                             <div className="match-team">
                                                 <div className={`match-team-name${isBBC(m.awayTeam)?' bbc':''}`}>{m.awayTeam}</div>
                                                 {m.awayScore!==null&&<div className="match-team-score">{m.awayScore}</div>}
+                                            </div>
+                                        </div>
+                                    ))}
+                                </>)}
+                                {cancelled.length>0&&(<>
+                                    <div className="schedule-section-title" style={{marginTop:finished.length>0||upcoming.length>0?'1.1rem':'0'}}>
+                                        Abgesagt <span className="pill" style={{background:'#cc0000'}}>{cancelled.length}</span>
+                                    </div>
+                                    {cancelled.map(m=>(
+                                        <div key={m.id} className="match-card cancelled">
+                                            <div className="match-team">
+                                                <div className={`match-team-name${isBBC(m.homeTeam)?' bbc':''}`}>{m.homeTeam}</div>
+                                            </div>
+                                            <div className="match-info">
+                                                <div className="match-date" style={{textDecoration:'line-through'}}>{m.date}</div>
+                                                <div className="match-time" style={{textDecoration:'line-through'}}>{m.time}</div>
+                                                <div className="cancelled-badge">Abgesagt</div>
+                                            </div>
+                                            <div className="match-team">
+                                                <div className={`match-team-name${isBBC(m.awayTeam)?' bbc':''}`}>{m.awayTeam}</div>
                                             </div>
                                         </div>
                                     ))}
