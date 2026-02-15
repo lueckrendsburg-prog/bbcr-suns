@@ -664,6 +664,12 @@
             const [lastUpdated,   setLastUpdated]  = useState(null);
             const [isUpdating,    setIsUpdating]   = useState(false);
 
+            // Nach jedem View- oder Tab-Wechsel nach oben scrollen
+            useEffect(() => {
+                document.documentElement.scrollTop = 0;
+                document.body.scrollTop = 0;
+            }, [view, tab]);
+
             useEffect(() => {
                 loadData();
                 if (window.electronAPI) {
@@ -739,8 +745,8 @@
                 }
             };
 
-            const selectTeam = t => { setSelectedTeam(t); setView('detail'); setTab('standings'); window.scrollTo({top:0, behavior:'instant'}); };
-            const goHome     = () => { setView('home'); setSelectedTeam(null); setSelectedMatch(null); window.scrollTo({top:0, behavior:'instant'}); };
+            const selectTeam = t => { setSelectedTeam(t); setView('detail'); setTab('standings'); };
+            const goHome     = () => { setView('home'); setSelectedTeam(null); setSelectedMatch(null); };
             const isBBC      = n  => { const s=(n||'').toLowerCase(); return s.includes('rendsburg')||s.includes('bbc'); };
             const getStandings = key => (data.standings||[]).filter(s=>s.teamKey===key);
             const getSchedule  = key => (data.schedule||[]).filter(m=>m.teamKey===key&&(isBBC(m.homeTeam)||isBBC(m.awayTeam)));
