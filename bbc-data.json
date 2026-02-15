@@ -1029,8 +1029,8 @@
       "awayTeam": "BSG Kisdorf Kaltenkirchen",
       "homeScore": null,
       "awayScore": null,
-      "venue": "Helene-Lange-Gymnasium, Ritterstr. 12, 24768 Rendsburg",
-      "status": "upcoming",
+      "venue": "N/A",
+      "status": "finished",
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688325"
     },
     {
@@ -1044,7 +1044,7 @@
       "homeScore": null,
       "awayScore": null,
       "venue": "N/A",
-      "status": "upcoming",
+      "status": "finished",
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688346"
     },
     {
@@ -1058,7 +1058,7 @@
       "homeScore": null,
       "awayScore": null,
       "venue": "N/A",
-      "status": "upcoming",
+      "status": "finished",
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688347"
     },
     {
@@ -2178,7 +2178,7 @@
       "homeScore": null,
       "awayScore": null,
       "venue": "N/A",
-      "status": "upcoming",
+      "status": "finished",
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2710266"
     },
     {
@@ -2457,8 +2457,8 @@
       "awayTeam": "BBC Rendsburg",
       "homeScore": null,
       "awayScore": null,
-      "venue": "Sachsenwald Gymnasium, Schulstr. 19, 21465 Reinbek",
-      "status": "upcoming",
+      "venue": "N/A",
+      "status": "finished",
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2719287"
     },
     {
@@ -2854,5 +2854,5 @@
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2761948"
     }
   ],
-  "lastUpdated": "2026-02-14T20:42:33.657Z"
+  "lastUpdated": "2026-02-15T15:20:02.009Z"
 }
