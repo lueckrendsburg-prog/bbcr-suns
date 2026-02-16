@@ -1011,7 +1011,9 @@
                     if (e.touches.length !== 1 || sw.startScroll !== 0) return;
                     const dy = e.touches[0].clientY - sw.startY;
                     const dx = e.touches[0].clientX - sw.startX;
-                    if (dy > 30 && Math.abs(dy) > Math.abs(dx)) showPTR(dy > PULL_THRESHOLD);
+                    // PTR nur zeigen wenn Bewegung klar vertikal (3:1) und weit genug
+                    const clearlyVertical = Math.abs(dy) > Math.abs(dx) * 3;
+                    if (clearlyVertical && dy > 50) showPTR(dy > PULL_THRESHOLD);
                     else showPTR(false);
                 };
 
@@ -1021,31 +1023,31 @@
                     const dx = e.changedTouches[0].clientX - sw.startX;
                     const dy = e.changedTouches[0].clientY - sw.startY;
 
-                    // Pull-to-Refresh: nach unten ziehen an oberster Position
-                    if (Math.abs(dy) > Math.abs(dx) && dy > PULL_THRESHOLD && sw.startScroll === 0) {
+                    // Pull-to-Refresh: nur wenn Bewegung klar vertikal (3:1) und ganz oben
+                    const clearlyVertical = Math.abs(dy) > Math.abs(dx) * 3;
+                    if (clearlyVertical && dy > PULL_THRESHOLD && sw.startScroll === 0) {
                         handleUpdate();
                         return;
                     }
 
-                    // Nur horizontales Swipen auswerten
-                    if (Math.abs(dx) < Math.abs(dy) * 1.5) return;
+                    // Nur horizontales Swipen auswerten (Bewegung muss klar horizontal sein)
+                    if (Math.abs(dx) < Math.abs(dy) * 2) return;
                     if (Math.abs(dx) < SWIPE_THRESHOLD) return;
 
                     const viewNow = viewRef.current;
                     const tabNow  = tabRef.current;
 
                     if (viewNow === 'detail') {
-                        if (dx > BACK_THRESHOLD) {
-                            // Swipe rechts → zurück zum Home
-                            goHome();
-                        } else if (dx < -SWIPE_THRESHOLD) {
-                            // Swipe links → Tab wechseln (standings ↔ schedule)
-                            setTab(t => t === 'standings' ? 'schedule' : 'standings');
-                        } else if (dx > SWIPE_THRESHOLD && tabNow === 'schedule') {
-                            // Swipe rechts innerhalb detail → standings
-                            setTab('standings');
+                        if (dx < -SWIPE_THRESHOLD) {
+                            // Swipe links: standings → schedule
+                            if (tabNow === 'standings') setTab('schedule');
+                        } else if (dx > SWIPE_THRESHOLD) {
+                            // Swipe rechts: schedule → standings, standings → Home
+                            if (tabNow === 'schedule') { setTab('standings'); }
+                            else if (dx > BACK_THRESHOLD) { goHome(); }
                         }
                     }
+
                 };
 
                 window.addEventListener('touchstart', onStart, { passive: true });
