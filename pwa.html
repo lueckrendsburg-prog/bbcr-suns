@@ -295,6 +295,45 @@
             content:''; flex:1; height:1px;
             background:linear-gradient(90deg,var(--sky),transparent); opacity:0.25;
         }
+        .standings-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+        }
+        .standings-table thead th {
+            font-weight: 900;
+            font-style: italic;
+            font-size: 0.85rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--mid);
+            padding: 0.4rem 0.5rem;
+            border-bottom: 2px solid var(--sky);
+            text-align: left;
+        }
+        .standings-table tbody td {
+            padding: 0.5rem 0.5rem;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--slate);
+        }
+        .standings-table tbody tr.highlight-row td {
+            color: var(--sky-dark);
+            font-weight: 700;
+            background: rgba(91,184,245,0.06);
+        }
+        .standings-table .rank-cell {
+            font-weight: 900;
+            color: var(--mid);
+            width: 1.5rem;
+        }
+
         .schedule-container { display:flex; flex-direction:column; gap:0.55rem; }
 
         .match-card {
@@ -418,93 +457,260 @@
 
         /* ── BOTTOM SHEET MODAL ──────────────────────────────────── */
         .modal-overlay {
-            position:fixed; inset:0;
-            background:rgba(17,24,39,0.72);
-            display:flex; align-items:flex-end; justify-content:center;
-            z-index:3000;
-            backdrop-filter:blur(4px);
-            animation:overlayIn 0.22s ease-out;
+            position: fixed; inset:0;
+            background: rgba(17,24,39,0.72);
+            display: flex; align-items:center; justify-content:center;
+            z-index: 3000;
+            animation: fadeUp 0.25s ease-out;
+            backdrop-filter: blur(6px);
         }
-        @keyframes overlayIn { from{opacity:0;} to{opacity:1;} }
-
         .modal {
-            background:var(--white);
-            border-radius:20px 20px 0 0;
-            padding:0 1.2rem 1.5rem;
-            padding-bottom:calc(1.5rem + env(safe-area-inset-bottom));
-            width:100%; max-height:88vh; overflow-y:auto;
-            box-shadow:0 -10px 40px rgba(17,24,39,0.25);
-            animation:sheetUp 0.32s cubic-bezier(0.2,0.8,0.4,1);
-            position:relative;
+            background: var(--slate);
+            border-radius: 16px;
+            padding: 0;
+            max-width: 620px; width: 92%;
+            max-height: 92vh; overflow: hidden;
+            box-shadow: 0 30px 80px rgba(17,24,39,0.5);
+            position: relative;
+            animation: slideUp 0.3s cubic-bezier(.2,.8,.4,1);
+            border: 1px solid rgba(91,184,245,0.2);
         }
-        @keyframes sheetUp {
-            from { transform:translateY(100%); }
-            to   { transform:translateY(0); }
+        .modal-header {
+            background: var(--slate);
+            padding: 1.5rem 1.5rem 0;
         }
-        /* Drag Handle */
-        .modal-handle {
-            width:36px; height:4px; border-radius:2px;
-            background:#D1D5DB; margin:14px auto 16px; flex-shrink:0;
+        .modal-body {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 0 0 16px 16px;
+        }
+        @keyframes slideUp {
+            from { opacity:0; transform:translateY(30px); }
+            to   { opacity:1; transform:translateY(0); }
         }
         .modal-close {
-            position:absolute; top:14px; right:14px;
-            background:#F3F4F6; border:none; color:var(--slate);
-            width:30px; height:30px; border-radius:50%;
-            display:flex; align-items:center; justify-content:center;
-            font-size:0.9rem; cursor:pointer;
+            position: absolute; top: 1rem; right: 1rem;
+            background: rgba(255,255,255,0.1); border: none;
+            color: rgba(255,255,255,0.7); font-size: 1.1rem;
+            cursor: pointer; width: 32px; height: 32px;
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 50%; transition: all 0.2s;
         }
-        .modal-close:active { background:var(--sky); color:var(--white); }
+        .modal-close:hover { background: var(--sky); color: var(--slate); transform: rotate(90deg); }
+
+        .match-status-badge {
+            display: inline-block; padding: 0.25rem 0.8rem;
+            border-radius: 3px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 0.72rem; font-weight: 900; letter-spacing: 2.5px;
+            text-transform: uppercase; margin-bottom: 1rem;
+        
+            text-align: center; display: block;
+            margin-left: auto; margin-right: auto;
+        }
+        .status-finished  { background: rgba(46,125,50,0.15);  color: #2E7D32; }
+        .status-upcoming  { background: rgba(91,184,245,0.15); color: var(--sky-dark); }
+        .status-cancelled { background: rgba(198,40,40,0.12);  color: #C62828; }
+
+        .modal-teams {
+            display: flex; align-items: center;
+            justify-content: space-between;
+            gap: 1rem; margin-bottom: 1.2rem;
+            padding: 1rem; border-radius: 8px;
+            background: rgba(91,184,245,0.08);
+            border: 1px solid rgba(91,184,245,0.15);
+        }
+        .modal-team {
+            flex: 1; text-align: center;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900; font-size: 1rem;
+            letter-spacing: 1px; text-transform: uppercase;
+            color: var(--slate); line-height: 1.3;
+        }
+        .modal-team.bbc { color: var(--sky-dark); }
+        .modal-score {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900; font-size: 2.2rem;
+            color: var(--slate); flex-shrink: 0;
+            letter-spacing: 3px;
+        }
+        .modal-details { display: grid; gap: 0.6rem; }
+        .modal-detail-item {
+            display: flex; justify-content: space-between;
+            align-items: center;
+            padding: 0.55rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.07);
+        }
+        .modal-detail-label {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900; font-size: 0.72rem;
+            letter-spacing: 2.5px; text-transform: uppercase;
+            color: var(--mid);
+        }
+        .modal-detail-value {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1rem; font-weight: 700;
+            letter-spacing: 0.5px; text-transform: uppercase;
+            color: var(--slate); text-align: right;
+        }
+        .venue-link {
+            color: var(--sky-dark); text-decoration: none;
+        }
+        .venue-link:hover { text-decoration: underline; }
 
         .status-badge {
-            display:inline-block; padding:0.22rem 0.65rem; border-radius:3px;
-            font-family:'Barlow Condensed',sans-serif;
-            font-size:0.68rem; font-weight:700; letter-spacing:1.5px; text-transform:uppercase;
+            display:inline-block; padding:0.3rem 0.9rem;
+            border-radius:3px;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size:0.75rem; font-weight:700;
+            letter-spacing:2px; text-transform:uppercase;
+        
+            text-align: center;
         }
         .status-finished { background:#E8F5E9; color:#2E7D32; border:1px solid #A5D6A7; }
         .status-upcoming { background:rgba(91,184,245,0.1); color:var(--sky-dark); border:1px solid rgba(91,184,245,0.4); }
 
-        .match-detail-header { text-align:center; margin-bottom:0.9rem; padding-bottom:0.9rem; border-bottom:1px solid #EEF4FA; }
+        .match-detail-header { text-align:center; margin-bottom:1.5rem; padding-bottom:1.5rem; border-bottom:1px solid #EEF4FA; }
+
         .match-detail-teams {
             display:flex; justify-content:space-around;
-            align-items:center; margin:1rem 0; gap:0.5rem;
+            align-items:center; margin:1.5rem 0; gap:1rem;
         }
         .match-detail-team { text-align:center; flex:1; }
         .match-detail-team-name {
-            font-family:'Barlow Condensed',sans-serif;
-            font-weight:900; font-size:1.25rem; color:var(--slate);
-            text-transform:uppercase; line-height:1.2; margin-bottom:0.35rem;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight:900; font-size:1.8rem;
+            color: var(--slate); text-transform:uppercase;
+            letter-spacing:1px; line-height:1.2; margin-bottom:0.5rem;
         }
         .match-detail-score {
-            font-family:'Barlow Condensed',sans-serif;
-            font-weight:900; font-size:2.8rem; color:var(--sky-dark); line-height:1;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight:900; font-size:4rem;
+            color: var(--sky-dark); line-height:1;
         }
         .match-detail-vs {
-            font-family:'Barlow Condensed',sans-serif;
-            font-weight:900; font-size:1rem; color:rgba(30,48,80,0.2); flex-shrink:0;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight:900; font-size:1.5rem;
+            color: rgba(30,48,80,0.2); flex-shrink:0;
         }
+
         .match-detail-info {
-            display:grid; grid-template-columns:1fr 1fr; gap:0.65rem; margin-top:0.9rem;
+            display:grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px,1fr));
+            gap:1rem; margin-top:1.5rem;
         }
         .info-item {
-            background:var(--off-white); padding:0.85rem 0.75rem;
-            border-radius:10px; border:1px solid #E2EDF5;
+            background: var(--off-white);
+            padding:1.2rem; border-radius:10px;
+            border:1px solid #E2EDF5;
         }
         .info-item-label {
-            font-size:0.62rem; font-weight:700; letter-spacing:1.5px;
-            text-transform:uppercase; color:var(--mid); margin-bottom:0.28rem;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.1rem; font-weight: 700;
+            letter-spacing: 1px; text-transform: uppercase;
+            color: var(--mid); margin-bottom: 0.2rem;
         }
-        .info-item-value {
-            font-family:'Barlow Condensed',sans-serif;
-            font-weight:700; font-size:1.05rem; color:var(--slate);
+                .info-item-value {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.1rem; font-weight: 700;
+            letter-spacing: 1px; text-transform: uppercase;
+            color: var(--slate);
         }
         .location-link {
-            display:inline-flex; align-items:center; gap:0.3rem;
-            color:var(--sky-dark); text-decoration:none;
-            font-size:0.72rem; font-weight:600; margin-top:0.35rem;
+            display:inline-flex; align-items:center; gap:0.4rem;
+            color: var(--sky-dark); text-decoration:none;
+            font-size:0.8rem; font-weight:600;
+            margin-top:0.5rem; transition:all 0.2s;
         }
-        .location-link:active { color:var(--sky); }
+        .location-link:hover { color:var(--sky); transform:translateX(3px); }
 
-        /* ── ABGESAGTE SPIELE ────────────────────────────────── */
+        /* ── EMPTY / LOADING ─────────────────────────────────────────── */
+        .empty-state { text-align:center; padding:4rem 2rem; opacity:0.5; }
+        .empty-state-icon { font-size:3rem; margin-bottom:1rem; }
+        .empty-state-text { font-size:1rem; color:var(--mid); }
+
+        .loading {
+            text-align:center; padding:4rem;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight:700; font-size:1.5rem;
+            letter-spacing:3px; text-transform:uppercase;
+            color: var(--sky-dark);
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+        @keyframes pulse { 0%,100% { opacity:0.4; } 50% { opacity:1; } }
+
+        /* ── STATUS BAR ──────────────────────────────────────────────── */
+        .status-bar {
+            position: fixed; bottom:0; left:0; right:0; z-index: 10;
+            background: var(--slate);
+            height: calc(44px + env(safe-area-inset-bottom));
+            display:flex; align-items:flex-start;
+            padding: 0 2rem;
+            padding-bottom: env(safe-area-inset-bottom);
+            padding-left: max(2rem, env(safe-area-inset-left));
+            padding-right: max(2rem, env(safe-area-inset-right));
+            z-index: 1000;
+            justify-content: space-between;
+        }
+        .status-indicator {
+            display:flex; align-items:center; gap:0.6rem;
+            font-size:0.75rem; font-weight:600;
+            letter-spacing:1px; text-transform:uppercase;
+            color: rgba(255,255,255,0.5);
+        }
+        .status-dot {
+            width:8px; height:8px; border-radius:50%;
+            background: var(--sky);
+            animation: blink 2s infinite;
+        }
+        @keyframes blink { 0%,100% { opacity:1; } 50% { opacity:0.2; } }
+        .status-time {
+            font-size:0.75rem; font-weight:500;
+            color: rgba(255,255,255,0.4);
+        }
+
+        /* ── BBC LOGO SEITENENDE ─────────────────────────────────────── */
+        main.main-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ── LETZTES ERGEBNIS AUF TEAMKARTE ────────────────────── */
+        .last-result {
+            display: flex; align-items: center; gap: 0.5rem;
+            margin-top: 0.6rem; padding-top: 0.6rem;
+            border-top: 1px solid rgba(91,184,245,0.12);
+        }
+        .result-badge {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900; font-size: 0.7rem;
+            width: 22px; height: 22px; border-radius: 4px;
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+        }
+        .result-win  { background: #E8F5E9; color: #2E7D32; }
+        .result-loss { background: #FFEBEE; color: #C62828; }
+        .result-score {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 900; font-size: 1rem; color: var(--slate);
+        }
+        .result-opponent {
+            font-size: 0.72rem; color: var(--mid);
+            white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+        }
+
+        /* ── BASKETBALL SPINNER ─────────────────────────────────── */
+        .basketball-spinner {
+            font-size: 2.5rem;
+            animation: spin 0.9s linear infinite;
+            display: block; margin-bottom: 0.5rem;
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to   { transform: rotate(360deg); }
+        }
+
+        /* Abgesagte Spiele */
         .match-card.cancelled {
             opacity: 0.5;
             background: rgba(240,240,240,0.85);
@@ -645,6 +851,7 @@
     </script>
     <script type="text/babel">
         const { useState, useEffect, useRef } = React;
+        const VERSION = 'v1.2.0';
 
         const IconHome = () => (
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -768,6 +975,25 @@
             const selectTeam = t => { setSelectedTeam(t); setView('detail'); setTab('standings'); };
             const goHome     = () => { setView('home'); setSelectedTeam(null); setSelectedMatch(null); };
             const isBBC      = n  => { const s=(n||'').toLowerCase(); return s.includes('rendsburg')||s.includes('bbc'); };
+        const getLastResult = team => {
+            const s = (data.schedule||[]).filter(m =>
+                m.teamKey === team.key && m.status === 'finished' && !m.abgesagt &&
+                m.homeScore !== null && m.awayScore !== null &&
+                (isBBC(m.homeTeam) || isBBC(m.awayTeam))
+            ).map((m, i) => ({ m, i }))
+            .sort((a, b) => {
+                const toDate = str => {
+                    if (!str) return 0;
+                    const p = str.split('.');
+                    return p.length === 3
+                        ? new Date(+p[2], +p[1]-1, +p[0]).getTime()
+                        : 0;
+                };
+                const dateDiff = toDate(b.m.date) - toDate(a.m.date);
+                return dateDiff !== 0 ? dateDiff : b.i - a.i;
+            });
+            return s.length > 0 ? s[0].m : null;
+        };
             const getStandings = key => (data.standings||[]).filter(s=>s.teamKey===key);
             const getSchedule  = key => (data.schedule||[]).filter(m=>m.teamKey===key&&(isBBC(m.homeTeam)||isBBC(m.awayTeam)));
 
@@ -785,14 +1011,15 @@
                 return (
                     <div className="modal-overlay" onClick={()=>setSelectedMatch(null)}>
                         <div className="modal" onClick={e=>e.stopPropagation()}>
-                            <div className="modal-handle"/>
-                            <button className="modal-close" onClick={()=>setSelectedMatch(null)}>✕</button>
-                            <div className="match-detail-header">
-                                <span className={`status-badge ${fin?'status-finished':'status-upcoming'}`}>
-                                    {fin?'✓ Beendet':'○ Anstehend'}
+                            <div className="modal-header">
+                                <div className="modal-handle"/>
+                                <button className="modal-close" onClick={()=>setSelectedMatch(null)}>✕</button>
+                                <span className={`match-status-badge status-${selectedMatch.status}`}>
+                                    {fin?'✓ Beendet': selectedMatch.status==='cancelled'?'✗ Abgesagt':'○ Anstehend'}
                                 </span>
                             </div>
-                            <div className="match-detail-teams">
+                            <div className="modal-body">
+                                <div className="match-detail-teams">
                                 <div className="match-detail-team">
                                     <div className="match-detail-team-name">{selectedMatch.homeTeam}</div>
                                     {fin && <div className="match-detail-score">{selectedMatch.homeScore}</div>}
@@ -827,6 +1054,7 @@
                                     <div className="info-item-value" style={{fontSize:'0.88rem'}}>{selectedMatch.league||selectedTeam?.league}</div>
                                 </div>
                             </div>
+                            </div>{/* modal-body */}
                         </div>
                     </div>
                 );
@@ -862,6 +1090,23 @@
                                             </div>
                                         </div>
                                     </div>
+                                    {(() => {
+                                        const last = getLastResult(t);
+                                        if (!last) return null;
+                                        const bbcScore = isBBC(last.homeTeam) ? last.homeScore : last.awayScore;
+                                        const oppScore = isBBC(last.homeTeam) ? last.awayScore : last.homeScore;
+                                        const opponent = isBBC(last.homeTeam) ? last.awayTeam : last.homeTeam;
+                                        const won = bbcScore > oppScore;
+                                        return (
+                                            <div className="last-result">
+                                                <span className={`result-badge ${won?'result-win':'result-loss'}`}>
+                                                    {won?'S':'N'}
+                                                </span>
+                                                <span className="result-score">{bbcScore}:{oppScore}</span>
+                                                <span className="result-opponent">vs {opponent}</span>
+                                            </div>
+                                        );
+                                    })()}
                                     <div className="card-chevron"><IconChevron/></div>
                                 </div>
                             ))}
@@ -903,13 +1148,21 @@
                                 </div>
                                 {standings.length>0?(
                                     <table>
-                                        <thead><tr><th>#</th><th>Team</th><th>Sp</th><th>S</th><th>N</th><th>Pkt</th></tr></thead>
+                                        <thead><tr><th>#</th><th>Team</th><th>Sp</th><th>S</th><th>N</th><th>+/-</th><th>Pkt</th></tr></thead>
                                         <tbody>
                                             {standings.map(item=>(
                                                 <tr key={`${item.rank}-${item.team}`} className={isBBC(item.team)?'highlight-row':''}>
                                                     <td className="rank-cell">{item.rank}</td>
                                                     <td style={{fontSize:'0.78rem'}}>{item.team}</td>
                                                     <td>{item.games}</td><td>{item.wins}</td><td>{item.losses}</td>
+                                                    <td style={{
+                                                        color: (item.pointsFor-item.pointsAgainst)>0?'var(--sky-dark)':(item.pointsFor-item.pointsAgainst)<0?'#e55':'var(--mid)',
+                                                        fontWeight:'600'
+                                                    }}>
+                                                        {item.pointsFor!=null&&item.pointsAgainst!=null
+                                                            ?((item.pointsFor-item.pointsAgainst)>0?'+':'')+(item.pointsFor-item.pointsAgainst)
+                                                            :'-'}
+                                                    </td>
                                                     <td style={{fontWeight:'700',color:'var(--sky-dark)'}}>{item.points}</td>
                                                 </tr>
                                             ))}
@@ -1023,7 +1276,7 @@
 
                 <div className="container">
                     {loading
-                        ? <div className="loading">Lade…</div>
+                        ? <div className="loading"><div className="basketball-spinner">🏀</div>Lade…</div>
                         : view==='home' ? renderHome() : renderDetail()
                     }
                 </div>
@@ -1051,6 +1304,12 @@
                         </button>
                     </div>
                 </nav>
+                <div style={{
+                    textAlign:'center', padding:'0.25rem 0 0.5rem',
+                    fontSize:'0.58rem', fontWeight:700, letterSpacing:'2px',
+                    textTransform:'uppercase', color:'rgba(255,255,255,0.2)',
+                    fontFamily:"'Barlow Condensed',sans-serif"
+                }}>{VERSION}</div>
             </>);
         }
 
