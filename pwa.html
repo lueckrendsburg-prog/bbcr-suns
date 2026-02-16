@@ -1030,7 +1030,24 @@
                         return;
                     }
 
-window.addEventListener('touchstart', onStart, { passive: true });
+                    // Nur horizontales Swipen auswerten
+                    if (Math.abs(dx) < Math.abs(dy) * 2) return;
+                    if (Math.abs(dx) < SWIPE_THRESHOLD) return;
+
+                    const viewNow = viewRef.current;
+                    const tabNow  = tabRef.current;
+
+                    if (viewNow === 'detail') {
+                        if (dx < -SWIPE_THRESHOLD) {
+                            if (tabNow === 'standings') setTab('schedule');
+                        } else if (dx > SWIPE_THRESHOLD) {
+                            if (tabNow === 'schedule') { setTab('standings'); }
+                            else if (dx > BACK_THRESHOLD) { goHome(); }
+                        }
+                    }
+                };
+
+                window.addEventListener('touchstart', onStart, { passive: true });
                 window.addEventListener('touchmove',  onMove,  { passive: true });
                 window.addEventListener('touchend',   onEnd,   { passive: true });
                 return () => {
