@@ -81,6 +81,8 @@
       "wins": 11,
       "losses": 1,
       "points": 22,
+      "pointsFor": 816,
+      "pointsAgainst": 552,
       "teamKey": "damen"
     },
     {
@@ -90,6 +92,8 @@
       "wins": 7,
       "losses": 2,
       "points": 14,
+      "pointsFor": 557,
+      "pointsAgainst": 451,
       "teamKey": "damen"
     },
     {
@@ -99,6 +103,8 @@
       "wins": 6,
       "losses": 3,
       "points": 12,
+      "pointsFor": 491,
+      "pointsAgainst": 426,
       "teamKey": "damen"
     },
     {
@@ -108,6 +114,8 @@
       "wins": 5,
       "losses": 3,
       "points": 10,
+      "pointsFor": 477,
+      "pointsAgainst": 413,
       "teamKey": "damen"
     },
     {
@@ -117,6 +125,8 @@
       "wins": 5,
       "losses": 5,
       "points": 10,
+      "pointsFor": 470,
+      "pointsAgainst": 442,
       "teamKey": "damen"
     },
     {
@@ -126,6 +136,8 @@
       "wins": 5,
       "losses": 6,
       "points": 10,
+      "pointsFor": 516,
+      "pointsAgainst": 542,
       "teamKey": "damen"
     },
     {
@@ -135,6 +147,8 @@
       "wins": 4,
       "losses": 6,
       "points": 8,
+      "pointsFor": 576,
+      "pointsAgainst": 617,
       "teamKey": "damen"
     },
     {
@@ -144,6 +158,8 @@
       "wins": 2,
       "losses": 9,
       "points": 4,
+      "pointsFor": 496,
+      "pointsAgainst": 678,
       "teamKey": "damen"
     },
     {
@@ -153,6 +169,8 @@
       "wins": 0,
       "losses": 10,
       "points": 0,
+      "pointsFor": 310,
+      "pointsAgainst": 588,
       "teamKey": "damen"
     },
     {
@@ -162,6 +180,8 @@
       "wins": 10,
       "losses": 0,
       "points": 20,
+      "pointsFor": 968,
+      "pointsAgainst": 305,
       "teamKey": "u18w"
     },
     {
@@ -171,6 +191,8 @@
       "wins": 6,
       "losses": 2,
       "points": 12,
+      "pointsFor": 486,
+      "pointsAgainst": 410,
       "teamKey": "u18w"
     },
     {
@@ -180,6 +202,8 @@
       "wins": 4,
       "losses": 5,
       "points": 8,
+      "pointsFor": 461,
+      "pointsAgainst": 458,
       "teamKey": "u18w"
     },
     {
@@ -189,6 +213,8 @@
       "wins": 3,
       "losses": 4,
       "points": 6,
+      "pointsFor": 343,
+      "pointsAgainst": 422,
       "teamKey": "u18w"
     },
     {
@@ -198,6 +224,8 @@
       "wins": 3,
       "losses": 6,
       "points": 6,
+      "pointsFor": 464,
+      "pointsAgainst": 633,
       "teamKey": "u18w"
     },
     {
@@ -207,6 +235,8 @@
       "wins": 1,
       "losses": 3,
       "points": 2,
+      "pointsFor": 195,
+      "pointsAgainst": 326,
       "teamKey": "u18w"
     },
     {
@@ -216,6 +246,8 @@
       "wins": 1,
       "losses": 8,
       "points": 2,
+      "pointsFor": 288,
+      "pointsAgainst": 651,
       "teamKey": "u18w"
     },
     {
@@ -225,6 +257,8 @@
       "wins": 0,
       "losses": 0,
       "points": 0,
+      "pointsFor": 0,
+      "pointsAgainst": 0,
       "teamKey": "u18w"
     },
     {
@@ -234,6 +268,8 @@
       "wins": 0,
       "losses": 0,
       "points": 0,
+      "pointsFor": 0,
+      "pointsAgainst": 0,
       "teamKey": "u18w"
     },
     {
@@ -243,6 +279,8 @@
       "wins": 5,
       "losses": 1,
       "points": 10,
+      "pointsFor": 390,
+      "pointsAgainst": 264,
       "teamKey": "u16w"
     },
     {
@@ -252,6 +290,8 @@
       "wins": 4,
       "losses": 2,
       "points": 8,
+      "pointsFor": 395,
+      "pointsAgainst": 335,
       "teamKey": "u16w"
     },
     {
@@ -261,6 +301,8 @@
       "wins": 3,
       "losses": 3,
       "points": 6,
+      "pointsFor": 335,
+      "pointsAgainst": 346,
       "teamKey": "u16w"
     },
     {
@@ -270,6 +312,8 @@
       "wins": 2,
       "losses": 3,
       "points": 4,
+      "pointsFor": 270,
+      "pointsAgainst": 232,
       "teamKey": "u16w"
     },
     {
@@ -279,6 +323,8 @@
       "wins": 0,
       "losses": 5,
       "points": 0,
+      "pointsFor": 207,
+      "pointsAgainst": 420,
       "teamKey": "u16w"
     },
     {
@@ -288,6 +334,8 @@
       "wins": 6,
       "losses": 0,
       "points": 12,
+      "pointsFor": 514,
+      "pointsAgainst": 273,
       "teamKey": "u14w"
     },
     {
@@ -297,6 +345,8 @@
       "wins": 4,
       "losses": 1,
       "points": 8,
+      "pointsFor": 410,
+      "pointsAgainst": 194,
       "teamKey": "u14w"
     },
     {
@@ -306,6 +356,8 @@
       "wins": 4,
       "losses": 4,
       "points": 8,
+      "pointsFor": 485,
+      "pointsAgainst": 446,
       "teamKey": "u14w"
     },
     {
@@ -315,6 +367,8 @@
       "wins": 1,
       "losses": 3,
       "points": 2,
+      "pointsFor": 178,
+      "pointsAgainst": 279,
       "teamKey": "u14w"
     },
     {
@@ -324,6 +378,8 @@
       "wins": 0,
       "losses": 7,
       "points": 0,
+      "pointsFor": 240,
+      "pointsAgainst": 635,
       "teamKey": "u14w"
     },
     {
@@ -333,6 +389,8 @@
       "wins": 0,
       "losses": 0,
       "points": 0,
+      "pointsFor": 0,
+      "pointsAgainst": 0,
       "teamKey": "u14w"
     },
     {
@@ -342,6 +400,8 @@
       "wins": 7,
       "losses": 1,
       "points": 14,
+      "pointsFor": 473,
+      "pointsAgainst": 314,
       "teamKey": "u12w"
     },
     {
@@ -351,6 +411,8 @@
       "wins": 7,
       "losses": 2,
       "points": 14,
+      "pointsFor": 578,
+      "pointsAgainst": 306,
       "teamKey": "u12w"
     },
     {
@@ -360,6 +422,8 @@
       "wins": 3,
       "losses": 6,
       "points": 6,
+      "pointsFor": 379,
+      "pointsAgainst": 487,
       "teamKey": "u12w"
     },
     {
@@ -369,6 +433,8 @@
       "wins": 0,
       "losses": 8,
       "points": 0,
+      "pointsFor": 227,
+      "pointsAgainst": 550,
       "teamKey": "u12w"
     },
     {
@@ -378,6 +444,8 @@
       "wins": 9,
       "losses": 1,
       "points": 18,
+      "pointsFor": 854,
+      "pointsAgainst": 652,
       "teamKey": "u12ml"
     },
     {
@@ -387,6 +455,8 @@
       "wins": 8,
       "losses": 3,
       "points": 16,
+      "pointsFor": 770,
+      "pointsAgainst": 648,
       "teamKey": "u12ml"
     },
     {
@@ -396,6 +466,8 @@
       "wins": 7,
       "losses": 5,
       "points": 14,
+      "pointsFor": 899,
+      "pointsAgainst": 754,
       "teamKey": "u12ml"
     },
     {
@@ -405,6 +477,8 @@
       "wins": 5,
       "losses": 4,
       "points": 10,
+      "pointsFor": 570,
+      "pointsAgainst": 620,
       "teamKey": "u12ml"
     },
     {
@@ -414,6 +488,8 @@
       "wins": 5,
       "losses": 7,
       "points": 10,
+      "pointsFor": 686,
+      "pointsAgainst": 817,
       "teamKey": "u12ml"
     },
     {
@@ -423,6 +499,8 @@
       "wins": 3,
       "losses": 6,
       "points": 6,
+      "pointsFor": 550,
+      "pointsAgainst": 649,
       "teamKey": "u12ml"
     },
     {
@@ -432,6 +510,8 @@
       "wins": 3,
       "losses": 7,
       "points": 6,
+      "pointsFor": 719,
+      "pointsAgainst": 698,
       "teamKey": "u12ml"
     },
     {
@@ -441,6 +521,8 @@
       "wins": 2,
       "losses": 9,
       "points": 4,
+      "pointsFor": 584,
+      "pointsAgainst": 794,
       "teamKey": "u12ml"
     }
   ],
@@ -3956,5 +4038,5 @@
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2711890"
     }
   ],
-  "lastUpdated": "2026-02-16T13:26:25.579Z"
+  "lastUpdated": "2026-02-16T14:11:36.301Z"
 }
