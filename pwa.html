@@ -41,12 +41,14 @@
 
         * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
 
-        html, body {
+        html, html { overscroll-behavior-y: none; touch-action: pan-x pan-y; }
+        body {
             font-family: 'Barlow', sans-serif;
             background: var(--off-white);
             color: var(--charcoal);
             overflow-x: hidden;
             overflow-y: auto;
+            overscroll-behavior-y: none;  /* Deaktiviert nativen Browser-PTR */
             -webkit-overflow-scrolling: touch;
             height: 100%;
         }
