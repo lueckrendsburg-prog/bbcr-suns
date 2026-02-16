@@ -991,64 +991,75 @@
             const swipeRef = React.useRef({});
             React.useEffect(() => {
                 const sw = swipeRef.current;
-                const SWIPE_THRESHOLD = 50;   // px horizontal für Tab-Wechsel
-                const BACK_THRESHOLD  = 80;   // px horizontal für zurück
-                const PULL_THRESHOLD  = 80;   // px vertikal für Refresh
-
-                const onStart = e => {
-                    if (e.touches.length !== 1) return;
-                    sw.startX   = e.touches[0].clientX;
-                    sw.startY   = e.touches[0].clientY;
-                    // PTR nur wenn Finger aufsetzt während Seite BEREITS oben steht
-                    // Hochscrollen gilt nicht — Seite muss schon oben sein
-                    sw.ptrReady = (window.scrollY === 0);
-                };
+                const SWIPE_THRESHOLD = 50;
+                const BACK_THRESHOLD  = 80;
+                const PULL_THRESHOLD  = 80;
 
                 const showPTR = show => {
                     const el = document.getElementById('ptr-indicator');
                     if (el) el.style.display = show ? 'block' : 'none';
                 };
 
+                const onStart = e => {
+                    if (e.touches.length !== 1) return;
+                    sw.startX    = e.touches[0].clientX;
+                    sw.startY    = e.touches[0].clientY;
+                    sw.moved     = false;
+                    sw.ptrActive = false;
+                    // PTR nur möglich wenn Seite beim Touch-Beginn bereits oben
+                    sw.ptrReady  = (window.scrollY === 0);
+                };
+
                 const onMove = e => {
-                    if (e.touches.length !== 1 || !sw.ptrReady) { showPTR(false); return; }
+                    if (e.touches.length !== 1 || sw.startX === undefined) return;
                     const dy = e.touches[0].clientY - sw.startY;
                     const dx = e.touches[0].clientX - sw.startX;
-                    // Nur nach unten, klar vertikal
-                    if (dy <= 0 || Math.abs(dy) < Math.abs(dx) * 3) { showPTR(false); return; }
-                    showPTR(dy > PULL_THRESHOLD);
+                    sw.moved = true;
+
+                    // PTR: nur wenn beim Start oben UND Seite immer noch oben UND nach unten
+                    if (sw.ptrReady && window.scrollY === 0 && dy > 0 && Math.abs(dy) > Math.abs(dx) * 2.5) {
+                        sw.ptrActive = true;
+                        // Natürliches Scrollen verhindern während PTR aktiv
+                        e.preventDefault();
+                        showPTR(dy > PULL_THRESHOLD);
+                    } else {
+                        sw.ptrActive = false;
+                        showPTR(false);
+                    }
                 };
 
                 const onEnd = e => {
                     showPTR(false);
-                    if (sw.startX === undefined) return;
+                    if (!sw.moved || sw.startX === undefined) return;
                     const dx = e.changedTouches[0].clientX - sw.startX;
                     const dy = e.changedTouches[0].clientY - sw.startY;
 
-                    // PTR auslösen: Seite war oben beim Start, klar nach unten gezogen
-                    if (sw.ptrReady && dy > PULL_THRESHOLD && Math.abs(dy) > Math.abs(dx) * 3) {
+                    // PTR auslösen
+                    if (sw.ptrActive && dy > PULL_THRESHOLD) {
                         handleUpdate();
+                        sw.ptrActive = false;
                         return;
                     }
 
-                    // Nur horizontales Swipen auswerten
+                    // Swipe Navigation (nur horizontal)
                     if (Math.abs(dx) < Math.abs(dy) * 2) return;
                     if (Math.abs(dx) < SWIPE_THRESHOLD) return;
 
                     const viewNow = viewRef.current;
                     const tabNow  = tabRef.current;
-
                     if (viewNow === 'detail') {
                         if (dx < -SWIPE_THRESHOLD) {
                             if (tabNow === 'standings') setTab('schedule');
                         } else if (dx > SWIPE_THRESHOLD) {
-                            if (tabNow === 'schedule') { setTab('standings'); }
-                            else if (dx > BACK_THRESHOLD) { goHome(); }
+                            if (tabNow === 'schedule') setTab('standings');
+                            else if (dx > BACK_THRESHOLD) goHome();
                         }
                     }
                 };
 
+                // touchmove NICHT passive damit e.preventDefault() funktioniert
                 window.addEventListener('touchstart', onStart, { passive: true });
-                window.addEventListener('touchmove',  onMove,  { passive: true });
+                window.addEventListener('touchmove',  onMove,  { passive: false });
                 window.addEventListener('touchend',   onEnd,   { passive: true });
                 return () => {
                     window.removeEventListener('touchstart', onStart);
