@@ -995,19 +995,72 @@
                 const sw = swipeRef.current;
                 const SWIPE_THRESHOLD = 60;
                 const BACK_THRESHOLD  = 90;
+                const PTR_HOLD_MS     = 600;  // Mindesthaltedauer für PTR
+                const PTR_MIN_PX      = 90;   // Mindestweg nach unten
+
+                const showPTR = show => {
+                    const el = document.getElementById('ptr-indicator');
+                    if (el) el.style.display = show ? 'block' : 'none';
+                };
 
                 const onStart = e => {
                     if (e.touches.length !== 1) return;
-                    sw.startX = e.touches[0].clientX;
-                    sw.startY = e.touches[0].clientY;
+                    sw.startX    = e.touches[0].clientX;
+                    sw.startY    = e.touches[0].clientY;
+                    sw.startTime = Date.now();
+                    sw.ptrTimer  = null;
+                    sw.ptrFired  = false;
+                    // Seite muss beim Fingeraufsetzen bereits oben sein
+                    // UND darf keine Scroll-Bewegung im Gange sein (scrollY stabil)
+                    sw.scrollAtStart = window.scrollY;
+                };
+
+                const onMove = e => {
+                    if (e.touches.length !== 1 || sw.startX === undefined) return;
+                    // Wenn Seite beim Start nicht oben war → kein PTR
+                    if (sw.scrollAtStart !== 0) return;
+                    // Wenn Seite jetzt nicht mehr oben → kein PTR
+                    if (window.scrollY !== 0) { showPTR(false); return; }
+
+                    const dy = e.touches[0].clientY - sw.startY;
+                    const dx = e.touches[0].clientX - sw.startX;
+
+                    // Nur nach unten, klar vertikal, genug Weg zurückgelegt
+                    if (dy < PTR_MIN_PX || Math.abs(dy) < Math.abs(dx) * 2.5) {
+                        showPTR(false);
+                        return;
+                    }
+
+                    // Zeitbedingung: PTR nur wenn Finger lange genug gehalten
+                    const held = Date.now() - sw.startTime;
+                    if (held >= PTR_HOLD_MS) {
+                        showPTR(true);
+                        sw.ptrFired = true;
+                    } else {
+                        showPTR(false);
+                    }
                 };
 
                 const onEnd = e => {
+                    showPTR(false);
                     if (sw.startX === undefined) return;
                     const dx = e.changedTouches[0].clientX - sw.startX;
                     const dy = e.changedTouches[0].clientY - sw.startY;
+                    const held = Date.now() - sw.startTime;
 
-                    // Nur horizontales Swipen auswerten (dx deutlich größer als dy)
+                    // PTR: alle Bedingungen müssen erfüllt sein
+                    if (
+                        sw.scrollAtStart === 0 &&
+                        window.scrollY   === 0 &&
+                        dy  >= PTR_MIN_PX      &&
+                        held >= PTR_HOLD_MS     &&
+                        Math.abs(dy) > Math.abs(dx) * 2.5
+                    ) {
+                        handleUpdate();
+                        return;
+                    }
+
+                    // Swipe Navigation (nur horizontal)
                     if (Math.abs(dx) < Math.abs(dy) * 2) return;
                     if (Math.abs(dx) < SWIPE_THRESHOLD) return;
 
@@ -1024,9 +1077,11 @@
                 };
 
                 window.addEventListener('touchstart', onStart, { passive: true });
+                window.addEventListener('touchmove',  onMove,  { passive: true });
                 window.addEventListener('touchend',   onEnd,   { passive: true });
                 return () => {
                     window.removeEventListener('touchstart', onStart);
+                    window.removeEventListener('touchmove',  onMove);
                     window.removeEventListener('touchend',   onEnd);
                 };
             }, []);  // eslint-disable-line
