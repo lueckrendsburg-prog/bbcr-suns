@@ -1009,13 +1009,14 @@
                 };
 
                 const onMove = e => {
-                    if (e.touches.length !== 1 || !sw.atTop) return;
+                    if (e.touches.length !== 1) return;
+                    // Seite muss aktuell UND beim Start ganz oben sein
+                    if (!sw.atTop || window.scrollY !== 0) { showPTR(false); return; }
                     const dy = e.touches[0].clientY - sw.startY;
                     const dx = e.touches[0].clientX - sw.startX;
-                    // PTR nur wenn klar nach unten (positives dy, 3:1 Verhältnis)
-                    const clearlyDown = dy > 0 && Math.abs(dy) > Math.abs(dx) * 3;
-                    if (clearlyDown && dy > 50) showPTR(dy > PULL_THRESHOLD);
-                    else showPTR(false);
+                    // Nur nach unten (dy positiv), klar vertikal (3:1)
+                    if (dy <= 0 || Math.abs(dy) < Math.abs(dx) * 3) { showPTR(false); return; }
+                    showPTR(dy > PULL_THRESHOLD);
                 };
 
                 const onEnd = e => {
@@ -1024,9 +1025,10 @@
                     const dx = e.changedTouches[0].clientX - sw.startX;
                     const dy = e.changedTouches[0].clientY - sw.startY;
 
-                    // Pull-to-Refresh: nur wenn beim Start ganz oben, klar nach unten gezogen
+                    // PTR: beim Start ganz oben, aktuell ganz oben, klar nach unten
+                    const stillAtTop  = window.scrollY === 0;
                     const clearlyDown = dy > 0 && Math.abs(dy) > Math.abs(dx) * 3;
-                    if (sw.atTop && clearlyDown && dy > PULL_THRESHOLD) {
+                    if (sw.atTop && stillAtTop && clearlyDown && dy > PULL_THRESHOLD) {
                         handleUpdate();
                         return;
                     }
