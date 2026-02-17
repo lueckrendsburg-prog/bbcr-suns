@@ -714,6 +714,10 @@
         [data-theme="dark"] .season-stats-team-name { color: var(--sky); }
         [data-theme="dark"] .season-stats-wrapper .season-stats-card { background: rgba(30,41,59,0.98); }
 
+                .match-card--cancelled { opacity: 0.6; }
+        .abgesagt-label { color: #f87171 !important; font-weight: 700; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; }
+        .pill--cancelled { background: rgba(248,113,113,0.2); color: #f87171; }
+        [data-theme="dark"] .abgesagt-label { color: #fca5a5 !important; }
         </style>
 </head>
 <body>
@@ -1247,8 +1251,9 @@
                 if (!selectedTeam) return null;
                 const standings = getStandings(selectedTeam.key);
                 const schedule  = getSchedule(selectedTeam.key);
-                const upcoming  = schedule.filter(m=>m.status==='upcoming');
-                const finished  = schedule.filter(m=>m.status==='finished' && !m.abgesagt);
+                const upcoming   = schedule.filter(m=>m.status==='upcoming' && !m.abgesagt);
+                const finished   = schedule.filter(m=>m.status==='finished' && !m.abgesagt);
+                const cancelled  = schedule.filter(m=>m.abgesagt);
 
                 // Erkenne ob zwei BBC-Teams in dieser Liga spielen
                 const bbcTeams = [...new Set(
@@ -1430,6 +1435,25 @@
                                             <div className="match-team">
                                                 <div className={`match-team-name${isBBC(m.awayTeam)?' bbc':''}`}>{m.awayTeam}</div>
                                                 {m.awayScore!==null&&<div className="match-team-score">{m.awayScore}</div>}
+                                            </div>
+                                        </div>
+                                    ))}
+                                </>)}
+                                {cancelled.length>0&&(<>
+                                    <div className="schedule-section-title" style={{marginTop:'1.1rem'}}>
+                                        Abgesagt <span className="pill pill--cancelled">{cancelled.length}</span>
+                                    </div>
+                                    {cancelled.map(m=>(
+                                        <div key={m.id} className="match-card match-card--cancelled">
+                                            <div className="match-team">
+                                                <div className={`match-team-name${isBBC(m.homeTeam)?' bbc':''}`}>{m.homeTeam}</div>
+                                            </div>
+                                            <div className="match-info">
+                                                <div className="match-date">{m.date}</div>
+                                                <div className="match-time abgesagt-label">Abgesagt</div>
+                                            </div>
+                                            <div className="match-team">
+                                                <div className={`match-team-name${isBBC(m.awayTeam)?' bbc':''}`}>{m.awayTeam}</div>
                                             </div>
                                         </div>
                                     ))}
