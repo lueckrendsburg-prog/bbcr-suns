@@ -528,7 +528,7 @@
         .btn-dismiss { background:rgba(255,255,255,0.1); color:rgba(255,255,255,0.65); }
 
         .standings-table { width:100%; border-collapse:collapse; font-family:'Barlow Condensed',sans-serif; font-size:1rem; letter-spacing:0.5px; }
-        .standings-table thead th { font-weight:900; font-style:italic; text-transform:uppercase; font-size:0.75rem; letter-spacing:1.5px; color:var(--mid); padding:0.5rem 0.3rem; text-align:center; border-bottom:2px solid rgba(91,184,245,0.2); }
+        .standings-table thead th { font-weight:900; font-style:italic; text-transform:uppercase; font-size:0.75rem; letter-spacing:1.5px; color:var(--mid); padding:0.5rem 0.3rem; text-align:center; border-bottom:1px solid rgba(91,184,245,0.2); }
         .standings-table thead th:nth-child(2) { text-align:left; }
         .standings-table tbody td { padding:0.45rem 0.3rem; text-align:center; border-bottom:1px solid rgba(74,111,165,0.1); color:var(--charcoal); }
         .standings-table tbody td:nth-child(2) { text-align:left; }
@@ -591,7 +591,7 @@
         /* Tabelle */
         [data-theme="dark"] .table-container { background: rgba(30,41,59,0.98); border-color: rgba(91,184,245,0.1); }
         [data-theme="dark"] .standings-table tbody td { color: #f1f5f9; border-color: rgba(91,184,245,0.08); }
-        [data-theme="dark"] .standings-table thead th { color: var(--sky-pale); border-color: rgba(91,184,245,0.15); }
+        [data-theme="dark"] .standings-table thead th { color: var(--mid); border-color: rgba(91,184,245,0.15); }
         [data-theme="dark"] .standings-table tbody tr:hover { background: rgba(91,184,245,0.08); }
         [data-theme="dark"] .highlight-row { background: rgba(91,184,245,0.12) !important; }
         [data-theme="dark"] .highlight-row td { color: #f1f5f9; }
@@ -650,7 +650,7 @@
 
         .header-right-buttons {
             position: absolute; top: 50%; right: 0.5rem; transform: translateY(-50%);
-            display: flex; flex-direction: column; align-items: center; gap: 0.2rem;
+            display: flex; align-items: center; gap: 0.1rem;
         }
         .darkmode-toggle {
             background: none; border: none; cursor: pointer; padding: 0.2rem;
@@ -704,19 +704,6 @@
         .season-stat-label { font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: rgba(30,48,80,0.5); }
         .season-stat-divider { width: 1px; height: 2rem; background: rgba(91,184,245,0.2); }
 
-        
-        /* Saison-Stats: Zwei-Team-Layout */
-        .season-stats-wrapper { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 0.75rem; }
-        .season-stats-card--named { flex-direction: column !important; align-items: stretch !important; padding: 0.7rem 0.9rem !important; }
-        .season-stats-team-name { font-family: 'Barlow Condensed', sans-serif; font-size: 0.7rem; font-weight: 900; letter-spacing: 1.5px; text-transform: uppercase; color: var(--sky-dark); padding: 0 0 0.4rem 0; border-bottom: 1px solid rgba(91,184,245,0.15); margin-bottom: 0.5rem; }
-        .season-stats-row { display: flex; align-items: center; justify-content: space-between; width: 100%; }
-        [data-theme="dark"] .season-stats-team-name { color: var(--sky); }
-        [data-theme="dark"] .season-stats-wrapper .season-stats-card { background: rgba(30,41,59,0.98); }
-
-                .match-card--cancelled { opacity: 0.6; }
-        .abgesagt-label { color: #f87171 !important; font-weight: 700; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; }
-        .pill--cancelled { background: rgba(248,113,113,0.2); color: #f87171; }
-        [data-theme="dark"] .abgesagt-label { color: #fca5a5 !important; }
         </style>
 </head>
 <body>
@@ -787,8 +774,6 @@
     })();
     </script>
     <script type="text/babel">
-        const { useState, useEffect, useRef } = React;
-        co
         const { useState, useEffect, useRef } = React;
         const VERSION         = 'v1.2.4';
         const GITHUB_DATA_URL = 'https://lueckrendsburg-prog.github.io/bbcr-suns/bbc-data.json';
@@ -1256,40 +1241,23 @@
                 const finished   = schedule.filter(m=>m.status==='finished' && !m.abgesagt);
                 const cancelled  = schedule.filter(m=>m.abgesagt);
 
-                // Erkenne ob zwei BBC-Teams in dieser Liga spielen
-                const bbcTeams = [...new Set(
-                    standings.filter(s => isBBC(s.team)).map(s => s.team)
-                )].sort();
-                const hasTwo = bbcTeams.length >= 2;
+                const bbcTeams = [...new Set(standings.filter(s=>isBBC(s.team)).map(s=>s.team))].sort();
+                const hasTwo   = bbcTeams.length >= 2;
 
-                // Stats für ein Team berechnen
                 const calcStats = (teamName) => {
-                    const fin = hasTwo
-                        ? finished.filter(m => m.homeTeam.toLowerCase()===teamName.toLowerCase() || m.awayTeam.toLowerCase()===teamName.toLowerCase())
-                        : finished;
-                    const w = fin.filter(m => {
-                        const isHome = m.homeTeam.toLowerCase()===teamName.toLowerCase();
-                        return isHome ? m.homeScore > m.awayScore : m.awayScore > m.homeScore;
-                    }).length;
-                    const pts = fin.reduce((s,m) => {
-                        const isHome = m.homeTeam.toLowerCase()===teamName.toLowerCase();
-                        return s + (isHome ? (m.homeScore||0) : (m.awayScore||0));
-                    }, 0);
-                    const standing = standings.find(s => s.team.toLowerCase()===teamName.toLowerCase());
-                    return {
-                        winPct: fin.length>0 ? Math.round(w/fin.length*100) : 0,
-                        avgPts: fin.length>0 ? (pts/fin.length).toFixed(1) : '-',
-                        rank:   standing ? standing.rank : '-',
-                        games:  fin.length
-                    };
+                    const tn  = teamName.toLowerCase();
+                    const fin = hasTwo ? finished.filter(m=>m.homeTeam.toLowerCase()===tn||m.awayTeam.toLowerCase()===tn) : finished;
+                    const w   = fin.filter(m=>{ const h=m.homeTeam.toLowerCase()===tn; return h?m.homeScore>m.awayScore:m.awayScore>m.homeScore; }).length;
+                    const pts = fin.reduce((s,m)=>{ const h=m.homeTeam.toLowerCase()===tn; return s+(h?(m.homeScore||0):(m.awayScore||0)); },0);
+                    const st  = standings.find(s=>s.team.toLowerCase()===tn);
+                    return { winPct:fin.length>0?Math.round(w/fin.length*100):0, avgPts:fin.length>0?(pts/fin.length).toFixed(1):'-', rank:st?st.rank:'-', games:fin.length };
                 };
 
-                // Fallback für einzelnes BBC-Team
-                const wins      = finished.filter(m => { const h=isBBC(m.homeTeam); return h?m.homeScore>m.awayScore:m.awayScore>m.homeScore; }).length;
-                const totalPts  = finished.reduce((s,m) => s+(isBBC(m.homeTeam)?(m.homeScore||0):(m.awayScore||0)),0);
-                const avgPts    = finished.length>0 ? (totalPts/finished.length).toFixed(1) : '-';
-                const winPct    = finished.length>0 ? Math.round(wins/finished.length*100) : 0;
-                const teamStanding = standings.find(s => isBBC(s.team));
+                const wins      = finished.filter(m=>{const h=isBBC(m.homeTeam);return h?m.homeScore>m.awayScore:m.awayScore>m.homeScore;}).length;
+                const totalPts  = finished.reduce((s,m)=>s+(isBBC(m.homeTeam)?(m.homeScore||0):(m.awayScore||0)),0);
+                const avgPts    = finished.length>0?(totalPts/finished.length).toFixed(1):'-';
+                const winPct    = finished.length>0?Math.round(wins/finished.length*100):0;
+                const teamStanding = standings.find(s=>isBBC(s.team));
                 return (
                     <div className="page-transition">
                         
@@ -1307,49 +1275,25 @@
                                     <div key={tn} className="season-stats-card season-stats-card--named">
                                         <div className="season-stats-team-name">{tn}</div>
                                         <div className="season-stats-row">
-                                            <div className="season-stat">
-                                                <span className="season-stat-value">{st.winPct}%</span>
-                                                <span className="season-stat-label">Siege</span>
-                                            </div>
+                                            <div className="season-stat"><span className="season-stat-value">{st.winPct}%</span><span className="season-stat-label">Siege</span></div>
                                             <div className="season-stat-divider"/>
-                                            <div className="season-stat">
-                                                <span className="season-stat-value">{st.avgPts}</span>
-                                                <span className="season-stat-label">Ø Pkt</span>
-                                            </div>
+                                            <div className="season-stat"><span className="season-stat-value">{st.avgPts}</span><span className="season-stat-label">Ø Pkt</span></div>
                                             <div className="season-stat-divider"/>
-                                            <div className="season-stat">
-                                                <span className="season-stat-value">{st.rank}</span>
-                                                <span className="season-stat-label">Platz</span>
-                                            </div>
+                                            <div className="season-stat"><span className="season-stat-value">{st.rank}</span><span className="season-stat-label">Platz</span></div>
                                             <div className="season-stat-divider"/>
-                                            <div className="season-stat">
-                                                <span className="season-stat-value">{st.games}</span>
-                                                <span className="season-stat-label">Sp</span>
-                                            </div>
+                                            <div className="season-stat"><span className="season-stat-value">{st.games}</span><span className="season-stat-label">Sp</span></div>
                                         </div>
                                     </div>
                                 );
                             }) : (
                                 <div className="season-stats-card">
-                                    <div className="season-stat">
-                                        <span className="season-stat-value">{winPct}%</span>
-                                        <span className="season-stat-label">Siege</span>
-                                    </div>
+                                    <div className="season-stat"><span className="season-stat-value">{winPct}%</span><span className="season-stat-label">Siege</span></div>
                                     <div className="season-stat-divider"/>
-                                    <div className="season-stat">
-                                        <span className="season-stat-value">{avgPts}</span>
-                                        <span className="season-stat-label">Ø Pkt</span>
-                                    </div>
+                                    <div className="season-stat"><span className="season-stat-value">{avgPts}</span><span className="season-stat-label">Ø Pkt</span></div>
                                     <div className="season-stat-divider"/>
-                                    <div className="season-stat">
-                                        <span className="season-stat-value">{teamStanding ? teamStanding.rank : '-'}</span>
-                                        <span className="season-stat-label">Platz</span>
-                                    </div>
+                                    <div className="season-stat"><span className="season-stat-value">{teamStanding?teamStanding.rank:'-'}</span><span className="season-stat-label">Platz</span></div>
                                     <div className="season-stat-divider"/>
-                                    <div className="season-stat">
-                                        <span className="season-stat-value">{finished.length}</span>
-                                        <span className="season-stat-label">Sp</span>
-                                    </div>
+                                    <div className="season-stat"><span className="season-stat-value">{finished.length}</span><span className="season-stat-label">Sp</span></div>
                                 </div>
                             )}
                             </div>
@@ -1446,16 +1390,9 @@
                                     </div>
                                     {cancelled.map(m=>(
                                         <div key={m.id} className="match-card match-card--cancelled">
-                                            <div className="match-team">
-                                                <div className={`match-team-name${isBBC(m.homeTeam)?' bbc':''}`}>{m.homeTeam}</div>
-                                            </div>
-                                            <div className="match-info">
-                                                <div className="match-date">{m.date}</div>
-                                                <div className="match-time abgesagt-label">Abgesagt</div>
-                                            </div>
-                                            <div className="match-team">
-                                                <div className={`match-team-name${isBBC(m.awayTeam)?' bbc':''}`}>{m.awayTeam}</div>
-                                            </div>
+                                            <div className="match-team"><div className={`match-team-name${isBBC(m.homeTeam)?' bbc':''}`}>{m.homeTeam}</div></div>
+                                            <div className="match-info"><div className="match-date">{m.date}</div><div className="match-time abgesagt-label">Abgesagt</div></div>
+                                            <div className="match-team"><div className={`match-team-name${isBBC(m.awayTeam)?' bbc':''}`}>{m.awayTeam}</div></div>
                                         </div>
                                     ))}
                                 </>)}
@@ -1544,7 +1481,6 @@
         }
 
         ReactDOM.render(<Dashboard/>, document.getElementById('root'));
-
-    </script>
+</script>
 </body>
 </html>
