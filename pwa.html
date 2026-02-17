@@ -824,29 +824,10 @@
     <script>
     // ── SERVICE WORKER ────────────────────────────────────────────
     if ('serviceWorker' in navigator) {
-        // Erst ALLE alten Service Worker deregistrieren (auch Blob-SWs)
+        // Alle alten Service Worker deregistrieren
         navigator.serviceWorker.getRegistrations().then(regs => {
-            const kills = regs
-                .filter(r => !r.active || !r.active.scriptURL.includes('sw.js'))
-                .map(r => r.unregister());
-            Promise.all(kills).then(() => {
-                // Dann neuen SW registrieren
-                navigator.serviceWorker.register('./sw.js', { scope: './', updateViaCache: 'none' })
-                    .then(r => {
-                        console.log('✅ SW:', r.scope);
-                        r.update(); // Sofort auf Update prüfen
-                        r.addEventListener('updatefound', () => {
-                            const newSW = r.installing;
-                            newSW.addEventListener('statechange', () => {
-                                if (newSW.state === 'installed') {
-                                    newSW.postMessage({ type: 'SKIP_WAITING' });
-                                    window.location.reload();
-                                }
-                            });
-                        });
-                    })
-                    .catch(e => console.warn('SW Fehler:', e));
-            });
+            regs.forEach(r => r.unregister());
+            console.log('SW deregistriert:', regs.length);
         });
     }
 
