@@ -526,8 +526,12 @@
         .update-button:disabled { opacity:0.2; }
         .basketball-spinner { font-size:2.5rem; animation:spin 1s linear infinite; display:inline-block; }
         .loading { display:flex; flex-direction:column; align-items:center; justify-content:center; padding:3rem; gap:1rem; font-family:'Barlow Condensed',sans-serif; font-size:1rem; letter-spacing:2px; color:var(--mid); text-transform:uppercase; }
-        .last-result { font-family:'Barlow Condensed',sans-serif; font-size:0.72rem; font-weight:700; letter-spacing:0.5px; color:rgba(255,255,255,0.5); display:flex; align-items:center; gap:0.3rem; }
+        .last-result { font-family:'Barlow Condensed',sans-serif; font-size:0.72rem; font-weight:700; letter-spacing:0.5px; display:flex; align-items:center; gap:0.35rem; margin-top:0.3rem; flex-wrap:wrap; }
+        .last-result-badge { font-size:0.65rem; font-weight:900; padding:0.1rem 0.35rem; border-radius:3px; letter-spacing:1px; }
+        .last-result-badge.won  { background:rgba(34,197,94,0.2); color:#4ade80; }
+        .last-result-badge.lost { background:rgba(239,68,68,0.2);  color:#f87171; }
         .last-result-score { color:var(--sky); font-weight:900; }
+        .last-result-matchup { color:rgba(255,255,255,0.4); font-size:0.65rem; font-weight:400; }
         </style>
 </head>
 <body>
@@ -898,15 +902,16 @@
                                         const isHome = isBBC(lr.homeTeam);
                                         const bbcScore  = isHome ? lr.homeScore : lr.awayScore;
                                         const oppScore  = isHome ? lr.awayScore : lr.homeScore;
-                                        const opponent  = isHome ? lr.awayTeam  : lr.homeTeam;
                                         const won = bbcScore > oppScore;
                                         return (
                                             <div className="last-result">
-                                                <span style={{color: won ? 'var(--sky)' : 'rgba(255,255,255,0.4)', fontWeight:900}}>
+                                                <span className={`last-result-badge ${won ? 'won' : 'lost'}`}>
                                                     {won ? 'S' : 'N'}
                                                 </span>
                                                 <span className="last-result-score">{bbcScore}:{oppScore}</span>
-                                                <span style={{opacity:0.5, fontSize:'0.65rem'}}>vs {opponent}</span>
+                                                <span className="last-result-matchup">
+                                                    {lr.homeTeam} – {lr.awayTeam}
+                                                </span>
                                             </div>
                                         );
                                     })()}
