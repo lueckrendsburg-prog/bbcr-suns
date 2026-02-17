@@ -372,6 +372,11 @@
         .nav-item.active::after { transform:scaleX(1); }
 
         /* ── BOTTOM SHEET MODAL ──────────────────────────────────── */
+        body.modal-open {
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+        }
         .modal-overlay {
             position:fixed; inset:0;
             background:rgba(17,24,39,0.72);
@@ -379,6 +384,8 @@
             z-index:3000;
             backdrop-filter:blur(4px);
             animation:overlayIn 0.22s ease-out;
+            touch-action: none;
+            overscroll-behavior: none;
         }
         @keyframes overlayIn { from{opacity:0;} to{opacity:1;} }
 
@@ -670,14 +677,22 @@
             const [isUpdating,    setIsUpdating]   = useState(false);
             const [updateDone,    setUpdateDone]    = useState(false);
 
-            // Modal: body-scroll sperren/entsperren
+            // Modal: body-scroll sperren (iOS-sicher)
             useEffect(() => {
                 if (selectedMatch) {
-                    document.body.style.overflow = 'hidden';
+                    const scrollY = window.scrollY;
+                    document.body.classList.add('modal-open');
+                    document.body.style.top = `-${scrollY}px`;
                 } else {
-                    document.body.style.overflow = '';
+                    const scrollY = parseInt(document.body.style.top || '0') * -1;
+                    document.body.classList.remove('modal-open');
+                    document.body.style.top = '';
+                    if (scrollY) window.scrollTo(0, scrollY);
                 }
-                return () => { document.body.style.overflow = ''; };
+                return () => {
+                    document.body.classList.remove('modal-open');
+                    document.body.style.top = '';
+                };
             }, [selectedMatch]);
 
             const loadData = async () => {
@@ -909,7 +924,7 @@
                 const finished  = schedule.filter(m=>m.status==='finished');
                 return (
                     <div className="page-transition">
-                        <button className="back-button" onClick={goHome}>← Zurück</button>
+                        
                         <div className="team-detail-header">
                             <div className="team-detail-title">{selectedTeam.name}</div>
                             <div className="team-detail-league">{selectedTeam.league}</div>
