@@ -528,7 +528,8 @@
         .btn-dismiss { background:rgba(255,255,255,0.1); color:rgba(255,255,255,0.65); }
 
         .standings-table { width:100%; border-collapse:collapse; font-family:'Barlow Condensed',sans-serif; font-size:1rem; letter-spacing:0.5px; }
-        .standings-table thead th { font-weight:900; font-style:italic; text-transform:uppercase; font-size:0.75rem; letter-spacing:1.5px; color:var(--mid); padding:0.5rem 0.3rem; text-align:center; border-bottom:2px solid var(--sky-pale); }
+        .standings-table thead { background: var(--slate); }
+        .standings-table thead th { font-weight:900; font-style:italic; text-transform:uppercase; font-size:0.75rem; letter-spacing:1.5px; color:var(--sky-pale); padding:0.5rem 0.3rem; text-align:center; border-bottom:2px solid rgba(91,184,245,0.3); }
         .standings-table thead th:nth-child(2) { text-align:left; }
         .standings-table tbody td { padding:0.45rem 0.3rem; text-align:center; border-bottom:1px solid rgba(74,111,165,0.1); color:var(--charcoal); }
         .standings-table tbody td:nth-child(2) { text-align:left; }
@@ -700,7 +701,11 @@
 
         /* Feature 5: Saison-Stats Karte */
         .season-stats-wrapper { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 0.75rem; }
-        .season-stats-card--named { padding-top: 0.6rem !important; }
+        .season-stats-card--named { 
+            padding: 0.7rem 0.9rem !important; 
+            flex-direction: column; 
+            align-items: stretch; 
+        }
         .season-stats-team-name {
             font-family: 'Barlow Condensed', sans-serif;
             font-size: 0.7rem; font-weight: 900; letter-spacing: 1.5px;
@@ -708,7 +713,7 @@
             padding: 0 0 0.4rem 0; border-bottom: 1px solid rgba(91,184,245,0.15);
             margin-bottom: 0.5rem;
         }
-        .season-stats-row { display: flex; align-items: center; justify-content: space-around; }
+        .season-stats-row { display: flex; align-items: center; justify-content: space-between; width: 100%; }
         [data-theme="dark"] .season-stats-team-name { color: var(--sky); }
         [data-theme="dark"] .season-stats-card--named { border-color: rgba(91,184,245,0.2); }
         .season-stats-card {
@@ -718,7 +723,7 @@
             margin-bottom: 0.75rem;
             box-shadow: 0 2px 10px rgba(30,48,80,0.07);
         }
-        .season-stat { display: flex; flex-direction: column; align-items: center; gap: 0.15rem; }
+        .season-stat { display: flex; flex-direction: column; align-items: center; gap: 0.15rem; flex: 1; }
         .season-stat-value { font-family: 'Barlow Condensed', sans-serif; font-size: 1.4rem; font-weight: 900; color: var(--sky-dark); line-height: 1; }
         .season-stat-label { font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: rgba(30,48,80,0.5); }
         .season-stat-divider { width: 1px; height: 2rem; background: rgba(91,184,245,0.2); }
@@ -786,13 +791,7 @@
         window.addEventListener('scroll', () => { ty = window.scrollY; }, {passive:true});
         function tick() {
             cy = lerp(cy, ty, 0.04);
-            img.style.transform = 'translateY(' + (-(cy * 0.18)) + 'px)';
-            requestAnimationFrame(tick);
-        }
-        tick();
-    })();
-    </script>
-    <script type="text/babel">
+    
         const { useState, useEffect, useRef } = React;
         const VERSION         = 'v1.2.4';
         const GITHUB_DATA_URL = 'https://lueckrendsburg-prog.github.io/bbcr-suns/bbc-data.json';
@@ -1337,22 +1336,22 @@
                                             <div className="season-stats-row">
                                                 <div className="season-stat">
                                                     <span className="season-stat-value">{st.winPct}%</span>
-                                                    <span className="season-stat-label">Siegquote</span>
+                                                    <span className="season-stat-label">Siege</span>
                                                 </div>
                                                 <div className="season-stat-divider"/>
                                                 <div className="season-stat">
                                                     <span className="season-stat-value">{st.avgPts}</span>
-                                                    <span className="season-stat-label">Ø Punkte</span>
+                                                    <span className="season-stat-label">Ø Pkt</span>
                                                 </div>
                                                 <div className="season-stat-divider"/>
                                                 <div className="season-stat">
                                                     <span className="season-stat-value">{st.rank}</span>
-                                                    <span className="season-stat-label">Tabellenplatz</span>
+                                                    <span className="season-stat-label">Platz</span>
                                                 </div>
                                                 <div className="season-stat-divider"/>
                                                 <div className="season-stat">
                                                     <span className="season-stat-value">{st.games}</span>
-                                                    <span className="season-stat-label">Spiele</span>
+                                                    <span className="season-stat-label">Sp</span>
                                                 </div>
                                             </div>
                                         </div>
