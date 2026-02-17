@@ -670,16 +670,15 @@
             const [isUpdating,    setIsUpdating]   = useState(false);
             const [updateDone,    setUpdateDone]    = useState(false);
 
+            // Modal: body-scroll sperren/entsperren
             useEffect(() => {
-                loadData();
-                if (window.electronAPI) {
-                    window.electronAPI.onDataUpdated(d => { setData(d); setLastUpdated(d.lastUpdated); });
-                    window.electronAPI.onInitialDataLoaded(d => { setData(d); setLastUpdated(d.lastUpdated); setLoading(false); });
-                    window.electronAPI.onScrapingComplete(d => { setData(d); setLastUpdated(d.lastUpdated); setIsUpdating(false); setLoading(false); });
-                    window.electronAPI.onScrapingError(() => { setIsUpdating(false); setLoading(false); });
-                    window.electronAPI.onStartScraping(() => { setIsUpdating(true); setLoading(true); });
+                if (selectedMatch) {
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.body.style.overflow = '';
                 }
-            }, []);
+                return () => { document.body.style.overflow = ''; };
+            }, [selectedMatch]);
 
             const loadData = async () => {
                 setLoading(true);
@@ -698,6 +697,19 @@
                     setLoading(false);
                 }
             };
+
+            useEffect(() => {
+                loadData();
+                if (window.electronAPI) {
+                    window.electronAPI.onDataUpdated(d => { setData(d); setLastUpdated(d.lastUpdated); });
+                    window.electronAPI.onInitialDataLoaded(d => { setData(d); setLastUpdated(d.lastUpdated); setLoading(false); });
+                    window.electronAPI.onScrapingComplete(d => { setData(d); setLastUpdated(d.lastUpdated); setIsUpdating(false); setLoading(false); });
+                    window.electronAPI.onScrapingError(() => { setIsUpdating(false); setLoading(false); });
+                    window.electronAPI.onStartScraping(() => { setIsUpdating(true); setLoading(true); });
+                }
+            }, []);
+
+
 
             const handleUpdate = async () => {
                 setIsUpdating(true); setLoading(true);
