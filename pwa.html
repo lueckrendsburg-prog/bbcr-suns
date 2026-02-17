@@ -274,6 +274,10 @@
             font-weight:900; font-size:1.05rem; color:var(--mid); width:32px;
         }
         .highlight-row td { background:rgba(91,184,245,0.08)!important; font-weight:700; }
+        .match-card--cancelled { opacity:0.55; }
+        .abgesagt-label { color:#f87171 !important; font-weight:700; font-size:0.7rem; text-transform:uppercase; letter-spacing:1px; }
+        .pill--cancelled { background:rgba(248,113,113,0.2); color:#f87171; }
+        [data-theme="dark"] .abgesagt-label { color:#fca5a5 !important; }
         .highlight-row .rank-cell { color:var(--sky-dark); }
 
         /* ── SCHEDULE ────────────────────────────────────────────── */
@@ -591,7 +595,7 @@
         /* Tabelle */
         [data-theme="dark"] .table-container { background: rgba(30,41,59,0.98); border-color: rgba(91,184,245,0.1); }
         [data-theme="dark"] .standings-table tbody td { color: #f1f5f9; border-color: rgba(91,184,245,0.08); }
-        [data-theme="dark"] .standings-table thead th { color: var(--mid); border-color: rgba(91,184,245,0.15); }
+        [data-theme="dark"] .standings-table thead th { color: rgba(148,163,184,0.9); border-color: rgba(91,184,245,0.15); }
         [data-theme="dark"] .standings-table tbody tr:hover { background: rgba(91,184,245,0.08); }
         [data-theme="dark"] .highlight-row { background: rgba(91,184,245,0.12) !important; }
         [data-theme="dark"] .highlight-row td { color: #f1f5f9; }
@@ -650,7 +654,7 @@
 
         .header-right-buttons {
             position: absolute; top: 50%; right: 0.5rem; transform: translateY(-50%);
-            display: flex; align-items: center; gap: 0.1rem;
+            display: flex; flex-direction: column; align-items: center; gap: 0.2rem;
         }
         .darkmode-toggle {
             background: none; border: none; cursor: pointer; padding: 0.2rem;
@@ -692,6 +696,11 @@
         .next-match-days { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 0.75rem; letter-spacing: 1px; background: var(--sky-dark); color: #fff; padding: 0.1rem 0.45rem; border-radius: 4px; }
 
         /* Feature 5: Saison-Stats Karte */
+        .season-stats-wrapper { display:flex; flex-direction:column; gap:0.5rem; margin-bottom:0.75rem; }
+        .season-stats-card--named { flex-direction:column !important; align-items:stretch !important; padding:0.7rem 0.9rem !important; margin-bottom:0 !important; }
+        .season-stats-team-name { font-family:'Barlow Condensed',sans-serif; font-size:0.7rem; font-weight:900; letter-spacing:1.5px; text-transform:uppercase; color:var(--sky-dark); padding:0 0 0.35rem 0; border-bottom:1px solid rgba(91,184,245,0.15); margin-bottom:0.45rem; }
+        .season-stats-row { display:flex; align-items:center; justify-content:space-between; width:100%; }
+        [data-theme="dark"] .season-stats-team-name { color:var(--sky); }
         .season-stats-card {
             background: rgba(255,255,255,0.92);
             border-radius: 12px; padding: 0.85rem 1rem;
