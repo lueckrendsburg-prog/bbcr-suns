@@ -528,8 +528,7 @@
         .btn-dismiss { background:rgba(255,255,255,0.1); color:rgba(255,255,255,0.65); }
 
         .standings-table { width:100%; border-collapse:collapse; font-family:'Barlow Condensed',sans-serif; font-size:1rem; letter-spacing:0.5px; }
-        .standings-table thead { background: var(--slate); }
-        .standings-table thead th { font-weight:900; font-style:italic; text-transform:uppercase; font-size:0.75rem; letter-spacing:1.5px; color:var(--sky-pale); padding:0.5rem 0.3rem; text-align:center; border-bottom:2px solid rgba(91,184,245,0.3); }
+        .standings-table thead th { font-weight:900; font-style:italic; text-transform:uppercase; font-size:0.75rem; letter-spacing:1.5px; color:var(--mid); padding:0.5rem 0.3rem; text-align:center; border-bottom:2px solid rgba(91,184,245,0.2); }
         .standings-table thead th:nth-child(2) { text-align:left; }
         .standings-table tbody td { padding:0.45rem 0.3rem; text-align:center; border-bottom:1px solid rgba(74,111,165,0.1); color:var(--charcoal); }
         .standings-table tbody td:nth-child(2) { text-align:left; }
@@ -592,7 +591,7 @@
         /* Tabelle */
         [data-theme="dark"] .table-container { background: rgba(30,41,59,0.98); border-color: rgba(91,184,245,0.1); }
         [data-theme="dark"] .standings-table tbody td { color: #f1f5f9; border-color: rgba(91,184,245,0.08); }
-        [data-theme="dark"] .standings-table thead th { color: var(--mid); border-color: rgba(91,184,245,0.15); }
+        [data-theme="dark"] .standings-table thead th { color: var(--sky-pale); border-color: rgba(91,184,245,0.15); }
         [data-theme="dark"] .standings-table tbody tr:hover { background: rgba(91,184,245,0.08); }
         [data-theme="dark"] .highlight-row { background: rgba(91,184,245,0.12) !important; }
         [data-theme="dark"] .highlight-row td { color: #f1f5f9; }
@@ -789,6 +788,8 @@
     </script>
     <script type="text/babel">
         const { useState, useEffect, useRef } = React;
+        co
+        const { useState, useEffect, useRef } = React;
         const VERSION         = 'v1.2.4';
         const GITHUB_DATA_URL = 'https://lueckrendsburg-prog.github.io/bbcr-suns/bbc-data.json';
 
@@ -977,7 +978,7 @@
                     } catch(e) { console.warn('Clipboard nicht verfügbar'); }
                 }
             };
-                        const selectTeam = t => { setSelectedTeam(t); setView('detail'); setTab('standings'); };
+                        const selectTeam = t => { setSelectedTeam(t); setView('detail'); setTab('standings'); window.scrollTo(0,0); };
             const goHome     = () => { setView('home'); setSelectedTeam(null); setSelectedMatch(null); };
 
             // ── SWIPE NAVIGATION ──────────────────────────────────
@@ -1543,6 +1544,3 @@
         }
 
         ReactDOM.render(<Dashboard/>, document.getElementById('root'));
-</script>
-</body>
-</html>
