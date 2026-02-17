@@ -18,10 +18,10 @@
       "name": "U18 weiblich",
       "league": "Oberliga",
       "position": 1,
-      "wins": 10,
+      "wins": 11,
       "losses": 0,
-      "points": 20,
-      "games": 10,
+      "points": 22,
+      "games": 11,
       "liga_id": "48937"
     },
     {
@@ -176,12 +176,12 @@
     {
       "rank": 1,
       "team": "BBC Rendsburg",
-      "games": 10,
-      "wins": 10,
+      "games": 11,
+      "wins": 11,
       "losses": 0,
-      "points": 20,
-      "pointsFor": 968,
-      "pointsAgainst": 305,
+      "points": 22,
+      "pointsFor": 1087,
+      "pointsAgainst": 351,
       "teamKey": "u18w"
     },
     {
@@ -231,12 +231,12 @@
     {
       "rank": 6,
       "team": "BBC Rendsburg 2",
-      "games": 4,
+      "games": 5,
       "wins": 1,
-      "losses": 3,
+      "losses": 4,
       "points": 2,
-      "pointsFor": 195,
-      "pointsAgainst": 326,
+      "pointsFor": 241,
+      "pointsAgainst": 445,
       "teamKey": "u18w"
     },
     {
@@ -1098,21 +1098,6 @@
       "spielUrl": ""
     },
     {
-      "id": "damen-51",
-      "teamKey": "damen",
-      "league": "Oberliga Nord",
-      "date": "31.01.2026",
-      "time": "15:30",
-      "homeTeam": "MTSV Hohenwestedt",
-      "awayTeam": "BBC Rendsburg",
-      "homeScore": null,
-      "awayScore": null,
-      "venue": "N/A",
-      "status": "cancelled",
-      "abgesagt": true,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688335"
-    },
-    {
       "id": "damen-52",
       "teamKey": "damen",
       "league": "Oberliga Nord",
@@ -1141,21 +1126,6 @@
       "status": "finished",
       "abgesagt": false,
       "spielUrl": ""
-    },
-    {
-      "id": "damen-3",
-      "teamKey": "damen",
-      "league": "Oberliga Nord",
-      "date": "07.02.2026",
-      "time": "13:30",
-      "homeTeam": "MTSV Hohenwestedt",
-      "awayTeam": "Itzehoe Eagles 2",
-      "homeScore": null,
-      "awayScore": null,
-      "venue": "N/A",
-      "status": "cancelled",
-      "abgesagt": true,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688287"
     },
     {
       "id": "damen-58",
@@ -1353,6 +1323,21 @@
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688351"
     },
     {
+      "id": "damen-51",
+      "teamKey": "damen",
+      "league": "Oberliga Nord",
+      "date": "26.02.2026",
+      "time": "18:30",
+      "homeTeam": "MTSV Hohenwestedt",
+      "awayTeam": "BBC Rendsburg",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Sporthalle Am Park, Am Park 8, 24594 Hohenwestedt",
+      "status": "upcoming",
+      "abgesagt": false,
+      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688335"
+    },
+    {
       "id": "damen-32",
       "teamKey": "damen",
       "league": "Oberliga Nord",
@@ -1501,6 +1486,21 @@
       "status": "upcoming",
       "abgesagt": false,
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688363"
+    },
+    {
+      "id": "damen-3",
+      "teamKey": "damen",
+      "league": "Oberliga Nord",
+      "date": "19.03.2026",
+      "time": "18:30",
+      "homeTeam": "MTSV Hohenwestedt",
+      "awayTeam": "Itzehoe Eagles 2",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "N/A",
+      "status": "upcoming",
+      "abgesagt": false,
+      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688287"
     },
     {
       "id": "damen-85",
@@ -2065,12 +2065,12 @@
       "time": "17:45",
       "homeTeam": "BBC Rendsburg 2",
       "awayTeam": "BBC Rendsburg",
-      "homeScore": null,
-      "awayScore": null,
-      "venue": "Helene-Lange-Gymnasium, Ritterstr. 12, 24768 Rendsburg",
-      "status": "upcoming",
+      "homeScore": 46,
+      "awayScore": 119,
+      "venue": "N/A",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2818951"
+      "spielUrl": ""
     },
     {
       "id": "u18w-49",
@@ -4038,5 +4038,5 @@
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2711890"
     }
   ],
-  "lastUpdated": "2026-02-17T12:20:32.924Z"
+  "lastUpdated": "2026-02-17T19:04:40.921Z"
 }
