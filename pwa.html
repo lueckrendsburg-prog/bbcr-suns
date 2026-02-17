@@ -276,6 +276,8 @@
         .highlight-row td { background:rgba(91,184,245,0.08)!important; font-weight:700; }
         .match-card--cancelled { opacity:0.55; }
         .abgesagt-label { color:#f87171 !important; font-weight:700; font-size:0.7rem; text-transform:uppercase; letter-spacing:1px; text-align:center; display:block; width:100%; }
+        .abgesagt-badge { display:inline-block; margin-top:0.25rem; padding:0.15rem 0.45rem; background:rgba(248,113,113,0.15); border:1px solid rgba(248,113,113,0.4); color:#f87171; font-size:0.6rem; font-weight:900; text-transform:uppercase; letter-spacing:1.5px; border-radius:3px; }
+        [data-theme="dark"] .abgesagt-badge { background:rgba(248,113,113,0.1); border-color:rgba(248,113,113,0.3); color:#fca5a5; }
         .pill--cancelled { background:rgba(248,113,113,0.2); color:#f87171; }
         [data-theme="dark"] .abgesagt-label { color:#fca5a5 !important; }
         .highlight-row .rank-cell { color:var(--sky-dark); }
@@ -330,7 +332,7 @@
         .match-info {
             text-align:center; background:#E8F4FD;
             border-radius:8px; padding:0.45rem 0.3rem;
-        }
+         text-align:center; }
         .match-date {
             font-family:'Barlow Condensed',sans-serif;
             font-size:0.67rem; font-weight:600; color:var(--mid); letter-spacing:0.3px;
@@ -1400,7 +1402,10 @@
                                     {cancelled.map(m=>(
                                         <div key={m.id} className="match-card match-card--cancelled">
                                             <div className="match-team"><div className={`match-team-name${isBBC(m.homeTeam)?' bbc':''}`}>{m.homeTeam}</div></div>
-                                            <div className="match-info"><div className="match-date">{m.date}</div><div className="match-time abgesagt-label">Abgesagt</div></div>
+                                            <div className="match-info">
+                                                <div className="match-date">{m.date}</div>
+                                                <span className="abgesagt-badge">Abgesagt</span>
+                                            </div>
                                             <div className="match-team"><div className={`match-team-name${isBBC(m.awayTeam)?' bbc':''}`}>{m.awayTeam}</div></div>
                                         </div>
                                     ))}
