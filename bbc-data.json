@@ -2067,8 +2067,8 @@
       "awayTeam": "BBC Rendsburg",
       "homeScore": null,
       "awayScore": null,
-      "venue": "N/A",
-      "status": "finished",
+      "venue": "Helene-Lange-Gymnasium, Ritterstr. 12, 24768 Rendsburg",
+      "status": "upcoming",
       "abgesagt": false,
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2818951"
     },
@@ -4038,5 +4038,5 @@
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2711890"
     }
   ],
-  "lastUpdated": "2026-02-17T10:44:55.055Z"
+  "lastUpdated": "2026-02-17T12:20:31.058Z"
 }
