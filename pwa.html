@@ -1016,13 +1016,23 @@
                                 </div>
                                 {standings.length>0?(
                                     <table>
-                                        <thead><tr><th>#</th><th>Team</th><th>Sp</th><th>S</th><th>N</th><th>Pkt</th></tr></thead>
+                                        <thead><tr><th>#</th><th>Team</th><th>Sp</th><th>S</th><th>N</th><th>+/-</th><th>Pkt</th></tr></thead>
                                         <tbody>
                                             {standings.map(item=>(
                                                 <tr key={`${item.rank}-${item.team}`} className={isBBC(item.team)?'highlight-row':''}>
                                                     <td className="rank-cell">{item.rank}</td>
                                                     <td style={{fontSize:'0.78rem', maxWidth:'90px', overflow:'hidden', textOverflow:'ellipsis', whiteSpace:'nowrap'}} title={item.team}>{item.team}</td>
                                                     <td>{item.games}</td><td>{item.wins}</td><td>{item.losses}</td>
+                                                    <td style={{
+                                                        fontWeight:'700',
+                                                        color: item.pointsFor!=null&&item.pointsAgainst!=null
+                                                            ? (item.pointsFor-item.pointsAgainst>=0 ? 'var(--sky-dark)' : '#f87171')
+                                                            : 'inherit'
+                                                    }}>
+                                                        {item.pointsFor!=null&&item.pointsAgainst!=null
+                                                            ? (item.pointsFor-item.pointsAgainst>0?'+':'')+(item.pointsFor-item.pointsAgainst)
+                                                            : '-'}
+                                                    </td>
                                                     <td style={{fontWeight:'700',color:'var(--sky-dark)'}}>{item.points}</td>
                                                 </tr>
                                             ))}
