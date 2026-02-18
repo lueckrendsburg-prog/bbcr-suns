@@ -259,7 +259,6 @@
             text-transform:uppercase; color:var(--white);
         }
         table { width:100%; border-collapse:collapse; }
-        thead { background:#E8F4FD; }
         th {
             padding:0.55rem 0.55rem;
             font-family:'Barlow Condensed',sans-serif;
@@ -534,7 +533,7 @@
         .btn-dismiss { background:rgba(255,255,255,0.1); color:rgba(255,255,255,0.65); }
 
         .standings-table { width:100%; border-collapse:collapse; font-family:'Barlow Condensed',sans-serif; font-size:1rem; letter-spacing:0.5px; }
-        .standings-table thead th { font-weight:900; font-style:italic; text-transform:uppercase; font-size:0.75rem; letter-spacing:1.5px; color:var(--mid); padding:0.5rem 0.3rem; text-align:center; border-bottom:1px solid rgba(91,184,245,0.2); }
+        .standings-table thead th { font-weight:900; font-style:italic; text-transform:uppercase; font-size:0.75rem; letter-spacing:1.5px; color:var(--mid); padding:0.5rem 0.3rem; text-align:center; border-bottom:2px solid rgba(91,184,245,0.3); }
         .standings-table thead th:nth-child(2) { text-align:left; }
         .standings-table tbody td { padding:0.45rem 0.3rem; text-align:center; border-bottom:1px solid rgba(74,111,165,0.1); color:var(--charcoal); }
         .standings-table tbody td:nth-child(2) { text-align:left; }
@@ -597,7 +596,8 @@
         /* Tabelle */
         [data-theme="dark"] .table-container { background: rgba(30,41,59,0.98); border-color: rgba(91,184,245,0.1); }
         [data-theme="dark"] .standings-table tbody td { color: #f1f5f9; border-color: rgba(91,184,245,0.08); }
-        [data-theme="dark"] .standings-table thead th { color: rgba(148,163,184,0.9); border-color: rgba(91,184,245,0.15); }
+        [data-theme="dark"] .standings-table thead { background: rgba(30,41,59,0.98); }
+        [data-theme="dark"] .standings-table thead th { color: rgba(148,163,184,0.85); border-bottom: 2px solid rgba(91,184,245,0.25); }
         [data-theme="dark"] .standings-table tbody tr:hover { background: rgba(91,184,245,0.08); }
         [data-theme="dark"] .highlight-row { background: rgba(91,184,245,0.12) !important; }
         [data-theme="dark"] .highlight-row td { color: #f1f5f9; }
@@ -715,6 +715,18 @@
         .season-stat-label { font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: rgba(30,48,80,0.5); }
         .season-stat-divider { width: 1px; height: 2rem; background: rgba(91,184,245,0.2); }
 
+        
+        .form-strip-row { display:flex; flex-direction:column; gap:0.15rem; margin-top:0.25rem; }
+        .form-strip-row + .form-strip-row { margin-top:0.35rem; }
+        .form-strip-label { font-size:0.58rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:rgba(30,48,80,0.45); margin-bottom:0.1rem; }
+        [data-theme="dark"] .form-strip-label { color:rgba(148,163,184,0.6); }
+        .next-match-banner-container { margin-bottom:1rem; }
+        
+        .next-match-team-label {
+            font-size:0.6rem; font-weight:900; letter-spacing:2px; text-transform:uppercase;
+            color:var(--sky-dark); margin-bottom:0.3rem; opacity:0.75;
+        }
+        [data-theme="dark"] .next-match-team-label { color:#cbd5e1; opacity:0.9; }
         </style>
 </head>
 <body>
@@ -786,7 +798,7 @@
     </script>
     <script type="text/babel">
         const { useState, useEffect, useRef } = React;
-        const VERSION         = 'v1.2.4';
+        const VERSION         = 'v1.2.5';
         const GITHUB_DATA_URL = 'https://lueckrendsburg-prog.github.io/bbcr-suns/bbc-data.json';
 
         const IconHome = () => (
@@ -1019,38 +1031,46 @@
             const isBBC      = n  => { const s=(n||'').toLowerCase(); return s.includes('rendsburg')||s.includes('bbc'); };
             const getStandings = key => (data.standings||[]).filter(s=>s.teamKey===key);
             const getSchedule  = key => (data.schedule||[]).filter(m=>m.teamKey===key&&(isBBC(m.homeTeam)||isBBC(m.awayTeam)));
-            const getFormStrip = team => {
+            const getFormStrips = team => {
                 const toDate = str => {
                     if (!str) return new Date(0);
                     const p = str.split('.');
-                    return p.length===3 ? new Date(+p[2],+p[1]-1,+p[0]) : new Date(0);
+                    if (p.length !== 3) return new Date(0);
+                    let y = +p[2];
+                    if (y < 100) y += 2000;
+                    return new Date(y, +p[1]-1, +p[0]);
                 };
-                return (data.schedule||[])
-                    .filter(m => m.teamKey===team.key && m.status==='finished' && !m.abgesagt
-                        && m.homeScore!==null && m.awayScore!==null
-                        && (isBBC(m.homeTeam)||isBBC(m.awayTeam)))
-                    .sort((a,b) => toDate(b.date)-toDate(a.date))
-                    .slice(0,5)
-                    .map(m => {
-                        const isHome = isBBC(m.homeTeam);
-                        const bbcScore = isHome ? m.homeScore : m.awayScore;
-                        const oppScore = isHome ? m.awayScore : m.homeScore;
-                        return bbcScore > oppScore ? 'W' : 'L';
+                const allGames = (data.schedule||[]).filter(m => m.teamKey===team.key && m.status==='finished' && !m.abgesagt && m.homeScore!==null && m.awayScore!==null);
+                const bbcTeams = [...new Set(allGames.map(m => isBBC(m.homeTeam) ? m.homeTeam : m.awayTeam).filter(t => t.toLowerCase().includes('rendsburg')))].sort();
+                if (bbcTeams.length <= 1) {
+                    const form = allGames.filter(m=>isBBC(m.homeTeam)||isBBC(m.awayTeam)).sort((a,b)=>toDate(b.date)-toDate(a.date)).slice(0,5).map(m=>{
+                        const isHome=isBBC(m.homeTeam); const bs=isHome?m.homeScore:m.awayScore; const os=isHome?m.awayScore:m.homeScore; return bs>os?'W':'L';
                     });
+                    return form.length > 0 ? [{ name: null, form }] : [];
+                }
+                return bbcTeams.map(tn => {
+                    const form = allGames.filter(m=>m.homeTeam.toLowerCase()===tn.toLowerCase()||m.awayTeam.toLowerCase()===tn.toLowerCase()).sort((a,b)=>toDate(b.date)-toDate(a.date)).slice(0,5).map(m=>{
+                        const isHome=m.homeTeam.toLowerCase()===tn.toLowerCase(); const bs=isHome?m.homeScore:m.awayScore; const os=isHome?m.awayScore:m.homeScore; return bs>os?'W':'L';
+                    });
+                    return { name: tn, form };
+                }).filter(s => s.form.length > 0);
             };
 
-            const getNextMatch = () => {
+            const getNextMatches = () => {
                 const toDate = str => {
                     if (!str) return new Date(9999,0,1);
                     const p = str.split('.');
-                    return p.length===3 ? new Date(+p[2],+p[1]-1,+p[0]) : new Date(9999,0,1);
+                    if (p.length !== 3) return new Date(9999,0,1);
+                    let y = +p[2];
+                    if (y < 100) y += 2000;
+                    return new Date(y, +p[1]-1, +p[0]);
                 };
-                const now = new Date(); now.setHours(0,0,0,0);
                 const upcoming = (data.schedule||[])
-                    .filter(m => m.status==='upcoming' && !m.abgesagt
-                        && (isBBC(m.homeTeam)||isBBC(m.awayTeam)))
+                    .filter(m => m.status==='upcoming' && !m.abgesagt && (isBBC(m.homeTeam)||isBBC(m.awayTeam)))
                     .sort((a,b) => toDate(a.date)-toDate(b.date));
-                return upcoming.length > 0 ? upcoming[0] : null;
+                if (upcoming.length === 0) return [];
+                const firstDate = upcoming[0].date;
+                return upcoming.filter(m => m.date === firstDate);
             };
 
             const getLastResult = team => {
@@ -1140,12 +1160,14 @@
 
             // ── HOME ──────────────────────────────────────────────
             const renderHome = () => {
-                const nextMatch = getNextMatch();
-                const daysUntil = nextMatch ? (() => {
+                const nextMatches = getNextMatches();
+                const daysUntil = nextMatches.length > 0 ? (() => {
                     const today = new Date(); today.setHours(0,0,0,0);
-                    const p = (nextMatch.date||'').split('.');
-                    const d = p.length===3 ? new Date(+p[2],+p[1]-1,+p[0]) : null;
-                    if (!d) return null;
+                    const p = (nextMatches[0].date||'').split('.');
+                    if (p.length !== 3) return null;
+                    let y = +p[2];
+                    if (y < 100) y += 2000;
+                    const d = new Date(y, +p[1]-1, +p[0]);
                     const diff = Math.round((d-today)/(1000*60*60*24));
                     if (diff === 0) return 'Heute';
                     if (diff === 1) return 'Morgen';
@@ -1153,21 +1175,26 @@
                 })() : null;
                 return (
                 <div className="page-transition">
-                    {nextMatch && (
-                        <div className="next-match-banner" style={{cursor:'pointer'}}
-                            onClick={()=>{
-                                const team = (data.teams||[]).find(t=>t.key===nextMatch.teamKey);
-                                if (team) { selectTeam(team); setTab('schedule'); }
-                            }}>
-                            <div className="next-match-label">⏱ Nächstes Spiel</div>
-                            <div className="next-match-teams">
-                                {nextMatch.homeTeam} <span className="next-match-vs">vs</span> {nextMatch.awayTeam}
-                            </div>
-                            <div className="next-match-meta">
-                                {daysUntil && <span className="next-match-days">{daysUntil}</span>}
-                                <span>{nextMatch.date}{nextMatch.time ? ' · ' + nextMatch.time : ''}</span>
-                                {nextMatch.venue && nextMatch.venue !== 'N/A' && <span>· {nextMatch.venue}</span>}
-                            </div>
+                    {nextMatches.length > 0 && (
+                        <div className="next-match-banner-container">
+                            <div className="next-match-label">⏱ Nächstes Spiel{nextMatches.length > 1 ? 'e' : ''}</div>
+                            {nextMatches.map((m,i) => {
+                                const team = (data.teams||[]).find(t=>t.key===m.teamKey);
+                                return (
+                                <div key={m.id} className="next-match-banner" style={{cursor:'pointer', marginTop: i>0?'0.5rem':'0'}}
+                                    onClick={()=>{ if (team) { selectTeam(team); setTab('schedule'); } }}>
+                                    {team && <div className="next-match-team-label">{team.name}</div>}
+                                    <div className="next-match-teams">
+                                        {m.homeTeam} <span className="next-match-vs">vs</span> {m.awayTeam}
+                                    </div>
+                                    <div className="next-match-meta">
+                                        {i===0 && daysUntil && <span className="next-match-days">{daysUntil}</span>}
+                                        <span>{m.date}{m.time ? ' · ' + m.time : ''}</span>
+                                        {m.venue && m.venue !== 'N/A' && <span>· {m.venue}</span>}
+                                    </div>
+                                </div>
+                                );
+                            })}
                         </div>
                     )}
                     <div className="section-label">Teams</div>
@@ -1197,16 +1224,18 @@
                                             </div>
                                         </div>
                                     {(() => {
-                                        const form = getFormStrip(t);
-                                        if (form.length > 0) return (
-                                            <div className="form-strip">
-                                                {form.map((r,i) => (
-                                                    <span key={i} className={`form-dot ${r==='W'?'form-win':'form-loss'}`}
-                                                        title={r==='W'?'Sieg':'Niederlage'}/>
-                                                ))}
+                                        const strips = getFormStrips(t);
+                                        if (strips.length === 0) return null;
+                                        return strips.map((strip,idx) => (
+                                            <div key={idx} className="form-strip-row">
+                                                {strip.name && <span className="form-strip-label">{strip.name}</span>}
+                                                <div className="form-strip">
+                                                    {strip.form.map((r,i) => (
+                                                        <span key={i} className={`form-dot ${r==='W'?'form-win':'form-loss'}`} title={r==='W'?'Sieg':'Niederlage'}/>
+                                                    ))}
+                                                </div>
                                             </div>
-                                        );
-                                        return null;
+                                        ));
                                     })()}
                                     {(() => {
                                         const lr = getLastResult(t);
@@ -1214,6 +1243,8 @@
                                         const isHome = isBBC(lr.homeTeam);
                                         const bbcScore  = isHome ? lr.homeScore : lr.awayScore;
                                         const oppScore  = isHome ? lr.awayScore : lr.homeScore;
+                                        const bbcTeam   = isHome ? lr.homeTeam : lr.awayTeam;
+                                        const oppTeam   = isHome ? lr.awayTeam : lr.homeTeam;
                                         const won = bbcScore > oppScore;
                                         return (
                                             <div className="last-result">
@@ -1222,7 +1253,7 @@
                                                 </span>
                                                 <span className="last-result-score">{bbcScore}:{oppScore}</span>
                                                 <span className="last-result-matchup">
-                                                    {lr.homeTeam} – {lr.awayTeam}
+                                                    {bbcTeam} – {oppTeam}
                                                 </span>
                                             </div>
                                         );
