@@ -1233,21 +1233,6 @@
       "spielUrl": ""
     },
     {
-      "id": "damen-63",
-      "teamKey": "damen",
-      "league": "Oberliga Nord",
-      "date": "15.02.2026",
-      "time": "18:00",
-      "homeTeam": "TSB Flensburg",
-      "awayTeam": "Kieler TB 2",
-      "homeScore": null,
-      "awayScore": null,
-      "venue": "N/A",
-      "status": "cancelled",
-      "abgesagt": true,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688347"
-    },
-    {
       "id": "damen-68",
       "teamKey": "damen",
       "league": "Oberliga Nord",
@@ -1336,6 +1321,21 @@
       "status": "upcoming",
       "abgesagt": false,
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688335"
+    },
+    {
+      "id": "damen-63",
+      "teamKey": "damen",
+      "league": "Oberliga Nord",
+      "date": "28.02.2026",
+      "time": "16:30",
+      "homeTeam": "TSB Flensburg",
+      "awayTeam": "Kieler TB 2",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "N/A",
+      "status": "upcoming",
+      "abgesagt": false,
+      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688347"
     },
     {
       "id": "damen-32",
@@ -4038,5 +4038,5 @@
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2711890"
     }
   ],
-  "lastUpdated": "2026-02-18T11:19:39.952Z"
+  "lastUpdated": "2026-02-19T19:40:39.730Z"
 }
