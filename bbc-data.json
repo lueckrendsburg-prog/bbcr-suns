@@ -2787,9 +2787,9 @@
       "awayTeam": "BBC Rendsburg",
       "homeScore": null,
       "awayScore": null,
-      "venue": "Ernst-Barlach-Gymnasium, Charles-Roß-Ring 53, 24106 Kiel",
-      "status": "upcoming",
-      "abgesagt": false,
+      "venue": "N/A",
+      "status": "cancelled",
+      "abgesagt": true,
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2719275"
     },
     {
@@ -2803,8 +2803,8 @@
       "homeScore": null,
       "awayScore": null,
       "venue": "N/A",
-      "status": "upcoming",
-      "abgesagt": false,
+      "status": "cancelled",
+      "abgesagt": true,
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2719273"
     },
     {
@@ -4038,5 +4038,5 @@
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2711890"
     }
   ],
-  "lastUpdated": "2026-02-20T13:27:26.450Z"
+  "lastUpdated": "2026-02-20T16:09:53.383Z"
 }
