@@ -88,12 +88,12 @@
     {
       "rank": 2,
       "team": "Itzehoe Eagles 2",
-      "games": 9,
-      "wins": 7,
+      "games": 10,
+      "wins": 8,
       "losses": 2,
-      "points": 14,
-      "pointsFor": 557,
-      "pointsAgainst": 451,
+      "points": 16,
+      "pointsFor": 595,
+      "pointsAgainst": 483,
       "teamKey": "damen"
     },
     {
@@ -165,12 +165,12 @@
     {
       "rank": 9,
       "team": "Kieler TB 2",
-      "games": 10,
+      "games": 11,
       "wins": 0,
-      "losses": 10,
+      "losses": 11,
       "points": 0,
-      "pointsFor": 310,
-      "pointsAgainst": 588,
+      "pointsFor": 342,
+      "pointsAgainst": 626,
       "teamKey": "damen"
     },
     {
@@ -187,23 +187,23 @@
     {
       "rank": 2,
       "team": "Itzehoe Eagles",
-      "games": 8,
-      "wins": 6,
+      "games": 9,
+      "wins": 7,
       "losses": 2,
-      "points": 12,
-      "pointsFor": 486,
-      "pointsAgainst": 410,
+      "points": 14,
+      "pointsFor": 538,
+      "pointsAgainst": 454,
       "teamKey": "u18w"
     },
     {
       "rank": 3,
       "team": "TSV Klausdorf",
-      "games": 9,
+      "games": 10,
       "wins": 4,
-      "losses": 5,
+      "losses": 6,
       "points": 8,
-      "pointsFor": 461,
-      "pointsAgainst": 458,
+      "pointsFor": 501,
+      "pointsAgainst": 512,
       "teamKey": "u18w"
     },
     {
@@ -230,24 +230,24 @@
     },
     {
       "rank": 6,
-      "team": "BBC Rendsburg 2",
-      "games": 5,
-      "wins": 1,
-      "losses": 4,
-      "points": 2,
-      "pointsFor": 241,
-      "pointsAgainst": 445,
+      "team": "Lübecker TS",
+      "games": 10,
+      "wins": 2,
+      "losses": 8,
+      "points": 4,
+      "pointsFor": 342,
+      "pointsAgainst": 691,
       "teamKey": "u18w"
     },
     {
       "rank": 7,
-      "team": "Lübecker TS",
-      "games": 9,
+      "team": "BBC Rendsburg 2",
+      "games": 6,
       "wins": 1,
-      "losses": 8,
+      "losses": 5,
       "points": 2,
-      "pointsFor": 288,
-      "pointsAgainst": 651,
+      "pointsFor": 285,
+      "pointsAgainst": 497,
       "teamKey": "u18w"
     },
     {
@@ -286,12 +286,12 @@
     {
       "rank": 2,
       "team": "Kieler Förde Baskets",
-      "games": 6,
-      "wins": 4,
+      "games": 7,
+      "wins": 5,
       "losses": 2,
-      "points": 8,
-      "pointsFor": 395,
-      "pointsAgainst": 335,
+      "points": 10,
+      "pointsFor": 509,
+      "pointsAgainst": 363,
       "teamKey": "u16w"
     },
     {
@@ -319,12 +319,12 @@
     {
       "rank": 5,
       "team": "TuS Nortorf",
-      "games": 5,
+      "games": 6,
       "wins": 0,
-      "losses": 5,
+      "losses": 6,
       "points": 0,
-      "pointsFor": 207,
-      "pointsAgainst": 420,
+      "pointsFor": 235,
+      "pointsAgainst": 534,
       "teamKey": "u16w"
     },
     {
@@ -440,38 +440,49 @@
     {
       "rank": 1,
       "team": "VfL Oldesloe",
-      "games": 10,
+      "games": 11,
       "wins": 9,
-      "losses": 1,
+      "losses": 2,
       "points": 18,
-      "pointsFor": 854,
-      "pointsAgainst": 652,
+      "pointsFor": 904,
+      "pointsAgainst": 746,
       "teamKey": "u12ml"
     },
     {
       "rank": 2,
       "team": "Möllner SV",
-      "games": 11,
-      "wins": 8,
+      "games": 12,
+      "wins": 9,
       "losses": 3,
-      "points": 16,
-      "pointsFor": 770,
-      "pointsAgainst": 648,
+      "points": 18,
+      "pointsFor": 864,
+      "pointsAgainst": 698,
       "teamKey": "u12ml"
     },
     {
       "rank": 3,
       "team": "Kieler TB",
-      "games": 12,
-      "wins": 7,
+      "games": 13,
+      "wins": 8,
       "losses": 5,
-      "points": 14,
-      "pointsFor": 899,
-      "pointsAgainst": 754,
+      "points": 16,
+      "pointsFor": 987,
+      "pointsAgainst": 836,
       "teamKey": "u12ml"
     },
     {
       "rank": 4,
+      "team": "Kieler Förde Baskets",
+      "games": 13,
+      "wins": 6,
+      "losses": 7,
+      "points": 12,
+      "pointsFor": 751,
+      "pointsAgainst": 857,
+      "teamKey": "u12ml"
+    },
+    {
+      "rank": 5,
       "team": "TuS Nortorf",
       "games": 9,
       "wins": 5,
@@ -479,17 +490,6 @@
       "points": 10,
       "pointsFor": 570,
       "pointsAgainst": 620,
-      "teamKey": "u12ml"
-    },
-    {
-      "rank": 5,
-      "team": "Kieler Förde Baskets",
-      "games": 12,
-      "wins": 5,
-      "losses": 7,
-      "points": 10,
-      "pointsFor": 686,
-      "pointsAgainst": 817,
       "teamKey": "u12ml"
     },
     {
@@ -506,23 +506,23 @@
     {
       "rank": 7,
       "team": "BSG Kisdorf Kaltenkirchen",
-      "games": 10,
+      "games": 11,
       "wins": 3,
-      "losses": 7,
+      "losses": 8,
       "points": 6,
-      "pointsFor": 719,
-      "pointsAgainst": 698,
+      "pointsFor": 801,
+      "pointsAgainst": 786,
       "teamKey": "u12ml"
     },
     {
       "rank": 8,
       "team": "TuS Felde e.V.",
-      "games": 11,
+      "games": 12,
       "wins": 2,
-      "losses": 9,
+      "losses": 10,
       "points": 4,
-      "pointsFor": 584,
-      "pointsAgainst": 794,
+      "pointsFor": 624,
+      "pointsAgainst": 859,
       "teamKey": "u12ml"
     }
   ],
@@ -1240,12 +1240,12 @@
       "time": "14:30",
       "homeTeam": "Itzehoe Eagles 2",
       "awayTeam": "Kieler TB 2",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 38,
+      "awayScore": 32,
       "venue": "N/A",
-      "status": "upcoming",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688352"
+      "spielUrl": ""
     },
     {
       "id": "damen-66",
@@ -2080,12 +2080,12 @@
       "time": "11:00",
       "homeTeam": "TSV Klausdorf",
       "awayTeam": "Lübecker TS",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 40,
+      "awayScore": 54,
       "venue": "N/A",
-      "status": "upcoming",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2721163"
+      "spielUrl": ""
     },
     {
       "id": "u18w-1",
@@ -2095,12 +2095,12 @@
       "time": "14:00",
       "homeTeam": "BBC Rendsburg 2",
       "awayTeam": "Itzehoe Eagles",
-      "homeScore": null,
-      "awayScore": null,
-      "venue": "Helene-Lange-Gymnasium, Ritterstr. 12, 24768 Rendsburg",
-      "status": "upcoming",
+      "homeScore": 44,
+      "awayScore": 52,
+      "venue": "N/A",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2816057"
+      "spielUrl": ""
     },
     {
       "id": "u18w-51",
@@ -2485,12 +2485,12 @@
       "time": "12:00",
       "homeTeam": "TuS Nortorf",
       "awayTeam": "Kieler Förde Baskets",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 28,
+      "awayScore": 114,
       "venue": "N/A",
-      "status": "upcoming",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2710265"
+      "spielUrl": ""
     },
     {
       "id": "u16w-20",
@@ -3835,12 +3835,12 @@
       "time": "11:00",
       "homeTeam": "Möllner SV",
       "awayTeam": "VfL Oldesloe",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 94,
+      "awayScore": 50,
       "venue": "N/A",
-      "status": "upcoming",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2711939"
+      "spielUrl": ""
     },
     {
       "id": "u12ml-52",
@@ -3850,12 +3850,12 @@
       "time": "12:00",
       "homeTeam": "BSG Kisdorf Kaltenkirchen",
       "awayTeam": "Kieler TB",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 82,
+      "awayScore": 88,
       "venue": "N/A",
-      "status": "upcoming",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2711940"
+      "spielUrl": ""
     },
     {
       "id": "u12ml-49",
@@ -3865,12 +3865,12 @@
       "time": "14:00",
       "homeTeam": "Kieler Förde Baskets",
       "awayTeam": "TuS Felde e.V.",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 65,
+      "awayScore": 40,
       "venue": "N/A",
-      "status": "upcoming",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2711937"
+      "spielUrl": ""
     },
     {
       "id": "u12ml-50",
@@ -4038,5 +4038,5 @@
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2711890"
     }
   ],
-  "lastUpdated": "2026-02-20T16:23:05.436Z"
+  "lastUpdated": "2026-02-21T15:59:31.742Z"
 }
