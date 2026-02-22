@@ -7,9 +7,9 @@
       "league": "Oberliga Nord",
       "position": 7,
       "wins": 4,
-      "losses": 6,
+      "losses": 7,
       "points": 8,
-      "games": 10,
+      "games": 11,
       "liga_id": "48934"
     },
     {
@@ -77,12 +77,12 @@
     {
       "rank": 1,
       "team": "TuS Nortorf",
-      "games": 12,
-      "wins": 11,
+      "games": 13,
+      "wins": 12,
       "losses": 1,
-      "points": 22,
-      "pointsFor": 816,
-      "pointsAgainst": 552,
+      "points": 24,
+      "pointsFor": 871,
+      "pointsAgainst": 600,
       "teamKey": "damen"
     },
     {
@@ -99,56 +99,56 @@
     {
       "rank": 3,
       "team": "MTSV Hohenwestedt",
-      "games": 9,
-      "wins": 6,
+      "games": 10,
+      "wins": 7,
       "losses": 3,
-      "points": 12,
-      "pointsFor": 532,
-      "pointsAgainst": 455,
+      "points": 14,
+      "pointsFor": 588,
+      "pointsAgainst": 495,
       "teamKey": "damen"
     },
     {
       "rank": 4,
       "team": "Lübecker TS",
-      "games": 9,
+      "games": 10,
       "wins": 6,
-      "losses": 3,
+      "losses": 4,
       "points": 12,
-      "pointsFor": 491,
-      "pointsAgainst": 426,
+      "pointsFor": 539,
+      "pointsAgainst": 481,
       "teamKey": "damen"
     },
     {
       "rank": 5,
       "team": "Kieler Förde Baskets",
-      "games": 11,
-      "wins": 5,
+      "games": 12,
+      "wins": 6,
       "losses": 6,
-      "points": 10,
-      "pointsFor": 516,
-      "pointsAgainst": 542,
+      "points": 12,
+      "pointsFor": 597,
+      "pointsAgainst": 606,
       "teamKey": "damen"
     },
     {
       "rank": 6,
       "team": "TSB Flensburg",
-      "games": 11,
+      "games": 12,
       "wins": 5,
-      "losses": 6,
+      "losses": 7,
       "points": 10,
-      "pointsFor": 512,
-      "pointsAgainst": 497,
+      "pointsFor": 552,
+      "pointsAgainst": 553,
       "teamKey": "damen"
     },
     {
       "rank": 7,
       "team": "BBC Rendsburg",
-      "games": 10,
+      "games": 11,
       "wins": 4,
-      "losses": 6,
+      "losses": 7,
       "points": 8,
-      "pointsFor": 576,
-      "pointsAgainst": 617,
+      "pointsFor": 640,
+      "pointsAgainst": 698,
       "teamKey": "damen"
     },
     {
@@ -197,6 +197,17 @@
     },
     {
       "rank": 3,
+      "team": "BG Ostholstein",
+      "games": 8,
+      "wins": 4,
+      "losses": 4,
+      "points": 8,
+      "pointsFor": 397,
+      "pointsAgainst": 474,
+      "teamKey": "u18w"
+    },
+    {
+      "rank": 4,
       "team": "TSV Klausdorf",
       "games": 10,
       "wins": 4,
@@ -207,25 +218,14 @@
       "teamKey": "u18w"
     },
     {
-      "rank": 4,
-      "team": "BG Ostholstein",
-      "games": 7,
-      "wins": 3,
-      "losses": 4,
-      "points": 6,
-      "pointsFor": 343,
-      "pointsAgainst": 422,
-      "teamKey": "u18w"
-    },
-    {
       "rank": 5,
       "team": "Kieler Förde Baskets e.V.",
-      "games": 9,
+      "games": 10,
       "wins": 3,
-      "losses": 6,
+      "losses": 7,
       "points": 6,
-      "pointsFor": 464,
-      "pointsAgainst": 633,
+      "pointsFor": 516,
+      "pointsAgainst": 687,
       "teamKey": "u18w"
     },
     {
@@ -1270,12 +1270,12 @@
       "time": "16:00",
       "homeTeam": "TSB Flensburg",
       "awayTeam": "MTSV Hohenwestedt",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 40,
+      "awayScore": 56,
       "venue": "N/A",
-      "status": "upcoming",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688305"
+      "spielUrl": ""
     },
     {
       "id": "damen-69",
@@ -1285,12 +1285,12 @@
       "time": "16:00",
       "homeTeam": "BBC Rendsburg",
       "awayTeam": "Kieler Förde Baskets",
-      "homeScore": null,
-      "awayScore": null,
-      "venue": "Helene-Lange-Gymnasium, Ritterstr. 12, 24768 Rendsburg",
-      "status": "upcoming",
+      "homeScore": 64,
+      "awayScore": 81,
+      "venue": "N/A",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688353"
+      "spielUrl": ""
     },
     {
       "id": "damen-67",
@@ -1300,12 +1300,12 @@
       "time": "16:30",
       "homeTeam": "Lübecker TS",
       "awayTeam": "TuS Nortorf",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 48,
+      "awayScore": 55,
       "venue": "N/A",
-      "status": "upcoming",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688351"
+      "spielUrl": ""
     },
     {
       "id": "damen-51",
@@ -2095,12 +2095,12 @@
       "time": "12:00",
       "homeTeam": "Kieler Förde Baskets e.V.",
       "awayTeam": "BG Ostholstein",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 52,
+      "awayScore": 54,
       "venue": "N/A",
-      "status": "upcoming",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2721165"
+      "spielUrl": ""
     },
     {
       "id": "u18w-19",
@@ -4038,5 +4038,5 @@
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2711890"
     }
   ],
-  "lastUpdated": "2026-02-22T13:58:18.935Z"
+  "lastUpdated": "2026-02-22T17:51:56.874Z"
 }
