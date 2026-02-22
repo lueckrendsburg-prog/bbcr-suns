@@ -66,10 +66,10 @@
       "name": "U12 ML",
       "league": "Miniliga",
       "position": 6,
-      "wins": 3,
+      "wins": 4,
       "losses": 6,
-      "points": 6,
-      "games": 9,
+      "points": 8,
+      "games": 10,
       "liga_id": "48964"
     }
   ],
@@ -98,6 +98,17 @@
     },
     {
       "rank": 3,
+      "team": "MTSV Hohenwestedt",
+      "games": 9,
+      "wins": 6,
+      "losses": 3,
+      "points": 12,
+      "pointsFor": 532,
+      "pointsAgainst": 455,
+      "teamKey": "damen"
+    },
+    {
+      "rank": 4,
       "team": "Lübecker TS",
       "games": 9,
       "wins": 6,
@@ -108,29 +119,7 @@
       "teamKey": "damen"
     },
     {
-      "rank": 4,
-      "team": "MTSV Hohenwestedt",
-      "games": 8,
-      "wins": 5,
-      "losses": 3,
-      "points": 10,
-      "pointsFor": 477,
-      "pointsAgainst": 413,
-      "teamKey": "damen"
-    },
-    {
       "rank": 5,
-      "team": "TSB Flensburg",
-      "games": 10,
-      "wins": 5,
-      "losses": 5,
-      "points": 10,
-      "pointsFor": 470,
-      "pointsAgainst": 442,
-      "teamKey": "damen"
-    },
-    {
-      "rank": 6,
       "team": "Kieler Förde Baskets",
       "games": 11,
       "wins": 5,
@@ -138,6 +127,17 @@
       "points": 10,
       "pointsFor": 516,
       "pointsAgainst": 542,
+      "teamKey": "damen"
+    },
+    {
+      "rank": 6,
+      "team": "TSB Flensburg",
+      "games": 11,
+      "wins": 5,
+      "losses": 6,
+      "points": 10,
+      "pointsFor": 512,
+      "pointsAgainst": 497,
       "teamKey": "damen"
     },
     {
@@ -484,23 +484,23 @@
     {
       "rank": 5,
       "team": "TuS Nortorf",
-      "games": 9,
+      "games": 10,
       "wins": 5,
-      "losses": 4,
+      "losses": 5,
       "points": 10,
-      "pointsFor": 570,
-      "pointsAgainst": 620,
+      "pointsFor": 614,
+      "pointsAgainst": 693,
       "teamKey": "u12ml"
     },
     {
       "rank": 6,
       "team": "BBC Rendsburg (w)",
-      "games": 9,
-      "wins": 3,
+      "games": 10,
+      "wins": 4,
       "losses": 6,
-      "points": 6,
-      "pointsFor": 550,
-      "pointsAgainst": 649,
+      "points": 8,
+      "pointsFor": 623,
+      "pointsAgainst": 693,
       "teamKey": "u12ml"
     },
     {
@@ -1255,12 +1255,12 @@
       "time": "18:00",
       "homeTeam": "MTSV Hohenwestedt",
       "awayTeam": "TSB Flensburg",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 55,
+      "awayScore": 42,
       "venue": "N/A",
-      "status": "upcoming",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688350"
+      "spielUrl": ""
     },
     {
       "id": "damen-21",
@@ -2013,21 +2013,6 @@
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2721127"
     },
     {
-      "id": "u18w-16",
-      "teamKey": "u18w",
-      "league": "Oberliga",
-      "date": "14.02.2026",
-      "time": "14:00",
-      "homeTeam": "BBC Rendsburg 2",
-      "awayTeam": "BG Ostholstein",
-      "homeScore": null,
-      "awayScore": null,
-      "venue": "N/A",
-      "status": "cancelled",
-      "abgesagt": true,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2817022"
-    },
-    {
       "id": "u18w-45",
       "teamKey": "u18w",
       "league": "Oberliga",
@@ -2191,6 +2176,21 @@
       "status": "upcoming",
       "abgesagt": false,
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2721168"
+    },
+    {
+      "id": "u18w-16",
+      "teamKey": "u18w",
+      "league": "Oberliga",
+      "date": "08.03.2026",
+      "time": "10:00",
+      "homeTeam": "BBC Rendsburg 2",
+      "awayTeam": "BG Ostholstein",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Helene-Lange-Gymnasium, Ritterstr. 12, 24768 Rendsburg",
+      "status": "upcoming",
+      "abgesagt": false,
+      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2817022"
     },
     {
       "id": "u18w-10",
@@ -3880,12 +3880,12 @@
       "time": "10:00",
       "homeTeam": "BBC Rendsburg (w)",
       "awayTeam": "TuS Nortorf",
-      "homeScore": null,
-      "awayScore": null,
-      "venue": "Helene-Lange-Gymnasium, Ritterstr. 12, 24768 Rendsburg",
-      "status": "upcoming",
+      "homeScore": 73,
+      "awayScore": 44,
+      "venue": "N/A",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2711938"
+      "spielUrl": ""
     },
     {
       "id": "u12ml-15",
@@ -4038,5 +4038,5 @@
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2711890"
     }
   ],
-  "lastUpdated": "2026-02-21T15:59:31.742Z"
+  "lastUpdated": "2026-02-22T13:58:18.935Z"
 }
