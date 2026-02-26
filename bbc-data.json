@@ -6,10 +6,10 @@
       "name": "Damen",
       "league": "Oberliga Nord",
       "position": 7,
-      "wins": 4,
+      "wins": 5,
       "losses": 7,
-      "points": 8,
-      "games": 11,
+      "points": 10,
+      "games": 12,
       "liga_id": "48934"
     },
     {
@@ -99,12 +99,12 @@
     {
       "rank": 3,
       "team": "MTSV Hohenwestedt",
-      "games": 10,
+      "games": 11,
       "wins": 7,
-      "losses": 3,
+      "losses": 4,
       "points": 14,
-      "pointsFor": 588,
-      "pointsAgainst": 495,
+      "pointsFor": 658,
+      "pointsAgainst": 567,
       "teamKey": "damen"
     },
     {
@@ -143,12 +143,12 @@
     {
       "rank": 7,
       "team": "BBC Rendsburg",
-      "games": 11,
-      "wins": 4,
+      "games": 12,
+      "wins": 5,
       "losses": 7,
-      "points": 8,
-      "pointsFor": 640,
-      "pointsAgainst": 698,
+      "points": 10,
+      "pointsFor": 712,
+      "pointsAgainst": 768,
       "teamKey": "damen"
     },
     {
@@ -1315,12 +1315,12 @@
       "time": "18:30",
       "homeTeam": "MTSV Hohenwestedt",
       "awayTeam": "BBC Rendsburg",
-      "homeScore": null,
-      "awayScore": null,
-      "venue": "Sporthalle Am Park, Am Park 8, 24594 Hohenwestedt",
-      "status": "upcoming",
+      "homeScore": 70,
+      "awayScore": 72,
+      "venue": "N/A",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688335"
+      "spielUrl": ""
     },
     {
       "id": "damen-63",
@@ -4038,5 +4038,5 @@
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2711890"
     }
   ],
-  "lastUpdated": "2026-02-26T05:47:59.250Z"
+  "lastUpdated": "2026-02-26T20:49:52.231Z"
 }
