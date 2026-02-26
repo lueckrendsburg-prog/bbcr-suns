@@ -1333,8 +1333,8 @@
       "homeScore": null,
       "awayScore": null,
       "venue": "N/A",
-      "status": "upcoming",
-      "abgesagt": false,
+      "status": "cancelled",
+      "abgesagt": true,
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688347"
     },
     {
@@ -1998,21 +1998,6 @@
       "spielUrl": ""
     },
     {
-      "id": "u18w-13",
-      "teamKey": "u18w",
-      "league": "Oberliga",
-      "date": "08.02.2026",
-      "time": "16:00",
-      "homeTeam": "TSV Klausdorf",
-      "awayTeam": "Kieler Förde Baskets e.V.",
-      "homeScore": null,
-      "awayScore": null,
-      "venue": "N/A",
-      "status": "cancelled",
-      "abgesagt": true,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2721127"
-    },
-    {
       "id": "u18w-45",
       "teamKey": "u18w",
       "league": "Oberliga",
@@ -2191,6 +2176,21 @@
       "status": "upcoming",
       "abgesagt": false,
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2817022"
+    },
+    {
+      "id": "u18w-13",
+      "teamKey": "u18w",
+      "league": "Oberliga",
+      "date": "14.03.2026",
+      "time": "10:00",
+      "homeTeam": "TSV Klausdorf",
+      "awayTeam": "Kieler Förde Baskets e.V.",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "N/A",
+      "status": "upcoming",
+      "abgesagt": false,
+      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2721127"
     },
     {
       "id": "u18w-10",
@@ -2718,21 +2718,6 @@
       "spielUrl": ""
     },
     {
-      "id": "u14w-27",
-      "teamKey": "u14w",
-      "league": "Oberliga",
-      "date": "07.02.2026",
-      "time": "12:30",
-      "homeTeam": "Kieler Förde Baskets",
-      "awayTeam": "Itzehoe Eagles",
-      "homeScore": null,
-      "awayScore": null,
-      "venue": "N/A",
-      "status": "cancelled",
-      "abgesagt": true,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2719284"
-    },
-    {
       "id": "u14w-25",
       "teamKey": "u14w",
       "league": "Oberliga",
@@ -2821,6 +2806,21 @@
       "status": "upcoming",
       "abgesagt": false,
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2719269"
+    },
+    {
+      "id": "u14w-27",
+      "teamKey": "u14w",
+      "league": "Oberliga",
+      "date": "14.03.2026",
+      "time": "13:30",
+      "homeTeam": "Kieler Förde Baskets",
+      "awayTeam": "Itzehoe Eagles",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "N/A",
+      "status": "upcoming",
+      "abgesagt": false,
+      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2719284"
     },
     {
       "id": "u14w-24",
@@ -4038,5 +4038,5 @@
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2711890"
     }
   ],
-  "lastUpdated": "2026-02-22T17:51:56.874Z"
+  "lastUpdated": "2026-02-26T05:47:59.250Z"
 }
