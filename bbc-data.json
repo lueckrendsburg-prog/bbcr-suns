@@ -54,10 +54,10 @@
       "name": "U12 weiblich",
       "league": "Oberliga",
       "position": 1,
-      "wins": 7,
+      "wins": 8,
       "losses": 1,
-      "points": 14,
-      "games": 8,
+      "points": 16,
+      "games": 9,
       "liga_id": "48944"
     },
     {
@@ -396,12 +396,12 @@
     {
       "rank": 1,
       "team": "BBC Rendsburg",
-      "games": 8,
-      "wins": 7,
+      "games": 9,
+      "wins": 8,
       "losses": 1,
-      "points": 14,
-      "pointsFor": 473,
-      "pointsAgainst": 314,
+      "points": 16,
+      "pointsFor": 535,
+      "pointsAgainst": 345,
       "teamKey": "u12w"
     },
     {
@@ -429,12 +429,12 @@
     {
       "rank": 4,
       "team": "TuS Nortorf",
-      "games": 8,
+      "games": 9,
       "wins": 0,
-      "losses": 8,
+      "losses": 9,
       "points": 0,
-      "pointsFor": 227,
-      "pointsAgainst": 550,
+      "pointsFor": 258,
+      "pointsAgainst": 612,
       "teamKey": "u12w"
     },
     {
@@ -3100,12 +3100,12 @@
       "time": "16:00",
       "homeTeam": "BBC Rendsburg",
       "awayTeam": "TuS Nortorf",
-      "homeScore": null,
-      "awayScore": null,
-      "venue": "Helene-Lange-Gymnasium, Ritterstr. 12, 24768 Rendsburg",
-      "status": "upcoming",
+      "homeScore": 62,
+      "awayScore": 31,
+      "venue": "N/A",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2719251"
+      "spielUrl": ""
     },
     {
       "id": "u12w-19",
@@ -4038,5 +4038,5 @@
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2711890"
     }
   ],
-  "lastUpdated": "2026-02-28T14:51:02.079Z"
+  "lastUpdated": "2026-02-28T17:44:51.045Z"
 }
