@@ -231,23 +231,23 @@
     {
       "rank": 6,
       "team": "Lübecker TS",
-      "games": 10,
-      "wins": 2,
+      "games": 11,
+      "wins": 3,
       "losses": 8,
-      "points": 4,
-      "pointsFor": 342,
-      "pointsAgainst": 691,
+      "points": 6,
+      "pointsFor": 391,
+      "pointsAgainst": 722,
       "teamKey": "u18w"
     },
     {
       "rank": 7,
       "team": "BBC Rendsburg 2",
-      "games": 6,
+      "games": 7,
       "wins": 1,
-      "losses": 5,
+      "losses": 6,
       "points": 2,
-      "pointsFor": 285,
-      "pointsAgainst": 497,
+      "pointsFor": 316,
+      "pointsAgainst": 546,
       "teamKey": "u18w"
     },
     {
@@ -2095,12 +2095,12 @@
       "time": "13:00",
       "homeTeam": "BBC Rendsburg 2",
       "awayTeam": "Lübecker TS",
-      "homeScore": null,
-      "awayScore": null,
-      "venue": "Herdergymnasium, Am Stadtsee 11, 24768 Rendsburg",
-      "status": "upcoming",
+      "homeScore": 31,
+      "awayScore": 49,
+      "venue": "N/A",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2816287"
+      "spielUrl": ""
     },
     {
       "id": "u18w-50",
@@ -4038,5 +4038,5 @@
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2711890"
     }
   ],
-  "lastUpdated": "2026-02-28T11:18:33.199Z"
+  "lastUpdated": "2026-02-28T14:51:02.079Z"
 }
