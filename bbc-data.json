@@ -30,10 +30,10 @@
       "name": "U16 weiblich",
       "league": "Oberliga",
       "position": 1,
-      "wins": 5,
+      "wins": 6,
       "losses": 1,
-      "points": 10,
-      "games": 6,
+      "points": 12,
+      "games": 7,
       "liga_id": "48940"
     },
     {
@@ -275,12 +275,12 @@
     {
       "rank": 1,
       "team": "BBC Rendsburg",
-      "games": 6,
-      "wins": 5,
+      "games": 7,
+      "wins": 6,
       "losses": 1,
-      "points": 10,
-      "pointsFor": 390,
-      "pointsAgainst": 264,
+      "points": 12,
+      "pointsFor": 488,
+      "pointsAgainst": 320,
       "teamKey": "u16w"
     },
     {
@@ -308,12 +308,12 @@
     {
       "rank": 4,
       "team": "Itzehoe Eagles",
-      "games": 5,
+      "games": 6,
       "wins": 2,
-      "losses": 3,
+      "losses": 4,
       "points": 4,
-      "pointsFor": 270,
-      "pointsAgainst": 232,
+      "pointsFor": 326,
+      "pointsAgainst": 330,
       "teamKey": "u16w"
     },
     {
@@ -440,12 +440,12 @@
     {
       "rank": 1,
       "team": "VfL Oldesloe",
-      "games": 11,
-      "wins": 9,
+      "games": 12,
+      "wins": 10,
       "losses": 2,
-      "points": 18,
-      "pointsFor": 904,
-      "pointsAgainst": 746,
+      "points": 20,
+      "pointsFor": 1010,
+      "pointsAgainst": 814,
       "teamKey": "u12ml"
     },
     {
@@ -484,12 +484,12 @@
     {
       "rank": 5,
       "team": "TuS Nortorf",
-      "games": 10,
+      "games": 11,
       "wins": 5,
-      "losses": 5,
+      "losses": 6,
       "points": 10,
-      "pointsFor": 614,
-      "pointsAgainst": 693,
+      "pointsFor": 682,
+      "pointsAgainst": 799,
       "teamKey": "u12ml"
     },
     {
@@ -2112,9 +2112,9 @@
       "awayTeam": "BBC Rendsburg 2",
       "homeScore": null,
       "awayScore": null,
-      "venue": "Sophie-Scholl-Gymnasium, Am Lehmwohld 41, 25524 Itzehoe",
-      "status": "upcoming",
-      "abgesagt": false,
+      "venue": "N/A",
+      "status": "cancelled",
+      "abgesagt": true,
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2816058"
     },
     {
@@ -2500,12 +2500,12 @@
       "time": "10:00",
       "homeTeam": "BBC Rendsburg",
       "awayTeam": "Itzehoe Eagles",
-      "homeScore": null,
-      "awayScore": null,
-      "venue": "Helene-Lange-Gymnasium, Ritterstr. 12, 24768 Rendsburg",
-      "status": "upcoming",
+      "homeScore": 98,
+      "awayScore": 56,
+      "venue": "N/A",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2710257"
+      "spielUrl": ""
     },
     {
       "id": "u16w-1",
@@ -3895,12 +3895,12 @@
       "time": "10:00",
       "homeTeam": "VfL Oldesloe",
       "awayTeam": "TuS Nortorf",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 106,
+      "awayScore": 68,
       "venue": "N/A",
-      "status": "upcoming",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2711901"
+      "spielUrl": ""
     },
     {
       "id": "u12ml-30",
@@ -4038,5 +4038,5 @@
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2711890"
     }
   ],
-  "lastUpdated": "2026-02-26T20:49:52.231Z"
+  "lastUpdated": "2026-02-28T11:18:33.199Z"
 }
