@@ -7,9 +7,9 @@
       "league": "Oberliga Nord",
       "position": 7,
       "wins": 5,
-      "losses": 7,
+      "losses": 8,
       "points": 10,
-      "games": 12,
+      "games": 13,
       "liga_id": "48934"
     },
     {
@@ -88,12 +88,12 @@
     {
       "rank": 2,
       "team": "Itzehoe Eagles 2",
-      "games": 10,
-      "wins": 8,
+      "games": 11,
+      "wins": 9,
       "losses": 2,
-      "points": 16,
-      "pointsFor": 595,
-      "pointsAgainst": 483,
+      "points": 18,
+      "pointsFor": 674,
+      "pointsAgainst": 552,
       "teamKey": "damen"
     },
     {
@@ -143,12 +143,12 @@
     {
       "rank": 7,
       "team": "BBC Rendsburg",
-      "games": 12,
+      "games": 13,
       "wins": 5,
-      "losses": 7,
+      "losses": 8,
       "points": 10,
-      "pointsFor": 712,
-      "pointsAgainst": 768,
+      "pointsFor": 781,
+      "pointsAgainst": 847,
       "teamKey": "damen"
     },
     {
@@ -484,12 +484,12 @@
     {
       "rank": 5,
       "team": "TuS Nortorf",
-      "games": 11,
+      "games": 12,
       "wins": 5,
-      "losses": 6,
+      "losses": 7,
       "points": 10,
-      "pointsFor": 682,
-      "pointsAgainst": 799,
+      "pointsFor": 727,
+      "pointsAgainst": 893,
       "teamKey": "u12ml"
     },
     {
@@ -506,12 +506,12 @@
     {
       "rank": 7,
       "team": "BSG Kisdorf Kaltenkirchen",
-      "games": 11,
-      "wins": 3,
+      "games": 12,
+      "wins": 4,
       "losses": 8,
-      "points": 6,
-      "pointsFor": 801,
-      "pointsAgainst": 786,
+      "points": 8,
+      "pointsFor": 895,
+      "pointsAgainst": 831,
       "teamKey": "u12ml"
     },
     {
@@ -1345,12 +1345,12 @@
       "time": "13:00",
       "homeTeam": "Itzehoe Eagles 2",
       "awayTeam": "BBC Rendsburg",
-      "homeScore": null,
-      "awayScore": null,
-      "venue": "Sophie-Scholl-Gymnasium, Am Lehmwohld 41, 25524 Itzehoe",
-      "status": "upcoming",
+      "homeScore": 79,
+      "awayScore": 69,
+      "venue": "N/A",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688316"
+      "spielUrl": ""
     },
     {
       "id": "damen-75",
@@ -3910,12 +3910,12 @@
       "time": "10:00",
       "homeTeam": "BSG Kisdorf Kaltenkirchen",
       "awayTeam": "TuS Nortorf",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 94,
+      "awayScore": 45,
       "venue": "N/A",
-      "status": "upcoming",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2711917"
+      "spielUrl": ""
     },
     {
       "id": "u12ml-40",
@@ -4038,5 +4038,5 @@
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2711890"
     }
   ],
-  "lastUpdated": "2026-02-28T17:44:51.045Z"
+  "lastUpdated": "2026-03-01T13:55:40.784Z"
 }
