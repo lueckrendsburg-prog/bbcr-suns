@@ -30,10 +30,10 @@
       "name": "U16 weiblich",
       "league": "Oberliga",
       "position": 1,
-      "wins": 6,
+      "wins": 7,
       "losses": 1,
-      "points": 12,
-      "games": 7,
+      "points": 14,
+      "games": 8,
       "liga_id": "48940"
     },
     {
@@ -275,12 +275,12 @@
     {
       "rank": 1,
       "team": "BBC Rendsburg",
-      "games": 7,
-      "wins": 6,
+      "games": 8,
+      "wins": 7,
       "losses": 1,
-      "points": 12,
-      "pointsFor": 488,
-      "pointsAgainst": 320,
+      "points": 14,
+      "pointsFor": 611,
+      "pointsAgainst": 363,
       "teamKey": "u16w"
     },
     {
@@ -319,12 +319,12 @@
     {
       "rank": 5,
       "team": "TuS Nortorf",
-      "games": 6,
+      "games": 7,
       "wins": 0,
-      "losses": 6,
+      "losses": 7,
       "points": 0,
-      "pointsFor": 235,
-      "pointsAgainst": 534,
+      "pointsFor": 278,
+      "pointsAgainst": 657,
       "teamKey": "u16w"
     },
     {
@@ -1363,8 +1363,8 @@
       "homeScore": null,
       "awayScore": null,
       "venue": "N/A",
-      "status": "upcoming",
-      "abgesagt": false,
+      "status": "cancelled",
+      "abgesagt": true,
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688359"
     },
     {
@@ -1563,6 +1563,21 @@
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688339"
     },
     {
+      "id": "damen-42",
+      "teamKey": "damen",
+      "league": "Oberliga Nord",
+      "date": "11.04.2026",
+      "time": "13:00",
+      "homeTeam": "Itzehoe Eagles 2",
+      "awayTeam": "Lübecker TS",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "N/A",
+      "status": "upcoming",
+      "abgesagt": false,
+      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688326"
+    },
+    {
       "id": "damen-89",
       "teamKey": "damen",
       "league": "Oberliga Nord",
@@ -1591,21 +1606,6 @@
       "status": "upcoming",
       "abgesagt": false,
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688371"
-    },
-    {
-      "id": "damen-42",
-      "teamKey": "damen",
-      "league": "Oberliga Nord",
-      "date": "25.04.2026",
-      "time": "14:00",
-      "homeTeam": "Itzehoe Eagles 2",
-      "awayTeam": "Lübecker TS",
-      "homeScore": null,
-      "awayScore": null,
-      "venue": "N/A",
-      "status": "upcoming",
-      "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688326"
     },
     {
       "id": "u18w-27",
@@ -2103,21 +2103,6 @@
       "spielUrl": ""
     },
     {
-      "id": "u18w-50",
-      "teamKey": "u18w",
-      "league": "Oberliga",
-      "date": "01.03.2026",
-      "time": "15:30",
-      "homeTeam": "Itzehoe Eagles",
-      "awayTeam": "BBC Rendsburg 2",
-      "homeScore": null,
-      "awayScore": null,
-      "venue": "N/A",
-      "status": "cancelled",
-      "abgesagt": true,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2816058"
-    },
-    {
       "id": "u18w-24",
       "teamKey": "u18w",
       "league": "Oberliga",
@@ -2221,6 +2206,21 @@
       "status": "upcoming",
       "abgesagt": false,
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2721129"
+    },
+    {
+      "id": "u18w-50",
+      "teamKey": "u18w",
+      "league": "Oberliga",
+      "date": "18.03.2026",
+      "time": "17:00",
+      "homeTeam": "Itzehoe Eagles",
+      "awayTeam": "BBC Rendsburg 2",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Sophie-Scholl-Gymnasium, Am Lehmwohld 41, 25524 Itzehoe",
+      "status": "upcoming",
+      "abgesagt": false,
+      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2816058"
     },
     {
       "id": "u18w-22",
@@ -2463,21 +2463,6 @@
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2710264"
     },
     {
-      "id": "u16w-29",
-      "teamKey": "u16w",
-      "league": "Oberliga",
-      "date": "15.02.2026",
-      "time": "14:00",
-      "homeTeam": "Lübecker TS",
-      "awayTeam": "Itzehoe Eagles",
-      "homeScore": null,
-      "awayScore": null,
-      "venue": "N/A",
-      "status": "cancelled",
-      "abgesagt": true,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2710266"
-    },
-    {
       "id": "u16w-28",
       "teamKey": "u16w",
       "league": "Oberliga",
@@ -2515,12 +2500,12 @@
       "time": "17:00",
       "homeTeam": "BBC Rendsburg",
       "awayTeam": "TuS Nortorf",
-      "homeScore": null,
-      "awayScore": null,
-      "venue": "Helene-Lange-Gymnasium, Ritterstr. 12, 24768 Rendsburg",
-      "status": "upcoming",
+      "homeScore": 123,
+      "awayScore": 43,
+      "venue": "N/A",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2710238"
+      "spielUrl": ""
     },
     {
       "id": "u16w-17",
@@ -2536,6 +2521,21 @@
       "status": "upcoming",
       "abgesagt": false,
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2710254"
+    },
+    {
+      "id": "u16w-29",
+      "teamKey": "u16w",
+      "league": "Oberliga",
+      "date": "21.03.2026",
+      "time": "13:00",
+      "homeTeam": "Lübecker TS",
+      "awayTeam": "Itzehoe Eagles",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "N/A",
+      "status": "upcoming",
+      "abgesagt": false,
+      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2710266"
     },
     {
       "id": "u14w-4",
@@ -2763,21 +2763,6 @@
       "spielUrl": ""
     },
     {
-      "id": "u14w-18",
-      "teamKey": "u14w",
-      "league": "Oberliga",
-      "date": "22.02.2026",
-      "time": "10:00",
-      "homeTeam": "Kieler Förde Baskets",
-      "awayTeam": "BBC Rendsburg",
-      "homeScore": null,
-      "awayScore": null,
-      "venue": "N/A",
-      "status": "cancelled",
-      "abgesagt": true,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2719275"
-    },
-    {
       "id": "u14w-16",
       "teamKey": "u14w",
       "league": "Oberliga",
@@ -2793,19 +2778,19 @@
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2719273"
     },
     {
-      "id": "u14w-12",
+      "id": "u14w-18",
       "teamKey": "u14w",
       "league": "Oberliga",
-      "date": "07.03.2026",
-      "time": "11:00",
-      "homeTeam": "Itzehoe Eagles",
-      "awayTeam": "Kieler Förde Baskets",
+      "date": "13.03.2026",
+      "time": "17:00",
+      "homeTeam": "Kieler Förde Baskets",
+      "awayTeam": "BBC Rendsburg",
       "homeScore": null,
       "awayScore": null,
-      "venue": "N/A",
+      "venue": "Ernst-Barlach-Gymnasium, Charles-Roß-Ring 53, 24106 Kiel",
       "status": "upcoming",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2719269"
+      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2719275"
     },
     {
       "id": "u14w-27",
@@ -2821,6 +2806,21 @@
       "status": "upcoming",
       "abgesagt": false,
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2719284"
+    },
+    {
+      "id": "u14w-12",
+      "teamKey": "u14w",
+      "league": "Oberliga",
+      "date": "17.03.2026",
+      "time": "16:30",
+      "homeTeam": "Itzehoe Eagles",
+      "awayTeam": "Kieler Förde Baskets",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "N/A",
+      "status": "upcoming",
+      "abgesagt": false,
+      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2719269"
     },
     {
       "id": "u14w-24",
@@ -4038,5 +4038,5 @@
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2711890"
     }
   ],
-  "lastUpdated": "2026-03-01T13:55:40.784Z"
+  "lastUpdated": "2026-03-06T20:09:59.272Z"
 }
