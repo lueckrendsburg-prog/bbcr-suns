@@ -18,10 +18,10 @@
       "name": "U18 weiblich",
       "league": "Oberliga",
       "position": 1,
-      "wins": 11,
+      "wins": 12,
       "losses": 0,
-      "points": 22,
-      "games": 11,
+      "points": 24,
+      "games": 12,
       "liga_id": "48937"
     },
     {
@@ -67,9 +67,9 @@
       "league": "Miniliga",
       "position": 6,
       "wins": 4,
-      "losses": 6,
+      "losses": 7,
       "points": 8,
-      "games": 10,
+      "games": 11,
       "liga_id": "48964"
     }
   ],
@@ -77,12 +77,12 @@
     {
       "rank": 1,
       "team": "TuS Nortorf",
-      "games": 13,
-      "wins": 12,
+      "games": 14,
+      "wins": 13,
       "losses": 1,
-      "points": 24,
-      "pointsFor": 871,
-      "pointsAgainst": 600,
+      "points": 26,
+      "pointsFor": 948,
+      "pointsAgainst": 649,
       "teamKey": "damen"
     },
     {
@@ -99,12 +99,12 @@
     {
       "rank": 3,
       "team": "MTSV Hohenwestedt",
-      "games": 11,
+      "games": 12,
       "wins": 7,
-      "losses": 4,
+      "losses": 5,
       "points": 14,
-      "pointsFor": 658,
-      "pointsAgainst": 567,
+      "pointsFor": 707,
+      "pointsAgainst": 644,
       "teamKey": "damen"
     },
     {
@@ -176,12 +176,12 @@
     {
       "rank": 1,
       "team": "BBC Rendsburg",
-      "games": 11,
-      "wins": 11,
+      "games": 12,
+      "wins": 12,
       "losses": 0,
-      "points": 22,
-      "pointsFor": 1087,
-      "pointsAgainst": 351,
+      "points": 24,
+      "pointsFor": 1188,
+      "pointsAgainst": 380,
       "teamKey": "u18w"
     },
     {
@@ -198,12 +198,12 @@
     {
       "rank": 3,
       "team": "BG Ostholstein",
-      "games": 8,
+      "games": 9,
       "wins": 4,
-      "losses": 4,
+      "losses": 5,
       "points": 8,
-      "pointsFor": 397,
-      "pointsAgainst": 474,
+      "pointsFor": 426,
+      "pointsAgainst": 575,
       "teamKey": "u18w"
     },
     {
@@ -451,12 +451,12 @@
     {
       "rank": 2,
       "team": "Möllner SV",
-      "games": 12,
-      "wins": 9,
+      "games": 13,
+      "wins": 10,
       "losses": 3,
-      "points": 18,
-      "pointsFor": 864,
-      "pointsAgainst": 698,
+      "points": 20,
+      "pointsFor": 976,
+      "pointsAgainst": 735,
       "teamKey": "u12ml"
     },
     {
@@ -473,34 +473,34 @@
     {
       "rank": 4,
       "team": "Kieler Förde Baskets",
-      "games": 13,
-      "wins": 6,
+      "games": 14,
+      "wins": 7,
       "losses": 7,
-      "points": 12,
-      "pointsFor": 751,
-      "pointsAgainst": 857,
+      "points": 14,
+      "pointsFor": 822,
+      "pointsAgainst": 907,
       "teamKey": "u12ml"
     },
     {
       "rank": 5,
       "team": "TuS Nortorf",
-      "games": 12,
+      "games": 13,
       "wins": 5,
-      "losses": 7,
+      "losses": 8,
       "points": 10,
-      "pointsFor": 727,
-      "pointsAgainst": 893,
+      "pointsFor": 764,
+      "pointsAgainst": 1005,
       "teamKey": "u12ml"
     },
     {
       "rank": 6,
       "team": "BBC Rendsburg (w)",
-      "games": 10,
+      "games": 11,
       "wins": 4,
-      "losses": 6,
+      "losses": 7,
       "points": 8,
-      "pointsFor": 623,
-      "pointsAgainst": 693,
+      "pointsFor": 673,
+      "pointsAgainst": 764,
       "teamKey": "u12ml"
     },
     {
@@ -1375,12 +1375,12 @@
       "time": "14:30",
       "homeTeam": "TuS Nortorf",
       "awayTeam": "MTSV Hohenwestedt",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 77,
+      "awayScore": 49,
       "venue": "N/A",
-      "status": "upcoming",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688357"
+      "spielUrl": ""
     },
     {
       "id": "damen-72",
@@ -1393,8 +1393,8 @@
       "homeScore": null,
       "awayScore": null,
       "venue": "N/A",
-      "status": "upcoming",
-      "abgesagt": false,
+      "status": "cancelled",
+      "abgesagt": true,
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688356"
     },
     {
@@ -2128,8 +2128,8 @@
       "homeScore": null,
       "awayScore": null,
       "venue": "N/A",
-      "status": "upcoming",
-      "abgesagt": false,
+      "status": "cancelled",
+      "abgesagt": true,
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2721169"
     },
     {
@@ -2140,12 +2140,12 @@
       "time": "14:00",
       "homeTeam": "BG Ostholstein",
       "awayTeam": "BBC Rendsburg",
-      "homeScore": null,
-      "awayScore": null,
-      "venue": "Sporthalle Weberschule, 23701 Eutin",
-      "status": "upcoming",
+      "homeScore": 29,
+      "awayScore": 101,
+      "venue": "N/A",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2721168"
+      "spielUrl": ""
     },
     {
       "id": "u18w-16",
@@ -3925,12 +3925,12 @@
       "time": "12:00",
       "homeTeam": "Kieler Förde Baskets",
       "awayTeam": "BBC Rendsburg (w)",
-      "homeScore": null,
-      "awayScore": null,
-      "venue": "Ernst-Barlach-Gymnasium, Charles-Roß-Ring 53, 24106 Kiel",
-      "status": "upcoming",
+      "homeScore": 71,
+      "awayScore": 50,
+      "venue": "N/A",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2711927"
+      "spielUrl": ""
     },
     {
       "id": "u12ml-55",
@@ -3940,12 +3940,12 @@
       "time": "12:00",
       "homeTeam": "TuS Nortorf",
       "awayTeam": "Möllner SV",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 37,
+      "awayScore": 112,
       "venue": "N/A",
-      "status": "upcoming",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2711943"
+      "spielUrl": ""
     },
     {
       "id": "u12ml-54",
@@ -4038,5 +4038,5 @@
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2711890"
     }
   ],
-  "lastUpdated": "2026-03-06T20:09:59.272Z"
+  "lastUpdated": "2026-03-07T15:35:38.180Z"
 }
