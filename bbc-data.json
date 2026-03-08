@@ -67,9 +67,9 @@
       "league": "Miniliga",
       "position": 6,
       "wins": 4,
-      "losses": 7,
+      "losses": 8,
       "points": 8,
-      "games": 11,
+      "games": 12,
       "liga_id": "48964"
     }
   ],
@@ -197,6 +197,17 @@
     },
     {
       "rank": 3,
+      "team": "TSV Klausdorf",
+      "games": 11,
+      "wins": 5,
+      "losses": 6,
+      "points": 10,
+      "pointsFor": 545,
+      "pointsAgainst": 555,
+      "teamKey": "u18w"
+    },
+    {
+      "rank": 4,
       "team": "BG Ostholstein",
       "games": 9,
       "wins": 4,
@@ -204,17 +215,6 @@
       "points": 8,
       "pointsFor": 426,
       "pointsAgainst": 575,
-      "teamKey": "u18w"
-    },
-    {
-      "rank": 4,
-      "team": "TSV Klausdorf",
-      "games": 10,
-      "wins": 4,
-      "losses": 6,
-      "points": 8,
-      "pointsFor": 501,
-      "pointsAgainst": 512,
       "teamKey": "u18w"
     },
     {
@@ -242,12 +242,12 @@
     {
       "rank": 7,
       "team": "BBC Rendsburg 2",
-      "games": 7,
+      "games": 8,
       "wins": 1,
-      "losses": 6,
+      "losses": 7,
       "points": 2,
-      "pointsFor": 316,
-      "pointsAgainst": 546,
+      "pointsFor": 359,
+      "pointsAgainst": 590,
       "teamKey": "u18w"
     },
     {
@@ -286,23 +286,23 @@
     {
       "rank": 2,
       "team": "Kieler Förde Baskets",
-      "games": 7,
+      "games": 8,
       "wins": 5,
-      "losses": 2,
+      "losses": 3,
       "points": 10,
-      "pointsFor": 509,
-      "pointsAgainst": 363,
+      "pointsFor": 570,
+      "pointsAgainst": 431,
       "teamKey": "u16w"
     },
     {
       "rank": 3,
       "team": "Lübecker TS",
-      "games": 6,
-      "wins": 3,
+      "games": 7,
+      "wins": 4,
       "losses": 3,
-      "points": 6,
-      "pointsFor": 335,
-      "pointsAgainst": 346,
+      "points": 8,
+      "pointsFor": 403,
+      "pointsAgainst": 407,
       "teamKey": "u16w"
     },
     {
@@ -440,12 +440,12 @@
     {
       "rank": 1,
       "team": "VfL Oldesloe",
-      "games": 12,
-      "wins": 10,
+      "games": 13,
+      "wins": 11,
       "losses": 2,
-      "points": 20,
-      "pointsFor": 1010,
-      "pointsAgainst": 814,
+      "points": 22,
+      "pointsFor": 1113,
+      "pointsAgainst": 902,
       "teamKey": "u12ml"
     },
     {
@@ -495,34 +495,34 @@
     {
       "rank": 6,
       "team": "BBC Rendsburg (w)",
-      "games": 11,
+      "games": 12,
       "wins": 4,
-      "losses": 7,
+      "losses": 8,
       "points": 8,
-      "pointsFor": 673,
-      "pointsAgainst": 764,
+      "pointsFor": 724,
+      "pointsAgainst": 835,
       "teamKey": "u12ml"
     },
     {
       "rank": 7,
       "team": "BSG Kisdorf Kaltenkirchen",
-      "games": 12,
+      "games": 13,
       "wins": 4,
-      "losses": 8,
+      "losses": 9,
       "points": 8,
-      "pointsFor": 895,
-      "pointsAgainst": 831,
+      "pointsFor": 983,
+      "pointsAgainst": 934,
       "teamKey": "u12ml"
     },
     {
       "rank": 8,
       "team": "TuS Felde e.V.",
-      "games": 12,
-      "wins": 2,
+      "games": 13,
+      "wins": 3,
       "losses": 10,
-      "points": 4,
-      "pointsFor": 624,
-      "pointsAgainst": 859,
+      "points": 6,
+      "pointsFor": 695,
+      "pointsAgainst": 910,
       "teamKey": "u12ml"
     }
   ],
@@ -2110,12 +2110,12 @@
       "time": "12:00",
       "homeTeam": "BBC Rendsburg 2",
       "awayTeam": "TSV Klausdorf",
-      "homeScore": null,
-      "awayScore": null,
-      "venue": "Helene-Lange-Gymnasium, Ritterstr. 12, 24768 Rendsburg",
-      "status": "upcoming",
+      "homeScore": 43,
+      "awayScore": 44,
+      "venue": "N/A",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2817025"
+      "spielUrl": ""
     },
     {
       "id": "u18w-55",
@@ -2515,12 +2515,12 @@
       "time": "12:00",
       "homeTeam": "Kieler Förde Baskets",
       "awayTeam": "Lübecker TS",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 61,
+      "awayScore": 68,
       "venue": "N/A",
-      "status": "upcoming",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2710254"
+      "spielUrl": ""
     },
     {
       "id": "u16w-29",
@@ -3955,12 +3955,12 @@
       "time": "10:00",
       "homeTeam": "VfL Oldesloe",
       "awayTeam": "BSG Kisdorf Kaltenkirchen",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 103,
+      "awayScore": 88,
       "venue": "N/A",
-      "status": "upcoming",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2711942"
+      "spielUrl": ""
     },
     {
       "id": "u12ml-56",
@@ -3970,12 +3970,12 @@
       "time": "10:00",
       "homeTeam": "TuS Felde e.V.",
       "awayTeam": "BBC Rendsburg (w)",
-      "homeScore": null,
-      "awayScore": null,
-      "venue": "Sporthalle Felde, Am Sportplatz 1, 24242 Felde",
-      "status": "upcoming",
+      "homeScore": 71,
+      "awayScore": 51,
+      "venue": "N/A",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2711944"
+      "spielUrl": ""
     },
     {
       "id": "u12ml-36",
@@ -4038,5 +4038,5 @@
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2711890"
     }
   ],
-  "lastUpdated": "2026-03-07T15:35:38.180Z"
+  "lastUpdated": "2026-03-08T15:07:49.732Z"
 }
