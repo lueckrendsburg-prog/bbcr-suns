@@ -5,11 +5,11 @@
       "key": "damen",
       "name": "Damen",
       "league": "Oberliga Nord",
-      "position": 7,
-      "wins": 5,
+      "position": 6,
+      "wins": 6,
       "losses": 8,
-      "points": 10,
-      "games": 13,
+      "points": 12,
+      "games": 14,
       "liga_id": "48934"
     },
     {
@@ -131,6 +131,17 @@
     },
     {
       "rank": 6,
+      "team": "BBC Rendsburg",
+      "games": 14,
+      "wins": 6,
+      "losses": 8,
+      "points": 12,
+      "pointsFor": 834,
+      "pointsAgainst": 897,
+      "teamKey": "damen"
+    },
+    {
+      "rank": 7,
       "team": "TSB Flensburg",
       "games": 12,
       "wins": 5,
@@ -138,17 +149,6 @@
       "points": 10,
       "pointsFor": 552,
       "pointsAgainst": 553,
-      "teamKey": "damen"
-    },
-    {
-      "rank": 7,
-      "team": "BBC Rendsburg",
-      "games": 13,
-      "wins": 5,
-      "losses": 8,
-      "points": 10,
-      "pointsFor": 781,
-      "pointsAgainst": 847,
       "teamKey": "damen"
     },
     {
@@ -165,12 +165,12 @@
     {
       "rank": 9,
       "team": "Kieler TB 2",
-      "games": 11,
+      "games": 12,
       "wins": 0,
-      "losses": 11,
+      "losses": 12,
       "points": 0,
-      "pointsFor": 342,
-      "pointsAgainst": 626,
+      "pointsFor": 392,
+      "pointsAgainst": 679,
       "teamKey": "damen"
     },
     {
@@ -209,12 +209,12 @@
     {
       "rank": 4,
       "team": "BG Ostholstein",
-      "games": 9,
+      "games": 10,
       "wins": 4,
-      "losses": 5,
+      "losses": 6,
       "points": 8,
-      "pointsFor": 426,
-      "pointsAgainst": 575,
+      "pointsFor": 478,
+      "pointsAgainst": 635,
       "teamKey": "u18w"
     },
     {
@@ -242,12 +242,12 @@
     {
       "rank": 7,
       "team": "BBC Rendsburg 2",
-      "games": 8,
-      "wins": 1,
+      "games": 9,
+      "wins": 2,
       "losses": 7,
-      "points": 2,
-      "pointsFor": 359,
-      "pointsAgainst": 590,
+      "points": 4,
+      "pointsFor": 419,
+      "pointsAgainst": 642,
       "teamKey": "u18w"
     },
     {
@@ -2155,12 +2155,12 @@
       "time": "10:00",
       "homeTeam": "BBC Rendsburg 2",
       "awayTeam": "BG Ostholstein",
-      "homeScore": null,
-      "awayScore": null,
-      "venue": "Helene-Lange-Gymnasium, Ritterstr. 12, 24768 Rendsburg",
-      "status": "upcoming",
+      "homeScore": 60,
+      "awayScore": 52,
+      "venue": "N/A",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2817022"
+      "spielUrl": ""
     },
     {
       "id": "u18w-13",
@@ -4038,5 +4038,5 @@
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2711890"
     }
   ],
-  "lastUpdated": "2026-03-08T15:59:04.660Z"
+  "lastUpdated": "2026-03-08T16:46:41.047Z"
 }
