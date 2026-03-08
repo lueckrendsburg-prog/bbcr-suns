@@ -1405,12 +1405,12 @@
       "time": "15:00",
       "homeTeam": "Kieler TB 2",
       "awayTeam": "BBC Rendsburg",
-      "homeScore": null,
-      "awayScore": null,
-      "venue": "Reventlou Halle, Beseler Allee 45-53, 24105 Kiel",
-      "status": "upcoming",
+      "homeScore": 50,
+      "awayScore": 53,
+      "venue": "N/A",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688355"
+      "spielUrl": ""
     },
     {
       "id": "damen-76",
@@ -4038,5 +4038,5 @@
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2711890"
     }
   ],
-  "lastUpdated": "2026-03-08T15:07:49.732Z"
+  "lastUpdated": "2026-03-08T15:59:04.660Z"
 }
