@@ -43,9 +43,9 @@
       "league": "Oberliga",
       "position": 1,
       "wins": 6,
-      "losses": 0,
+      "losses": 1,
       "points": 12,
-      "games": 6,
+      "games": 7,
       "liga_id": "48942"
     },
     {
@@ -308,45 +308,45 @@
     {
       "rank": 4,
       "team": "Itzehoe Eagles",
-      "games": 6,
-      "wins": 2,
+      "games": 7,
+      "wins": 3,
       "losses": 4,
-      "points": 4,
-      "pointsFor": 326,
+      "points": 6,
+      "pointsFor": 346,
       "pointsAgainst": 330,
       "teamKey": "u16w"
     },
     {
       "rank": 5,
       "team": "TuS Nortorf",
-      "games": 7,
+      "games": 8,
       "wins": 0,
-      "losses": 7,
+      "losses": 8,
       "points": 0,
       "pointsFor": 278,
-      "pointsAgainst": 657,
+      "pointsAgainst": 677,
       "teamKey": "u16w"
     },
     {
       "rank": 1,
       "team": "BBC Rendsburg",
-      "games": 6,
+      "games": 7,
       "wins": 6,
-      "losses": 0,
+      "losses": 1,
       "points": 12,
-      "pointsFor": 514,
-      "pointsAgainst": 273,
+      "pointsFor": 557,
+      "pointsAgainst": 329,
       "teamKey": "u14w"
     },
     {
       "rank": 2,
       "team": "Kieler Förde Baskets",
-      "games": 5,
-      "wins": 4,
+      "games": 6,
+      "wins": 5,
       "losses": 1,
-      "points": 8,
-      "pointsFor": 410,
-      "pointsAgainst": 194,
+      "points": 10,
+      "pointsFor": 466,
+      "pointsAgainst": 237,
       "teamKey": "u14w"
     },
     {
@@ -1383,21 +1383,6 @@
       "spielUrl": ""
     },
     {
-      "id": "damen-72",
-      "teamKey": "damen",
-      "league": "Oberliga Nord",
-      "date": "07.03.2026",
-      "time": "15:15",
-      "homeTeam": "TSB Flensburg",
-      "awayTeam": "Itzehoe Eagles 2",
-      "homeScore": null,
-      "awayScore": null,
-      "venue": "N/A",
-      "status": "cancelled",
-      "abgesagt": true,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688356"
-    },
-    {
       "id": "damen-71",
       "teamKey": "damen",
       "league": "Oberliga Nord",
@@ -1413,6 +1398,21 @@
       "spielUrl": ""
     },
     {
+      "id": "damen-88",
+      "teamKey": "damen",
+      "league": "Oberliga Nord",
+      "date": "14.03.2026",
+      "time": "12:30",
+      "homeTeam": "MTSV Hohenwestedt",
+      "awayTeam": "Kieler TB 2",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "N/A",
+      "status": "upcoming",
+      "abgesagt": false,
+      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688372"
+    },
+    {
       "id": "damen-76",
       "teamKey": "damen",
       "league": "Oberliga Nord",
@@ -1426,21 +1426,6 @@
       "status": "upcoming",
       "abgesagt": false,
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688360"
-    },
-    {
-      "id": "damen-88",
-      "teamKey": "damen",
-      "league": "Oberliga Nord",
-      "date": "14.03.2026",
-      "time": "18:30",
-      "homeTeam": "MTSV Hohenwestedt",
-      "awayTeam": "Kieler TB 2",
-      "homeScore": null,
-      "awayScore": null,
-      "venue": "N/A",
-      "status": "upcoming",
-      "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688372"
     },
     {
       "id": "damen-78",
@@ -1566,8 +1551,8 @@
       "id": "damen-42",
       "teamKey": "damen",
       "league": "Oberliga Nord",
-      "date": "11.04.2026",
-      "time": "13:00",
+      "date": "17.04.2026",
+      "time": "20:00",
       "homeTeam": "Itzehoe Eagles 2",
       "awayTeam": "Lübecker TS",
       "homeScore": null,
@@ -1606,6 +1591,21 @@
       "status": "upcoming",
       "abgesagt": false,
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688371"
+    },
+    {
+      "id": "damen-72",
+      "teamKey": "damen",
+      "league": "Oberliga Nord",
+      "date": "26.04.2026",
+      "time": "14:00",
+      "homeTeam": "TSB Flensburg",
+      "awayTeam": "Itzehoe Eagles 2",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "N/A",
+      "status": "upcoming",
+      "abgesagt": false,
+      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688356"
     },
     {
       "id": "u18w-27",
@@ -2455,12 +2455,12 @@
       "time": "13:00",
       "homeTeam": "Itzehoe Eagles",
       "awayTeam": "TuS Nortorf",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 20,
+      "awayScore": 0,
       "venue": "N/A",
       "status": "cancelled",
       "abgesagt": true,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2710264"
+      "spielUrl": ""
     },
     {
       "id": "u16w-28",
@@ -2785,12 +2785,12 @@
       "time": "17:00",
       "homeTeam": "Kieler Förde Baskets",
       "awayTeam": "BBC Rendsburg",
-      "homeScore": null,
-      "awayScore": null,
-      "venue": "Ernst-Barlach-Gymnasium, Charles-Roß-Ring 53, 24106 Kiel",
-      "status": "upcoming",
+      "homeScore": 56,
+      "awayScore": 43,
+      "venue": "N/A",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2719275"
+      "spielUrl": ""
     },
     {
       "id": "u14w-27",
@@ -3117,7 +3117,7 @@
       "awayTeam": "BBC Rendsburg",
       "homeScore": null,
       "awayScore": null,
-      "venue": "Ernst-Barlach-Gymnasium, Charles-Roß-Ring 53, 24106 Kiel",
+      "venue": "Ricarda-Huch-Schule, Westring 360, 24118 Kiel",
       "status": "upcoming",
       "abgesagt": false,
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2761943"
@@ -3162,7 +3162,7 @@
       "awayTeam": "TuS Nortorf",
       "homeScore": null,
       "awayScore": null,
-      "venue": "Ernst-Barlach-Gymnasium, Charles-Roß-Ring 53, 24106 Kiel",
+      "venue": "Ricarda-Huch-Schule, Westring 360, 24118 Kiel",
       "status": "upcoming",
       "abgesagt": false,
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2761946"
@@ -3177,7 +3177,7 @@
       "awayTeam": "BBC Rendsburg",
       "homeScore": null,
       "awayScore": null,
-      "venue": "Ernst-Barlach-Gymnasium, Charles-Roß-Ring 53, 24106 Kiel",
+      "venue": "Ricarda-Huch-Schule, Westring 360, 24118 Kiel",
       "status": "upcoming",
       "abgesagt": false,
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2761947"
@@ -4038,5 +4038,5 @@
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2711890"
     }
   ],
-  "lastUpdated": "2026-03-08T16:46:41.047Z"
+  "lastUpdated": "2026-03-13T19:32:28.035Z"
 }
