@@ -99,12 +99,12 @@
     {
       "rank": 3,
       "team": "MTSV Hohenwestedt",
-      "games": 12,
-      "wins": 7,
+      "games": 13,
+      "wins": 8,
       "losses": 5,
-      "points": 14,
-      "pointsFor": 707,
-      "pointsAgainst": 644,
+      "points": 16,
+      "pointsFor": 772,
+      "pointsAgainst": 687,
       "teamKey": "damen"
     },
     {
@@ -165,12 +165,12 @@
     {
       "rank": 9,
       "team": "Kieler TB 2",
-      "games": 12,
+      "games": 13,
       "wins": 0,
-      "losses": 12,
+      "losses": 13,
       "points": 0,
-      "pointsFor": 392,
-      "pointsAgainst": 679,
+      "pointsFor": 435,
+      "pointsAgainst": 744,
       "teamKey": "damen"
     },
     {
@@ -187,67 +187,67 @@
     {
       "rank": 2,
       "team": "Itzehoe Eagles",
-      "games": 9,
-      "wins": 7,
+      "games": 10,
+      "wins": 8,
       "losses": 2,
-      "points": 14,
-      "pointsFor": 538,
-      "pointsAgainst": 454,
+      "points": 16,
+      "pointsFor": 604,
+      "pointsAgainst": 500,
       "teamKey": "u18w"
     },
     {
       "rank": 3,
       "team": "TSV Klausdorf",
-      "games": 11,
-      "wins": 5,
+      "games": 12,
+      "wins": 6,
       "losses": 6,
-      "points": 10,
-      "pointsFor": 545,
-      "pointsAgainst": 555,
+      "points": 12,
+      "pointsFor": 602,
+      "pointsAgainst": 600,
       "teamKey": "u18w"
     },
     {
       "rank": 4,
       "team": "BG Ostholstein",
-      "games": 10,
+      "games": 11,
       "wins": 4,
-      "losses": 6,
+      "losses": 7,
       "points": 8,
-      "pointsFor": 478,
-      "pointsAgainst": 635,
+      "pointsFor": 524,
+      "pointsAgainst": 701,
       "teamKey": "u18w"
     },
     {
       "rank": 5,
-      "team": "Kieler Förde Baskets e.V.",
-      "games": 10,
-      "wins": 3,
-      "losses": 7,
-      "points": 6,
-      "pointsFor": 516,
-      "pointsAgainst": 687,
+      "team": "Lübecker TS",
+      "games": 12,
+      "wins": 4,
+      "losses": 8,
+      "points": 8,
+      "pointsFor": 445,
+      "pointsAgainst": 754,
       "teamKey": "u18w"
     },
     {
       "rank": 6,
-      "team": "Lübecker TS",
+      "team": "Kieler Förde Baskets e.V.",
       "games": 11,
       "wins": 3,
       "losses": 8,
       "points": 6,
-      "pointsFor": 391,
-      "pointsAgainst": 722,
+      "pointsFor": 561,
+      "pointsAgainst": 744,
       "teamKey": "u18w"
     },
     {
       "rank": 7,
       "team": "BBC Rendsburg 2",
-      "games": 9,
+      "games": 10,
       "wins": 2,
-      "losses": 7,
+      "losses": 8,
       "points": 4,
-      "pointsFor": 419,
-      "pointsAgainst": 642,
+      "pointsFor": 451,
+      "pointsAgainst": 696,
       "teamKey": "u18w"
     },
     {
@@ -440,12 +440,12 @@
     {
       "rank": 1,
       "team": "VfL Oldesloe",
-      "games": 13,
+      "games": 14,
       "wins": 11,
-      "losses": 2,
+      "losses": 3,
       "points": 22,
-      "pointsFor": 1113,
-      "pointsAgainst": 902,
+      "pointsFor": 1204,
+      "pointsAgainst": 1007,
       "teamKey": "u12ml"
     },
     {
@@ -462,12 +462,12 @@
     {
       "rank": 3,
       "team": "Kieler TB",
-      "games": 13,
-      "wins": 8,
+      "games": 14,
+      "wins": 9,
       "losses": 5,
-      "points": 16,
-      "pointsFor": 987,
-      "pointsAgainst": 836,
+      "points": 18,
+      "pointsFor": 1092,
+      "pointsAgainst": 927,
       "teamKey": "u12ml"
     },
     {
@@ -1405,12 +1405,12 @@
       "time": "12:30",
       "homeTeam": "MTSV Hohenwestedt",
       "awayTeam": "Kieler TB 2",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 65,
+      "awayScore": 43,
       "venue": "N/A",
-      "status": "upcoming",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688372"
+      "spielUrl": ""
     },
     {
       "id": "damen-76",
@@ -2170,12 +2170,12 @@
       "time": "10:00",
       "homeTeam": "TSV Klausdorf",
       "awayTeam": "Kieler Förde Baskets e.V.",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 57,
+      "awayScore": 45,
       "venue": "N/A",
-      "status": "upcoming",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2721127"
+      "spielUrl": ""
     },
     {
       "id": "u18w-10",
@@ -2185,12 +2185,12 @@
       "time": "13:00",
       "homeTeam": "Lübecker TS",
       "awayTeam": "BBC Rendsburg 2",
-      "homeScore": null,
-      "awayScore": null,
-      "venue": "Holstentor Gemeinschaftsschule, Wendische Straße 55, 23558 Lübeck",
-      "status": "upcoming",
+      "homeScore": 54,
+      "awayScore": 32,
+      "venue": "N/A",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2816286"
+      "spielUrl": ""
     },
     {
       "id": "u18w-15",
@@ -2200,12 +2200,12 @@
       "time": "14:00",
       "homeTeam": "BG Ostholstein",
       "awayTeam": "Itzehoe Eagles",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 46,
+      "awayScore": 66,
       "venue": "N/A",
-      "status": "upcoming",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2721129"
+      "spielUrl": ""
     },
     {
       "id": "u18w-50",
@@ -3985,12 +3985,12 @@
       "time": "12:00",
       "homeTeam": "VfL Oldesloe",
       "awayTeam": "Kieler TB",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 91,
+      "awayScore": 105,
       "venue": "N/A",
-      "status": "upcoming",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2711923"
+      "spielUrl": ""
     },
     {
       "id": "u12ml-14",
@@ -4038,5 +4038,5 @@
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2711890"
     }
   ],
-  "lastUpdated": "2026-03-13T19:32:28.035Z"
+  "lastUpdated": "2026-03-14T14:55:13.033Z"
 }
