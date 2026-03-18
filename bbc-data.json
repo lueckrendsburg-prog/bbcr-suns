@@ -330,12 +330,12 @@
     {
       "rank": 1,
       "team": "Kieler Förde Baskets",
-      "games": 7,
-      "wins": 6,
+      "games": 8,
+      "wins": 7,
       "losses": 1,
-      "points": 12,
-      "pointsFor": 608,
-      "pointsAgainst": 264,
+      "points": 14,
+      "pointsFor": 724,
+      "pointsAgainst": 295,
       "teamKey": "u14w"
     },
     {
@@ -363,12 +363,12 @@
     {
       "rank": 4,
       "team": "Itzehoe Eagles",
-      "games": 5,
+      "games": 6,
       "wins": 1,
-      "losses": 4,
+      "losses": 5,
       "points": 2,
-      "pointsFor": 205,
-      "pointsAgainst": 421,
+      "pointsFor": 236,
+      "pointsAgainst": 537,
       "teamKey": "u14w"
     },
     {
@@ -407,12 +407,12 @@
     {
       "rank": 2,
       "team": "Lübecker TS",
-      "games": 11,
-      "wins": 7,
+      "games": 12,
+      "wins": 8,
       "losses": 4,
-      "points": 14,
-      "pointsFor": 624,
-      "pointsAgainst": 386,
+      "points": 16,
+      "pointsFor": 660,
+      "pointsAgainst": 395,
       "teamKey": "u12w"
     },
     {
@@ -429,12 +429,12 @@
     {
       "rank": 4,
       "team": "TuS Nortorf",
-      "games": 11,
+      "games": 12,
       "wins": 0,
-      "losses": 11,
+      "losses": 12,
       "points": 0,
-      "pointsFor": 288,
-      "pointsAgainst": 713,
+      "pointsFor": 297,
+      "pointsAgainst": 749,
       "teamKey": "u12w"
     },
     {
@@ -1188,21 +1188,6 @@
       "spielUrl": ""
     },
     {
-      "id": "damen-41",
-      "teamKey": "damen",
-      "league": "Oberliga Nord",
-      "date": "15.02.2026",
-      "time": "14:00",
-      "homeTeam": "BBC Rendsburg",
-      "awayTeam": "BSG Kisdorf Kaltenkirchen",
-      "homeScore": null,
-      "awayScore": null,
-      "venue": "N/A",
-      "status": "cancelled",
-      "abgesagt": true,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688325"
-    },
-    {
       "id": "damen-62",
       "teamKey": "damen",
       "league": "Oberliga Nord",
@@ -1336,21 +1321,6 @@
       "status": "finished",
       "abgesagt": false,
       "spielUrl": ""
-    },
-    {
-      "id": "damen-75",
-      "teamKey": "damen",
-      "league": "Oberliga Nord",
-      "date": "07.03.2026",
-      "time": "14:00",
-      "homeTeam": "Kieler Förde Baskets",
-      "awayTeam": "BSG Kisdorf Kaltenkirchen",
-      "homeScore": null,
-      "awayScore": null,
-      "venue": "N/A",
-      "status": "cancelled",
-      "abgesagt": true,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688359"
     },
     {
       "id": "damen-73",
@@ -1516,6 +1486,36 @@
       "status": "upcoming",
       "abgesagt": false,
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688368"
+    },
+    {
+      "id": "damen-41",
+      "teamKey": "damen",
+      "league": "Oberliga Nord",
+      "date": "22.03.2026",
+      "time": "18:00",
+      "homeTeam": "BBC Rendsburg",
+      "awayTeam": "BSG Kisdorf Kaltenkirchen",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "Helene-Lange-Gymnasium, Ritterstr. 12, 24768 Rendsburg",
+      "status": "upcoming",
+      "abgesagt": false,
+      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688325"
+    },
+    {
+      "id": "damen-75",
+      "teamKey": "damen",
+      "league": "Oberliga Nord",
+      "date": "25.03.2026",
+      "time": "19:00",
+      "homeTeam": "Kieler Förde Baskets",
+      "awayTeam": "BSG Kisdorf Kaltenkirchen",
+      "homeScore": null,
+      "awayScore": null,
+      "venue": "N/A",
+      "status": "upcoming",
+      "abgesagt": false,
+      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688359"
     },
     {
       "id": "damen-64",
@@ -2815,12 +2815,12 @@
       "time": "16:30",
       "homeTeam": "Itzehoe Eagles",
       "awayTeam": "Kieler Förde Baskets",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 31,
+      "awayScore": 116,
       "venue": "N/A",
-      "status": "upcoming",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2719269"
+      "spielUrl": ""
     },
     {
       "id": "u14w-24",
@@ -3130,12 +3130,12 @@
       "time": "11:15",
       "homeTeam": "TuS Nortorf",
       "awayTeam": "Lübecker TS",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 9,
+      "awayScore": 36,
       "venue": "N/A",
-      "status": "upcoming",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2761944"
+      "spielUrl": ""
     },
     {
       "id": "u12w-21",
@@ -4038,5 +4038,5 @@
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2711890"
     }
   ],
-  "lastUpdated": "2026-03-15T20:02:12.800Z"
+  "lastUpdated": "2026-03-18T06:16:02.617Z"
 }
