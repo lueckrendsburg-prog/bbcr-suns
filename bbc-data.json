@@ -187,12 +187,12 @@
     {
       "rank": 2,
       "team": "Itzehoe Eagles",
-      "games": 10,
-      "wins": 8,
+      "games": 11,
+      "wins": 9,
       "losses": 2,
-      "points": 16,
-      "pointsFor": 604,
-      "pointsAgainst": 500,
+      "points": 18,
+      "pointsFor": 661,
+      "pointsAgainst": 534,
       "teamKey": "u18w"
     },
     {
@@ -242,12 +242,12 @@
     {
       "rank": 7,
       "team": "BBC Rendsburg 2",
-      "games": 10,
+      "games": 11,
       "wins": 2,
-      "losses": 8,
+      "losses": 9,
       "points": 4,
-      "pointsFor": 451,
-      "pointsAgainst": 696,
+      "pointsFor": 485,
+      "pointsAgainst": 753,
       "teamKey": "u18w"
     },
     {
@@ -2215,12 +2215,12 @@
       "time": "17:00",
       "homeTeam": "Itzehoe Eagles",
       "awayTeam": "BBC Rendsburg 2",
-      "homeScore": null,
-      "awayScore": null,
-      "venue": "Sophie-Scholl-Gymnasium, Am Lehmwohld 41, 25524 Itzehoe",
-      "status": "upcoming",
+      "homeScore": 57,
+      "awayScore": 34,
+      "venue": "N/A",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2816058"
+      "spielUrl": ""
     },
     {
       "id": "u18w-22",
@@ -4038,5 +4038,5 @@
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2711890"
     }
   ],
-  "lastUpdated": "2026-03-18T06:16:02.617Z"
+  "lastUpdated": "2026-03-19T05:51:38.248Z"
 }
