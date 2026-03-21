@@ -67,9 +67,9 @@
       "league": "Miniliga",
       "position": 7,
       "wins": 4,
-      "losses": 8,
+      "losses": 9,
       "points": 8,
-      "games": 12,
+      "games": 13,
       "liga_id": "48964"
     }
   ],
@@ -88,23 +88,23 @@
     {
       "rank": 2,
       "team": "Itzehoe Eagles 2",
-      "games": 11,
-      "wins": 9,
+      "games": 13,
+      "wins": 11,
       "losses": 2,
-      "points": 18,
-      "pointsFor": 674,
-      "pointsAgainst": 552,
+      "points": 22,
+      "pointsFor": 786,
+      "pointsAgainst": 631,
       "teamKey": "damen"
     },
     {
       "rank": 3,
       "team": "MTSV Hohenwestedt",
-      "games": 13,
-      "wins": 8,
-      "losses": 5,
-      "points": 16,
-      "pointsFor": 772,
-      "pointsAgainst": 687,
+      "games": 15,
+      "wins": 9,
+      "losses": 6,
+      "points": 18,
+      "pointsFor": 893,
+      "pointsAgainst": 793,
       "teamKey": "damen"
     },
     {
@@ -132,12 +132,12 @@
     {
       "rank": 6,
       "team": "Kieler Förde Baskets",
-      "games": 13,
+      "games": 14,
       "wins": 6,
-      "losses": 7,
+      "losses": 8,
       "points": 12,
-      "pointsFor": 628,
-      "pointsAgainst": 691,
+      "pointsFor": 682,
+      "pointsAgainst": 764,
       "teamKey": "damen"
     },
     {
@@ -154,12 +154,12 @@
     {
       "rank": 8,
       "team": "BSG Kisdorf Kaltenkirchen",
-      "games": 12,
+      "games": 13,
       "wins": 3,
-      "losses": 9,
+      "losses": 10,
       "points": 6,
-      "pointsFor": 547,
-      "pointsAgainst": 713,
+      "pointsFor": 578,
+      "pointsAgainst": 773,
       "teamKey": "damen"
     },
     {
@@ -209,12 +209,12 @@
     {
       "rank": 4,
       "team": "BG Ostholstein",
-      "games": 11,
-      "wins": 4,
+      "games": 12,
+      "wins": 5,
       "losses": 7,
-      "points": 8,
-      "pointsFor": 524,
-      "pointsAgainst": 701,
+      "points": 10,
+      "pointsFor": 628,
+      "pointsAgainst": 742,
       "teamKey": "u18w"
     },
     {
@@ -242,12 +242,12 @@
     {
       "rank": 7,
       "team": "BBC Rendsburg 2",
-      "games": 11,
+      "games": 12,
       "wins": 2,
-      "losses": 9,
+      "losses": 10,
       "points": 4,
-      "pointsFor": 485,
-      "pointsAgainst": 753,
+      "pointsFor": 526,
+      "pointsAgainst": 857,
       "teamKey": "u18w"
     },
     {
@@ -297,23 +297,23 @@
     {
       "rank": 3,
       "team": "Lübecker TS",
-      "games": 7,
+      "games": 8,
       "wins": 4,
-      "losses": 3,
+      "losses": 4,
       "points": 8,
-      "pointsFor": 403,
-      "pointsAgainst": 407,
+      "pointsFor": 448,
+      "pointsAgainst": 462,
       "teamKey": "u16w"
     },
     {
       "rank": 4,
       "team": "Itzehoe Eagles",
-      "games": 7,
-      "wins": 3,
+      "games": 8,
+      "wins": 4,
       "losses": 4,
-      "points": 6,
-      "pointsFor": 346,
-      "pointsAgainst": 330,
+      "points": 8,
+      "pointsFor": 401,
+      "pointsAgainst": 375,
       "teamKey": "u16w"
     },
     {
@@ -484,12 +484,12 @@
     {
       "rank": 5,
       "team": "TuS Nortorf",
-      "games": 13,
-      "wins": 5,
+      "games": 14,
+      "wins": 6,
       "losses": 8,
-      "points": 10,
-      "pointsFor": 764,
-      "pointsAgainst": 1005,
+      "points": 12,
+      "pointsFor": 834,
+      "pointsAgainst": 1062,
       "teamKey": "u12ml"
     },
     {
@@ -506,12 +506,12 @@
     {
       "rank": 7,
       "team": "BBC Rendsburg (w)",
-      "games": 12,
+      "games": 13,
       "wins": 4,
-      "losses": 8,
+      "losses": 9,
       "points": 8,
-      "pointsFor": 724,
-      "pointsAgainst": 835,
+      "pointsFor": 781,
+      "pointsAgainst": 905,
       "teamKey": "u12ml"
     },
     {
@@ -1435,12 +1435,12 @@
       "time": "18:30",
       "homeTeam": "MTSV Hohenwestedt",
       "awayTeam": "Itzehoe Eagles 2",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 48,
+      "awayScore": 52,
       "venue": "N/A",
-      "status": "upcoming",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688287"
+      "spielUrl": ""
     },
     {
       "id": "damen-85",
@@ -1450,12 +1450,12 @@
       "time": "14:00",
       "homeTeam": "Itzehoe Eagles 2",
       "awayTeam": "BSG Kisdorf Kaltenkirchen",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 60,
+      "awayScore": 31,
       "venue": "N/A",
-      "status": "upcoming",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688369"
+      "spielUrl": ""
     },
     {
       "id": "damen-83",
@@ -1465,12 +1465,12 @@
       "time": "16:30",
       "homeTeam": "Kieler Förde Baskets",
       "awayTeam": "MTSV Hohenwestedt",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 54,
+      "awayScore": 73,
       "venue": "N/A",
-      "status": "upcoming",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688367"
+      "spielUrl": ""
     },
     {
       "id": "damen-84",
@@ -2230,12 +2230,12 @@
       "time": "14:00",
       "homeTeam": "BG Ostholstein",
       "awayTeam": "BBC Rendsburg 2",
-      "homeScore": null,
-      "awayScore": null,
-      "venue": "Sporthalle Weberschule, 23701 Eutin",
-      "status": "upcoming",
+      "homeScore": 104,
+      "awayScore": 41,
+      "venue": "N/A",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2817023"
+      "spielUrl": ""
     },
     {
       "id": "u16w-16",
@@ -2530,12 +2530,12 @@
       "time": "13:00",
       "homeTeam": "Lübecker TS",
       "awayTeam": "Itzehoe Eagles",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 45,
+      "awayScore": 55,
       "venue": "N/A",
-      "status": "upcoming",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2710266"
+      "spielUrl": ""
     },
     {
       "id": "u14w-4",
@@ -4015,12 +4015,12 @@
       "time": "12:00",
       "homeTeam": "TuS Nortorf",
       "awayTeam": "BBC Rendsburg (w)",
-      "homeScore": null,
-      "awayScore": null,
-      "venue": "Grundschule Nortorf, Jahnstr. 2, 24589 Nortorf",
-      "status": "upcoming",
+      "homeScore": 70,
+      "awayScore": 57,
+      "venue": "N/A",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2711909"
+      "spielUrl": ""
     },
     {
       "id": "u12ml-4",
@@ -4038,5 +4038,5 @@
       "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2711890"
     }
   ],
-  "lastUpdated": "2026-03-19T05:51:38.248Z"
+  "lastUpdated": "2026-03-21T17:40:49.091Z"
 }
