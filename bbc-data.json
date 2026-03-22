@@ -6,10 +6,10 @@
       "name": "Damen",
       "league": "Oberliga Nord",
       "position": 5,
-      "wins": 7,
+      "wins": 8,
       "losses": 8,
-      "points": 14,
-      "games": 15,
+      "points": 16,
+      "games": 16,
       "liga_id": "48934"
     },
     {
@@ -42,10 +42,10 @@
       "name": "U14 weiblich",
       "league": "Oberliga",
       "position": 2,
-      "wins": 6,
+      "wins": 7,
       "losses": 1,
-      "points": 12,
-      "games": 7,
+      "points": 14,
+      "games": 8,
       "liga_id": "48942"
     },
     {
@@ -67,9 +67,9 @@
       "league": "Miniliga",
       "position": 7,
       "wins": 4,
-      "losses": 9,
+      "losses": 10,
       "points": 8,
-      "games": 13,
+      "games": 14,
       "liga_id": "48964"
     }
   ],
@@ -110,23 +110,23 @@
     {
       "rank": 4,
       "team": "Lübecker TS",
-      "games": 11,
-      "wins": 7,
+      "games": 12,
+      "wins": 8,
       "losses": 4,
-      "points": 14,
-      "pointsFor": 624,
-      "pointsAgainst": 512,
+      "points": 16,
+      "pointsFor": 698,
+      "pointsAgainst": 534,
       "teamKey": "damen"
     },
     {
       "rank": 5,
       "team": "BBC Rendsburg",
-      "games": 15,
-      "wins": 7,
+      "games": 16,
+      "wins": 8,
       "losses": 8,
-      "points": 14,
-      "pointsFor": 921,
-      "pointsAgainst": 940,
+      "points": 16,
+      "pointsFor": 985,
+      "pointsAgainst": 989,
       "teamKey": "damen"
     },
     {
@@ -154,23 +154,23 @@
     {
       "rank": 8,
       "team": "BSG Kisdorf Kaltenkirchen",
-      "games": 13,
+      "games": 14,
       "wins": 3,
-      "losses": 10,
+      "losses": 11,
       "points": 6,
-      "pointsFor": 578,
-      "pointsAgainst": 773,
+      "pointsFor": 627,
+      "pointsAgainst": 837,
       "teamKey": "damen"
     },
     {
       "rank": 9,
       "team": "Kieler TB 2",
-      "games": 14,
+      "games": 15,
       "wins": 0,
-      "losses": 14,
+      "losses": 15,
       "points": 0,
-      "pointsFor": 470,
-      "pointsAgainst": 795,
+      "pointsFor": 492,
+      "pointsAgainst": 869,
       "teamKey": "damen"
     },
     {
@@ -187,11 +187,11 @@
     {
       "rank": 2,
       "team": "Itzehoe Eagles",
-      "games": 11,
-      "wins": 9,
+      "games": 12,
+      "wins": 10,
       "losses": 2,
-      "points": 18,
-      "pointsFor": 661,
+      "points": 20,
+      "pointsFor": 681,
       "pointsAgainst": 534,
       "teamKey": "u18w"
     },
@@ -231,12 +231,12 @@
     {
       "rank": 6,
       "team": "Kieler Förde Baskets e.V.",
-      "games": 11,
+      "games": 12,
       "wins": 3,
-      "losses": 8,
+      "losses": 9,
       "points": 6,
       "pointsFor": 561,
-      "pointsAgainst": 744,
+      "pointsAgainst": 764,
       "teamKey": "u18w"
     },
     {
@@ -341,12 +341,12 @@
     {
       "rank": 2,
       "team": "BBC Rendsburg",
-      "games": 7,
-      "wins": 6,
+      "games": 8,
+      "wins": 7,
       "losses": 1,
-      "points": 12,
-      "pointsFor": 557,
-      "pointsAgainst": 329,
+      "points": 14,
+      "pointsFor": 653,
+      "pointsAgainst": 369,
       "teamKey": "u14w"
     },
     {
@@ -363,23 +363,23 @@
     {
       "rank": 4,
       "team": "Itzehoe Eagles",
-      "games": 6,
-      "wins": 1,
-      "losses": 5,
-      "points": 2,
-      "pointsFor": 236,
-      "pointsAgainst": 537,
+      "games": 8,
+      "wins": 2,
+      "losses": 6,
+      "points": 4,
+      "pointsFor": 296,
+      "pointsAgainst": 633,
       "teamKey": "u14w"
     },
     {
       "rank": 5,
       "team": "TSV Reinbek",
-      "games": 7,
+      "games": 8,
       "wins": 0,
-      "losses": 7,
+      "losses": 8,
       "points": 0,
       "pointsFor": 240,
-      "pointsAgainst": 635,
+      "pointsAgainst": 655,
       "teamKey": "u14w"
     },
     {
@@ -439,6 +439,17 @@
     },
     {
       "rank": 1,
+      "team": "Möllner SV",
+      "games": 14,
+      "wins": 11,
+      "losses": 3,
+      "points": 22,
+      "pointsFor": 1039,
+      "pointsAgainst": 777,
+      "teamKey": "u12ml"
+    },
+    {
+      "rank": 2,
       "team": "VfL Oldesloe",
       "games": 14,
       "wins": 11,
@@ -446,17 +457,6 @@
       "points": 22,
       "pointsFor": 1204,
       "pointsAgainst": 1007,
-      "teamKey": "u12ml"
-    },
-    {
-      "rank": 2,
-      "team": "Möllner SV",
-      "games": 13,
-      "wins": 10,
-      "losses": 3,
-      "points": 20,
-      "pointsFor": 976,
-      "pointsAgainst": 735,
       "teamKey": "u12ml"
     },
     {
@@ -506,12 +506,12 @@
     {
       "rank": 7,
       "team": "BBC Rendsburg (w)",
-      "games": 13,
+      "games": 14,
       "wins": 4,
-      "losses": 9,
+      "losses": 10,
       "points": 8,
-      "pointsFor": 781,
-      "pointsAgainst": 905,
+      "pointsFor": 823,
+      "pointsAgainst": 968,
       "teamKey": "u12ml"
     },
     {
@@ -1480,12 +1480,12 @@
       "time": "17:00",
       "homeTeam": "Kieler TB 2",
       "awayTeam": "Lübecker TS",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 22,
+      "awayScore": 74,
       "venue": "N/A",
-      "status": "upcoming",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688368"
+      "spielUrl": ""
     },
     {
       "id": "damen-41",
@@ -1495,12 +1495,12 @@
       "time": "18:00",
       "homeTeam": "BBC Rendsburg",
       "awayTeam": "BSG Kisdorf Kaltenkirchen",
-      "homeScore": null,
-      "awayScore": null,
-      "venue": "Helene-Lange-Gymnasium, Ritterstr. 12, 24768 Rendsburg",
-      "status": "upcoming",
+      "homeScore": 64,
+      "awayScore": 49,
+      "venue": "N/A",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2688325"
+      "spielUrl": ""
     },
     {
       "id": "damen-75",
@@ -2125,12 +2125,12 @@
       "time": "13:30",
       "homeTeam": "Itzehoe Eagles",
       "awayTeam": "Kieler Förde Baskets e.V.",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 20,
+      "awayScore": 0,
       "venue": "N/A",
       "status": "cancelled",
       "abgesagt": true,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2721169"
+      "spielUrl": ""
     },
     {
       "id": "u18w-54",
@@ -2770,12 +2770,12 @@
       "time": "13:30",
       "homeTeam": "Itzehoe Eagles",
       "awayTeam": "TSV Reinbek",
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 20,
+      "awayScore": 0,
       "venue": "N/A",
       "status": "cancelled",
       "abgesagt": true,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2719273"
+      "spielUrl": ""
     },
     {
       "id": "u14w-18",
@@ -2830,12 +2830,12 @@
       "time": "10:00",
       "homeTeam": "Itzehoe Eagles",
       "awayTeam": "BBC Rendsburg",
-      "homeScore": null,
-      "awayScore": null,
-      "venue": "Sophie-Scholl-Gymnasium, Am Lehmwohld 41, 25524 Itzehoe",
-      "status": "upcoming",
+      "homeScore": 40,
+      "awayScore": 96,
+      "venue": "N/A",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2719281"
+      "spielUrl": ""
     },
     {
       "id": "u12w-13",
@@ -4030,13 +4030,13 @@
       "time": "14:00",
       "homeTeam": "BBC Rendsburg (w)",
       "awayTeam": "Möllner SV",
-      "homeScore": null,
-      "awayScore": null,
-      "venue": "Helene-Lange-Gymnasium, Ritterstr. 12, 24768 Rendsburg",
-      "status": "upcoming",
+      "homeScore": 42,
+      "awayScore": 63,
+      "venue": "N/A",
+      "status": "finished",
       "abgesagt": false,
-      "spielUrl": "https://www.basketball-bund.net/static/#/spiel/2711890"
+      "spielUrl": ""
     }
   ],
-  "lastUpdated": "2026-03-21T17:40:49.091Z"
+  "lastUpdated": "2026-03-22T20:28:56.661Z"
 }
